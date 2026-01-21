@@ -33,6 +33,7 @@ import {
     Check as CheckIcon,
     DataObject as DataObjectIcon
 } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 
 interface JsonViewerProps {
     data: Record<string, unknown>;
@@ -46,6 +47,7 @@ export const JsonViewer: React.FC<JsonViewerProps> = ({
     height = '100%'
 }) => {
     const [copySuccess, setCopySuccess] = useState(false);
+    const { t } = useTranslation('catalogManagement');
 
     const handleCopyJson = () => {
         navigator.clipboard.writeText(JSON.stringify(data, null, 4)).then(() => {
@@ -210,7 +212,7 @@ export const JsonViewer: React.FC<JsonViewerProps> = ({
                     {filename}
                 </Typography>
                 <Box sx={{ ml: 'auto' }}>
-                    <Tooltip title={copySuccess ? "Copied!" : "Copy JSON"}>
+                    <Tooltip title={copySuccess ? t('productDetail.jsonViewer.copied') : t('productDetail.jsonViewer.copyJson')}>
                         <IconButton
                             size="small"
                             onClick={handleCopyJson}

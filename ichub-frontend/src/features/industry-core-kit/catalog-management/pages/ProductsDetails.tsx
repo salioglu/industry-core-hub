@@ -22,6 +22,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Button, Snackbar, Alert, Fab } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import { CardChip } from "@/features/industry-core-kit/catalog-management/components/product-list/CardChip";
@@ -56,6 +57,7 @@ import { mapApiPartDataToPartType, mapSharePartCustomerPartIds} from "../utils/u
 import { useEscapeNavigation } from '@/hooks/useEscapeKey';
 
 const ProductsDetails = () => {
+  const { t } = useTranslation('catalogManagement');
   const navigate = useNavigate();
 
   const { manufacturerId, manufacturerPartId } = useParams<{
@@ -118,7 +120,7 @@ const ProductsDetails = () => {
   }, [fetchData]);
 
   if(!manufacturerId || !manufacturerPartId){
-    return <div>Product not found</div>; 
+    return <div>{t('details.notFound')}</div>; 
   }
 
   if (isLoading) {
@@ -136,13 +138,13 @@ const ProductsDetails = () => {
           gap: 2,
           minHeight: '60vh'
         }}>
-          <ErrorNotFound icon={HelpOutlineIcon} message="404 PART NOT FOUND "/>
+          <ErrorNotFound icon={HelpOutlineIcon} message={t('details.partNotFound')}/>
           <Button 
             className="back-button" variant="outlined" size="small"
             onClick={() => navigate('/catalog')}
             startIcon={<ArrowBackIcon />}
           >
-            BACK TO CATALOG
+            {t('details.backToCatalog')}
           </Button>
         </Grid2>
       </Grid2>
@@ -228,7 +230,7 @@ const ProductsDetails = () => {
         setNotification({ 
           open: true, 
           severity: 'success', 
-          title: `Submodel created successfully with ${selectedSchema.metadata.name} schema!`
+          title: t('messages.submodelCreatedSuccess', { schemaName: selectedSchema.metadata.name })
         });
         
         handleCloseSubmodelCreator();
@@ -236,10 +238,10 @@ const ProductsDetails = () => {
         // Refresh the data
         await fetchData();
       } else {
-        throw new Error(result.message || 'Failed to create submodel');
+        throw new Error(result.message || t('messages.submodelCreatedError'));
       }
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : 'Failed to create submodel';
+      const errorMessage = error instanceof Error ? error.message : t('messages.submodelCreatedError');
       setNotification({ 
         open: true, 
         severity: 'error', 
@@ -277,7 +279,7 @@ const ProductsDetails = () => {
     
     return <CardChip 
       status={statusVariant} 
-      statusText={statusVariant} 
+      statusText={t(`status.${statusVariant.toLowerCase()}`)} 
       className={(statusVariant === StatusVariants.shared) || (statusVariant === StatusVariants.pending) ? 'black-status-chip' : undefined}
     />;
   };
@@ -296,7 +298,7 @@ const ProductsDetails = () => {
         </Grid2>
         <Grid2 size={4} display="flex" justifyContent="center" alignItems="center">
           <Button size="small" className="update-button" endIcon={<EditIcon />}>            
-              <span className="update-button-content">UPDATE</span>            
+              <span className="update-button-content">{t('details.update')}</span>            
           </Button>
         </Grid2>
         <Grid2 size={4} display="flex" justifyContent="end" alignItems="center">
@@ -314,7 +316,7 @@ const ProductsDetails = () => {
         <Grid2 container size={12} spacing={2}className="add-on-buttons">
           <Grid2 size={{ sm: 12 }}>
             <Button className="submodel-button" color="success" size="small" onClick={handleOpenSubmodelsGridDialog} fullWidth={true} style={{ padding: "5px" }}>
-              View Submodels
+              {t('details.viewSubmodels')}
             </Button>
           </Grid2>
         </Grid2>

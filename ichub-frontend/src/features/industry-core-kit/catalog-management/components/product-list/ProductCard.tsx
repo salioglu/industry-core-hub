@@ -30,6 +30,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { Box, Typography, IconButton, Button, Tooltip } from "@mui/material";
 import Menu from '@mui/material/Menu';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import { useTranslation } from 'react-i18next';
 import { CardChip } from "./CardChip";
 import { StatusVariants } from "@/features/industry-core-kit/catalog-management/types/types";
 import { ErrorNotFound } from '@/components/general/ErrorNotFound';
@@ -71,6 +72,7 @@ export const ProductCard = ({
   onRegisterClick, 
   isLoading,
 }: CardDecisionProps) => {
+  const { t } = useTranslation('catalogManagement');
 
   const handleDecision = (
     e: React.SyntheticEvent,
@@ -143,7 +145,7 @@ export const ProductCard = ({
     <Box className="custom-cards-list">
       {isLoading && <LoadingSpinner />}
       {!isLoading && items.length === 0 && (
-        <ErrorNotFound icon={ReportProblemIcon} message="No catalog parts available, please check your ichub-backend connection/configuration"/>
+        <ErrorNotFound icon={ReportProblemIcon} message={t('productCard.noPartsAvailable')}/>
       )}
       {items.map((item) => {
         const name = item.name ?? "";
@@ -157,11 +159,11 @@ export const ProductCard = ({
               onClick={() => { onClick(productId); }}
             >
               <Box className="custom-card-header" sx={{ alignItems: 'center', display: 'flex', gap: 1 }}>
-                <CardChip status={item.status} statusText={item.status} />
+                <CardChip status={item.status} statusText={item.status ? t(`status.${item.status.toLowerCase()}`) : ''} />
                 <Box className="custom-card-header-buttons">                  
                     {/* Register and Share icon buttons in header */}
                     {(item.status === StatusVariants.draft || item.status === StatusVariants.pending) && (
-                      <Tooltip title="Register part" arrow>
+                      <Tooltip title={t('productCard.registerPart')} arrow>
                         <span> 
                           <IconButton
                             onClick={(e) => {
@@ -178,7 +180,7 @@ export const ProductCard = ({
                       </Tooltip>
                     )}
                     {item.status !== StatusVariants.draft && item.status !== StatusVariants.pending && (
-                      <Tooltip title="Share part" arrow>
+                      <Tooltip title={t('productCard.sharePart')} arrow>
                         <IconButton
                           onClick={(e) => {
                             handleDecision(e, item.manufacturerId, item.manufacturerPartId, ButtonEvents.SHARE);
@@ -188,7 +190,7 @@ export const ProductCard = ({
                         </IconButton>
                       </Tooltip>
                     )}
-                  <Tooltip title="More options" arrow>
+                  <Tooltip title={t('productCard.moreOptions')} arrow>
                     <IconButton
                       onClick={(e) => {
                         e.stopPropagation();
@@ -228,7 +230,7 @@ export const ProductCard = ({
                       display: 'block'
                     }}
                   >
-                    Manufacturer Part ID
+                    {t('productCard.manufacturerPartId')}
                   </Typography>
                   <Tooltip title={item.manufacturerPartId} arrow placement="top">
                     <Typography 
@@ -275,7 +277,7 @@ export const ProductCard = ({
                       position: 'relative'
                     }}
                   >
-                    <Tooltip title={`Category: ${item.category}`} arrow placement="top">
+                    <Tooltip title={`${t('productCard.category')}: ${item.category}`} arrow placement="top">
                       <Typography
                         sx={{
                           fontSize: '0.65rem',
@@ -306,7 +308,7 @@ export const ProductCard = ({
                   </Box>
                 )}
                 <Button variant="contained" size="small" endIcon={<Launch />}>
-                  View
+                  {t('productCard.viewButton')}
                 </Button>
               </Box>
             </Box>
@@ -352,7 +354,7 @@ export const ProductCard = ({
                 }}
               >
                 <CloudUploadIcon fontSize="small" sx={{ marginRight: 1, color: '#000000 !important', fill: '#000000 !important' }} />
-                <Box component="span" sx={{ fontSize: '0.875rem', color: 'black' }}>Register part</Box>
+                <Box component="span" sx={{ fontSize: '0.875rem', color: 'black' }}>{t('productCard.registerPart')}</Box>
               </Box>
             )}
             {/* Share option (always) */}
@@ -379,7 +381,7 @@ export const ProductCard = ({
               }}
             >
               <IosShare fontSize="small" sx={{ marginRight: 1, color: '#000000 !important', fill: '#000000 !important' }} />
-              <Box component="span" sx={{ fontSize: '0.875rem', color: 'black' }}>Share part</Box>
+              <Box component="span" sx={{ fontSize: '0.875rem', color: 'black' }}>{t('productCard.sharePart')}</Box>
             </Box>
             {/* Copy AAS ID option (if available) */}
             {aasIds[selectedProductId] && (
@@ -414,7 +416,7 @@ export const ProductCard = ({
                   color: copySuccess[selectedProductId] ? 'white' : 'black',
                   transition: 'color 0.3s ease'
                 }}>
-                  {copySuccess[selectedProductId] ? 'Copied!' : `Copy AAS ID`}
+                  {copySuccess[selectedProductId] ? t('productCard.copied') : t('productCard.copyAasId')}
                 </Box>
               </Box>
             )}

@@ -20,7 +20,7 @@
  * SPDX-License-Identifier: Apache-2.0
  ********************************************************************************/
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@mui/material';
 import { Box, TextField, Alert, Dialog, DialogTitle, DialogContent, DialogActions, IconButton, Checkbox, FormControlLabel, Typography, Grid2, CircularProgress } from '@mui/material';
@@ -80,17 +80,6 @@ const DppShareDialog = ({ open, onClose, dppId, dppName }: DppShareDialogProps) 
       fetchData();
     }
   }, [open, dppId]);
-
-  const handlePartnerSelection = (_event: React.SyntheticEvent, value: PartnerInstance | null) => {
-    if (value && 'bpnl' in value) {
-      setBpnl(value.bpnl);
-    } else {
-      setBpnl('');
-    }
-    setError(false);
-    setApiErrorMessage('');
-    setSuccessMessage('');
-  };
 
   const handleShare = async () => {
     if (!bpnl.trim()) {

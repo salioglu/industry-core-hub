@@ -26,36 +26,44 @@ import { initReactI18next } from 'react-i18next';
 // English
 import enCommon from './locales/en/common.json';
 import enKits from './locales/en/kits.json';
+import enCatalogManagement from './locales/en/catalogManagement.json';
 
 // Spanish
 import esCommon from './locales/es/common.json';
 import esKits from './locales/es/kits.json';
+import esCatalogManagement from './locales/es/catalogManagement.json';
 
 // German
 import deCommon from './locales/de/common.json';
 import deKits from './locales/de/kits.json';
+import deCatalogManagement from './locales/de/catalogManagement.json';
 
 // French
 import frCommon from './locales/fr/common.json';
 import frKits from './locales/fr/kits.json';
+import frCatalogManagement from './locales/fr/catalogManagement.json';
 
 export const defaultNS = 'common';
 export const resources = {
   en: {
     common: enCommon,
-    kits: enKits
+    kits: enKits,
+    catalogManagement: enCatalogManagement
   },
   es: {
     common: esCommon,
-    kits: esKits
+    kits: esKits,
+    catalogManagement: esCatalogManagement
   },
   de: {
     common: deCommon,
-    kits: deKits
+    kits: deKits,
+    catalogManagement: deCatalogManagement
   },
   fr: {
     common: frCommon,
-    kits: frKits
+    kits: frKits,
+    catalogManagement: frCatalogManagement
   }
 } as const;
 
@@ -66,7 +74,7 @@ i18n
     lng: 'en', // Default language
     fallbackLng: 'en',
     defaultNS,
-    ns: ['common', 'kits'],
+    ns: ['common', 'kits', 'catalogManagement'],
     interpolation: {
       escapeValue: false // React already escapes values
     }

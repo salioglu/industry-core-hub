@@ -8,18 +8,39 @@
     "delete": "Supprimer",
     "edit": "Modifier",
     "create": "Créer",
+    "creating": "Création...",
     "search": "Rechercher",
     "filter": "Filtrer",
     "close": "Fermer",
     "confirm": "Confirmer",
     "back": "Retour",
     "next": "Suivant",
-    "loading": "Chargement..."
+    "loading": "Chargement...",
+    "share": "Partager",
+    "sharing": "Partage...",
+    "copy": "Copier",
+    "copied": "Copié !",
+    "view": "Voir",
+    "add": "Ajouter",
+    "update": "Mettre à jour",
+    "register": "Enregistrer"
+  },
+  "pagination": {
+    "of": "de",
+    "rowsPerPage": "Lignes par page"
   },
   "status": {
     "available": "Disponible",
     "comingSoon": "Bientôt disponible",
     "enabled": "Activé",
     "disabled": "Désactivé"
+  },
+  "table": {
+    "noData": "Aucune donnée disponible",
+    "loading": "Chargement des données..."
+  },
+  "notifications": {
+    "copiedToClipboard": "{{field}} copié dans le presse-papiers !",
+    "failedToCopy": "Échec de la copie de {{field}}"
   }
 }

@@ -8,18 +8,39 @@
     "delete": "Delete",
     "edit": "Edit",
     "create": "Create",
+    "creating": "Creating...",
     "search": "Search",
     "filter": "Filter",
     "close": "Close",
     "confirm": "Confirm",
     "back": "Back",
     "next": "Next",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "share": "Share",
+    "sharing": "Sharing...",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "view": "View",
+    "add": "Add",
+    "update": "Update",
+    "register": "Register"
+  },
+  "pagination": {
+    "of": "of",
+    "rowsPerPage": "Rows per page"
   },
   "status": {
     "available": "Available",
     "comingSoon": "Coming Soon",
     "enabled": "Enabled",
     "disabled": "Disabled"
+  },
+  "table": {
+    "noData": "No data available",
+    "loading": "Loading data..."
+  },
+  "notifications": {
+    "copiedToClipboard": "{{field}} copied to clipboard!",
+    "failedToCopy": "Failed to copy {{field}}"
   }
 }

@@ -54,6 +54,7 @@ import {
 } from '@mui/icons-material';
 import { fetchSubmodelContent } from '@/features/industry-core-kit/catalog-management/api';
 import JsonViewer from '@/components/general/JsonViewer';
+import { useTranslation } from 'react-i18next';
 
 interface SubmodelContent {
     [key: string]: unknown;
@@ -131,6 +132,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
     const [error, setError] = useState<string | null>(null);
     const [viewMode, setViewMode] = useState<'structured' | 'json'>('structured');
     const [copiedItems, setCopiedItems] = useState<Set<string>>(new Set());
+    const { t } = useTranslation('catalogManagement');
 
     const handleCopyValue = async (value: string) => {
         try {
@@ -180,7 +182,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                 setSubmodelContent(content);
             } catch (err) {
                 console.error('Failed to load submodel content:', err);
-                setError('Failed to load submodel content');
+                setError(t('productDetail.darkSubmodelViewer.failedToLoad'));
             } finally {
                 setIsLoading(false);
             }
@@ -277,7 +279,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
             );
         }
 
-        return <Typography variant="body2">Unknown data type</Typography>;
+        return <Typography variant="body2">{t('productDetail.darkSubmodelViewer.unknownDataType')}</Typography>;
     };
 
     return (
@@ -301,7 +303,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                         <SchemaIcon />
-                        <Typography variant="h6">Submodel Viewer</Typography>
+                        <Typography variant="h6">{t('productDetail.darkSubmodelViewer.title')}</Typography>
                     </Box>
                     <IconButton onClick={onClose} color="inherit">
                         <CloseIcon />
@@ -323,10 +325,10 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                         </Typography>
                         
                         <Box sx={{ display: 'grid', gap: 2, gridTemplateColumns: 'auto 1fr' }}>
-                            <Typography variant="body2" color="text.secondary">Submodel ID:</Typography>
+                            <Typography variant="body2" color="text.secondary">{t('productDetail.darkSubmodelViewer.submodelId')}:</Typography>
                             <Typography variant="body2" fontFamily="monospace">{submodel.id}</Typography>
                             
-                            <Typography variant="body2" color="text.secondary">Semantic ID:</Typography>
+                            <Typography variant="body2" color="text.secondary">{t('productDetail.darkSubmodelViewer.semanticId')}:</Typography>
                             <Typography variant="body2" fontFamily="monospace">
                                 {submodel.semanticId.keys.map(key => key.value).join(' / ')}
                             </Typography>
@@ -343,7 +345,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
                             <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                                 <DataObjectIcon />
-                                JSON Data
+                                {t('productDetail.darkSubmodelViewer.jsonData')}
                             </Typography>
                             
                             {/* View Toggle Button */}
@@ -355,7 +357,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                                     onClick={() => setViewMode('structured')}
                                     sx={{ textTransform: 'none' }}
                                 >
-                                    Structured
+                                    {t('productDetail.darkSubmodelViewer.structured')}
                                 </Button>
                                 <Button
                                     variant={viewMode === 'json' ? 'contained' : 'outlined'}
@@ -364,7 +366,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                                     onClick={() => setViewMode('json')}
                                     sx={{ textTransform: 'none' }}
                                 >
-                                    JSON
+                                    {t('productDetail.darkSubmodelViewer.json')}
                                 </Button>
                             </Box>
                         </Box>
@@ -411,7 +413,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                         {!isLoading && !error && !submodelContent && (
                             <Paper sx={{ p: 3, textAlign: 'center', backgroundColor: alpha('#000000', 0.2) }}>
                                 <Typography color="text.secondary">
-                                    No submodel data available or data could not be retrieved.
+                                    {t('productDetail.darkSubmodelViewer.noDataAvailable')}
                                 </Typography>
                             </Paper>
                         )}
@@ -420,7 +422,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
 
                 <DialogActions sx={{ p: 3, borderTop: 1, borderColor: 'divider' }}>
                     <Button onClick={onClose} variant="outlined">
-                        Close
+                        {t('productDetail.darkSubmodelViewer.close')}
                     </Button>
                     <Button 
                         onClick={loadSubmodelContent} 
@@ -441,7 +443,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                             fontWeight: 500,
                         }}
                     >
-                        {isLoading ? 'Loading...' : 'Refresh'}
+                        {isLoading ? t('productDetail.darkSubmodelViewer.loading') : t('productDetail.darkSubmodelViewer.refresh')}
                     </Button>
                 </DialogActions>
             </Dialog>
