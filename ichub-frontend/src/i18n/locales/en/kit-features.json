@@ -1,0 +1,13 @@
+{
+  "page": {
+    "title": "Welcome to Industry Core Hub",
+    "subtitle": "The Eclipse Tractus-X KITs & Use Cases Speed Way",
+    "description": "Enable or disable specific features within a KIT to unlock the complete potential of dataspaces.",
+    "exploreCarousel": "Explore the carousel below to discover available features.",
+    "featureToggled": "{{featureName}} in {{kitName}} has been {{status}}"
+  },
+  "kitCard": {
+    "viewFeatures": "View Features",
+    "comingSoon": "Coming Soon"
+  }
+}

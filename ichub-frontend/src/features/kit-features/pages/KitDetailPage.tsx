@@ -32,7 +32,7 @@ import {
   Grid2
 } from '@mui/material';
 import { ArrowBack, Schedule, CheckCircle, Settings, OpenInNew } from '@mui/icons-material';
-import { kits as kitsData } from '../../main';
+import { useTranslatedKits } from '@/hooks/useTranslatedKits';
 import { KitFeature } from '../types';
 import FeatureCard from '../components/FeatureCard';
 import { useFeatures } from '@/contexts/FeatureContext';
@@ -40,11 +40,12 @@ import { useFeatures } from '@/contexts/FeatureContext';
 const KitDetailPage: React.FC = () => {
   const { kitId } = useParams<{ kitId: string }>();
   const navigate = useNavigate();
+  const translatedKits = useTranslatedKits();
   const [kit, setKit] = useState<KitFeature | null>(null);
   const { toggleFeature, featureStates } = useFeatures();
 
   useEffect(() => {
-    const foundKit = kitsData.find(k => k.id === kitId);
+    const foundKit = translatedKits.find(k => k.id === kitId);
     if (foundKit) {
       // Update feature enabled states from context
       const updatedKit = {
@@ -56,7 +57,7 @@ const KitDetailPage: React.FC = () => {
       };
       setKit(updatedKit);
     }
-  }, [kitId, featureStates]);
+  }, [kitId, featureStates, translatedKits]);
 
   const handleFeatureToggle = (featureId: string, enabled: boolean) => {
     if (!kit) return;

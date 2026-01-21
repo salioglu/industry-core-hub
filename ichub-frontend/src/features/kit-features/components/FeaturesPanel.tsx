@@ -39,7 +39,7 @@ import {
   ExpandMore,
   ExpandLess
 } from '@mui/icons-material';
-import { kits } from '@/features/main';
+import { useTranslatedKits } from '@/hooks/useTranslatedKits';
 import { useFeatures } from '@/contexts/FeatureContext';
 
 interface FeaturesPanelProps {
@@ -51,6 +51,7 @@ interface FeaturesPanelProps {
 const FeaturesPanel: React.FC<FeaturesPanelProps> = ({ isOpen, onClose, onFeatureToggle }) => {
   const [expandedKits, setExpandedKits] = useState<string[]>([]);
   const { featureStates } = useFeatures();
+  const kits = useTranslatedKits();
 
   // Filter kits to show only those that have non-default features or are coming-soon
   const availableKits = useMemo(() => 
@@ -61,7 +62,7 @@ const FeaturesPanel: React.FC<FeaturesPanelProps> = ({ isOpen, onClose, onFeatur
       // Show kits that have at least one non-default feature
       return kit.features.some(feature => !feature.default);
     }),
-    []
+    [kits]
   );
 
   const handleKitToggle = (kitId: string) => {

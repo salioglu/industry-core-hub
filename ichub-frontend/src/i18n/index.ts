@@ -26,36 +26,44 @@ import { initReactI18next } from 'react-i18next';
 // English
 import enCommon from './locales/en/common.json';
 import enKits from './locales/en/kits.json';
+import enKitFeatures from './locales/en/kit-features.json';
 
 // Spanish
 import esCommon from './locales/es/common.json';
 import esKits from './locales/es/kits.json';
+import esKitFeatures from './locales/es/kit-features.json';
 
 // German
 import deCommon from './locales/de/common.json';
 import deKits from './locales/de/kits.json';
+import deKitFeatures from './locales/de/kit-features.json';
 
 // French
 import frCommon from './locales/fr/common.json';
 import frKits from './locales/fr/kits.json';
+import frKitFeatures from './locales/fr/kit-features.json';
 
 export const defaultNS = 'common';
 export const resources = {
   en: {
     common: enCommon,
-    kits: enKits
+    kits: enKits,
+    'kit-features': enKitFeatures
   },
   es: {
     common: esCommon,
-    kits: esKits
+    kits: esKits,
+    'kit-features': esKitFeatures
   },
   de: {
     common: deCommon,
-    kits: deKits
+    kits: deKits,
+    'kit-features': deKitFeatures
   },
   fr: {
     common: frCommon,
-    kits: frKits
+    kits: frKits,
+    'kit-features': frKitFeatures
   }
 } as const;
 
@@ -66,7 +74,7 @@ i18n
     lng: 'en', // Default language
     fallbackLng: 'en',
     defaultNS,
-    ns: ['common', 'kits'],
+    ns: ['common', 'kits', 'kit-features'],
     interpolation: {
       escapeValue: false // React already escapes values
     }

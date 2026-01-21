@@ -22,6 +22,7 @@
 ********************************************************************************/
 
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -33,14 +34,24 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import Policy from '@mui/icons-material/Policy';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
+import LanguageIcon from '@mui/icons-material/Language';
 import { Divider, ListItemIcon, Typography, Tooltip } from '@mui/material';
 import { Logout, Settings, ContentCopy } from '@mui/icons-material';
 import { getParticipantId } from '../../services/EnvironmentService';
 import useAuth from '../../hooks/useAuth';
 
+const languages = [
+  { code: 'en', name: 'English', flag: '🇬🇧' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' },
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷' }
+];
+
 export default function PrimarySearchAppBar() {
+  const { i18n } = useTranslation();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState<null | HTMLElement>(null);
+  const [languageAnchorEl, setLanguageAnchorEl] = useState<null | HTMLElement>(null);
   const [scrolled, setScrolled] = useState(false);
   const [participantId, setParticipantId] = useState<string>('CX-Operator');
   const [copied, setCopied] = useState(false);
@@ -50,6 +61,7 @@ export default function PrimarySearchAppBar() {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  const isLanguageMenuOpen = Boolean(languageAnchorEl);
 
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -85,6 +97,23 @@ export default function PrimarySearchAppBar() {
     } catch (error) {
       console.error('Failed to copy:', error);
     }
+  };
+
+  const handleLanguageMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setLanguageAnchorEl(event.currentTarget);
+  };
+
+  const handleLanguageMenuClose = () => {
+    setLanguageAnchorEl(null);
+  };
+
+  const handleLanguageChange = (langCode: string) => {
+    i18n.changeLanguage(langCode);
+    handleLanguageMenuClose();
+  };
+
+  const getCurrentLanguage = () => {
+    return languages.find(lang => lang.code === i18n.language) || languages[0];
   };
 
   useEffect(() => {
@@ -276,6 +305,64 @@ export default function PrimarySearchAppBar() {
     </Menu>
   );
 
+  const languageMenuId = 'language-menu';
+  const renderLanguageMenu = (
+    <Menu
+      anchorEl={languageAnchorEl}
+      id={languageMenuId}
+      open={isLanguageMenuOpen}
+      onClose={handleLanguageMenuClose}
+      PaperProps={{
+        elevation: 8,
+        sx: {
+          overflow: 'visible',
+          filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.15))',
+          mt: 1.5,
+          minWidth: 160,
+          borderRadius: 2,
+          '&:before': {
+            content: '""',
+            display: 'block',
+            position: 'absolute',
+            top: 0,
+            right: 14,
+            width: 10,
+            height: 10,
+            bgcolor: 'background.paper',
+            transform: 'translateY(-50%) rotate(45deg)',
+            zIndex: 0,
+          },
+        },
+      }}
+      transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+      anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+    >
+      {languages.map((lang) => (
+        <MenuItem
+          key={lang.code}
+          onClick={() => handleLanguageChange(lang.code)}
+          selected={i18n.language === lang.code}
+          sx={{
+            py: 1.25,
+            px: 2,
+            '&:hover': {
+              backgroundColor: 'rgba(66, 165, 245, 0.08)'
+            },
+            '&.Mui-selected': {
+              backgroundColor: 'rgba(25, 118, 210, 0.12)',
+              '&:hover': {
+                backgroundColor: 'rgba(25, 118, 210, 0.18)'
+              }
+            }
+          }}
+        >
+          <Typography variant="body2" sx={{ mr: 1.5 }}>{lang.flag}</Typography>
+          <Typography variant="body2">{lang.name}</Typography>
+        </MenuItem>
+      ))}
+    </Menu>
+  );
+
   const mobileMenuId = 'primary-search-account-menu-mobile';
   const renderMobileMenu = (
     <Menu
@@ -312,6 +399,15 @@ export default function PrimarySearchAppBar() {
           <Policy />
         </IconButton>
         <p>Policy Config</p>
+      </MenuItem>
+      <MenuItem onClick={handleLanguageMenuOpen}>
+        <IconButton
+          size="large"
+          aria-label="select language"
+        >
+          <LanguageIcon />
+        </IconButton>
+        <p>{getCurrentLanguage().flag} {getCurrentLanguage().name}</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -400,6 +496,26 @@ export default function PrimarySearchAppBar() {
                 <Policy/>
               </IconButton>
             </Tooltip>
+            <Tooltip title={`Language: ${getCurrentLanguage().name}`} arrow>
+              <IconButton
+                size="large"
+                aria-label="select language"
+                aria-controls={languageMenuId}
+                aria-haspopup="true"
+                onClick={handleLanguageMenuOpen}
+                sx={{
+                  color: 'white',
+                  '&:hover': {
+                    backgroundColor: 'rgba(25, 118, 210, 0.2)',
+                    transform: 'translateY(-1px)',
+                    boxShadow: '0 4px 12px rgba(25, 118, 210, 0.3)'
+                  },
+                  transition: 'all 0.2s ease-in-out'
+                }}
+              >
+                <LanguageIcon />
+              </IconButton>
+            </Tooltip>
             <IconButton
               size="large"
               edge="end"
@@ -428,6 +544,7 @@ export default function PrimarySearchAppBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      {renderLanguageMenu}
     </Box>
   );
 }
