@@ -70,8 +70,8 @@ export const useTranslatedKits = (): KitFeature[] => {
   return useMemo(() => [
     {
       id: 'industry-core',
-      name: t('industryCore.name'),
-      description: t('industryCore.description'),
+      name: t('items.industryCore.name'),
+      description: t('items.industryCore.description'),
       status: 'available',
       icon: <Hub />,
       image: IndustryCoreKitImage,
@@ -79,8 +79,8 @@ export const useTranslatedKits = (): KitFeature[] => {
         {
           module: catalogManagementFeature,
           id: 'catalog-management',
-          name: t('industryCore.features.catalogManagement.name'),
-          description: t('industryCore.features.catalogManagement.description'),
+          name: t('items.industryCore.features.catalogManagement.name'),
+          description: t('items.industryCore.features.catalogManagement.description'),
           icon: <Storefront />,
           enabled: true,
           default: true
@@ -88,8 +88,8 @@ export const useTranslatedKits = (): KitFeature[] => {
         {
           module: serializedPartsFeature,
           id: 'serialized-parts',
-          name: t('industryCore.features.serializedParts.name'),
-          description: t('industryCore.features.serializedParts.description'),
+          name: t('items.industryCore.features.serializedParts.name'),
+          description: t('items.industryCore.features.serializedParts.description'),
           icon: <Dashboard />,
           enabled: true,
           default: true
@@ -97,8 +97,8 @@ export const useTranslatedKits = (): KitFeature[] => {
         {
           module: partDiscoveryFeature,
           id: 'dataspace-discovery',
-          name: t('industryCore.features.dataspaceDiscovery.name'),
-          description: t('industryCore.features.dataspaceDiscovery.description'),
+          name: t('items.industryCore.features.dataspaceDiscovery.name'),
+          description: t('items.industryCore.features.dataspaceDiscovery.description'),
           icon: <FindInPage />,
           enabled: true,
           default: true
@@ -112,8 +112,8 @@ export const useTranslatedKits = (): KitFeature[] => {
     },
     {
       id: 'business-partner',
-      name: t('businessPartner.name'),
-      description: t('businessPartner.description'),
+      name: t('items.businessPartner.name'),
+      description: t('items.businessPartner.description'),
       status: 'available',
       icon: <Group />,
       image: BusinessPartnerKitImage,
@@ -121,8 +121,8 @@ export const useTranslatedKits = (): KitFeature[] => {
         {
           module: partnerManagementFeature,
           id: 'participants',
-          name: t('businessPartner.features.participants.name'),
-          description: t('businessPartner.features.participants.description'),
+          name: t('items.businessPartner.features.participants.name'),
+          description: t('items.businessPartner.features.participants.description'),
           icon: <GroupAdd />,
           enabled: true,
           default: true
@@ -136,8 +136,8 @@ export const useTranslatedKits = (): KitFeature[] => {
     },
     {
       id: 'eco-pass',
-      name: t('ecoPass.name'),
-      description: t('ecoPass.description'),
+      name: t('items.ecoPass.name'),
+      description: t('items.ecoPass.description'),
       status: 'available',
       icon: <Recycling />,
       image: EcoPassKitImage,
@@ -145,8 +145,8 @@ export const useTranslatedKits = (): KitFeature[] => {
         {
           module: passportConsumptionFeature,
           id: 'pass-consumption',
-          name: t('ecoPass.features.passConsumption.name'),
-          description: t('ecoPass.features.passConsumption.description'),
+          name: t('items.ecoPass.features.passConsumption.name'),
+          description: t('items.ecoPass.features.passConsumption.description'),
           icon: <Badge />,
           enabled: false,
           default: false
@@ -154,8 +154,8 @@ export const useTranslatedKits = (): KitFeature[] => {
         {
           module: passportProvisionFeature,
           id: 'pass-provision',
-          name: t('ecoPass.features.passProvision.name'),
-          description: t('ecoPass.features.passProvision.description'),
+          name: t('items.ecoPass.features.passProvision.name'),
+          description: t('items.ecoPass.features.passProvision.description'),
           icon: <PostAdd />,
           enabled: false,
           default: false
@@ -168,8 +168,8 @@ export const useTranslatedKits = (): KitFeature[] => {
     },
     {
       id: 'data-governance',
-      name: t('dataGovernance.name'),
-      description: t('dataGovernance.description'),
+      name: t('items.dataGovernance.name'),
+      description: t('items.dataGovernance.description'),
       status: 'coming-soon',
       icon: <Policy />,
       image: DataGovernanceKitImage,
@@ -180,8 +180,8 @@ export const useTranslatedKits = (): KitFeature[] => {
     },
     {
       id: 'pcf',
-      name: t('pcf.name'),
-      description: t('pcf.description'),
+      name: t('items.pcf.name'),
+      description: t('items.pcf.description'),
       status: 'coming-soon',
       icon: <EnergySavingsLeaf />,
       image: PcfKitImage,
@@ -192,8 +192,8 @@ export const useTranslatedKits = (): KitFeature[] => {
     },
     {
       id: 'data-chain',
-      name: t('dataChain.name'),
-      description: t('dataChain.description'),
+      name: t('items.dataChain.name'),
+      description: t('items.dataChain.description'),
       status: 'coming-soon',
       icon: <Link />,
       image: DataChainKitImage,
@@ -204,8 +204,8 @@ export const useTranslatedKits = (): KitFeature[] => {
     },
     {
       id: 'dcm',
-      name: t('dcm.name'),
-      description: t('dcm.description'),
+      name: t('items.dcm.name'),
+      description: t('items.dcm.description'),
       status: 'coming-soon',
       icon: <DeviceHub />,
       image: DcmKitImage,
@@ -216,8 +216,8 @@ export const useTranslatedKits = (): KitFeature[] => {
     },
     {
       id: 'traceability',
-      name: t('traceability.name'),
-      description: t('traceability.description'),
+      name: t('items.traceability.name'),
+      description: t('items.traceability.description'),
       status: 'coming-soon',
       icon: <Timeline />,
       image: TraceabilityKitImage,

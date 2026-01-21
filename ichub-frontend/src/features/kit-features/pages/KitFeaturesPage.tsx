@@ -40,7 +40,7 @@ import { KitFeature } from '../types';
 import { useTranslatedKits } from '@/hooks/useTranslatedKits';
 
 const KitFeaturesPage: React.FC = () => {
-  const { t } = useTranslation('kit-features');
+  const { t } = useTranslation('kits');
   const { t: tCommon } = useTranslation('common');
   const location = useLocation();
   const translatedKits = useTranslatedKits();

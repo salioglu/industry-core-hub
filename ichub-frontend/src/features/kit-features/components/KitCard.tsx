@@ -43,7 +43,7 @@ interface KitCardProps {
 }
 
 const KitCard: React.FC<KitCardProps> = ({ kit, isCenter = false }) => {
-  const { t } = useTranslation('kit-features');
+  const { t } = useTranslation('kits');
   const navigate = useNavigate();
 
   const handleViewFeatures = () => {
