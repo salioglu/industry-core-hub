@@ -1,0 +1,25 @@
+{
+  "features": {
+    "addFeatures": "Añadir Funcionalidades"
+  },
+  "actions": {
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "create": "Crear",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "loading": "Cargando..."
+  },
+  "status": {
+    "available": "Disponible",
+    "comingSoon": "Próximamente",
+    "enabled": "Habilitado",
+    "disabled": "Deshabilitado"
+  }
+}
