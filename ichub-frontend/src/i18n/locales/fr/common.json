@@ -74,6 +74,24 @@
   "errors": {
     "defaultTitle": "Une Erreur s'est Produite",
     "possibleCauses": "Causes possibles :",
-    "retry": "Réessayer"
+    "retry": "Réessayer",
+    "notFound": "Aucune pièce de catalogue disponible, veuillez vérifier la connexion/configuration d'ichub-backend."
+  },
+  "header": {
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "logout": "Déconnexion",
+    "notifications": "Notifications",
+    "policyConfig": "Config. Politiques",
+    "companyId": "ID Entreprise : {{id}}",
+    "copyId": "Copier l'ID",
+    "guest": "Invité",
+    "language": "Langue : {{language}}",
+    "notificationsComingSoon": "Les notifications seront bientôt disponibles",
+    "policyComingSoon": "La configuration des Politiques/Gouvernance sera bientôt disponible"
+  },
+  "jsonViewer": {
+    "copyJson": "Copier JSON",
+    "downloadJson": "Télécharger JSON"
   }
 }

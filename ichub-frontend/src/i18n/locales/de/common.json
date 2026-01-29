@@ -74,6 +74,24 @@
   "errors": {
     "defaultTitle": "Ein Fehler ist aufgetreten",
     "possibleCauses": "Mögliche Ursachen:",
-    "retry": "Erneut versuchen"
+    "retry": "Erneut versuchen",
+    "notFound": "Keine Katalogteile verfügbar, bitte überprüfen Sie die ichub-backend Verbindung/Konfiguration."
+  },
+  "header": {
+    "profile": "Profil",
+    "settings": "Einstellungen",
+    "logout": "Abmelden",
+    "notifications": "Benachrichtigungen",
+    "policyConfig": "Richtlinien-Konfig.",
+    "companyId": "Firmen-ID: {{id}}",
+    "copyId": "ID kopieren",
+    "guest": "Gast",
+    "language": "Sprache: {{language}}",
+    "notificationsComingSoon": "Benachrichtigungen kommen bald",
+    "policyComingSoon": "Richtlinien-/Governance-Konfiguration kommt bald"
+  },
+  "jsonViewer": {
+    "copyJson": "JSON kopieren",
+    "downloadJson": "JSON herunterladen"
   }
 }

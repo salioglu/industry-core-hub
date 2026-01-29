@@ -48,7 +48,7 @@ const languages = [
 ];
 
 export default function PrimarySearchAppBar() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('common');
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState<null | HTMLElement>(null);
   const [languageAnchorEl, setLanguageAnchorEl] = useState<null | HTMLElement>(null);
@@ -193,7 +193,7 @@ export default function PrimarySearchAppBar() {
             fontSize: '0.875rem'
           }}
         >
-          {isAuthenticated && user ? user.username : 'Guest'}
+          {isAuthenticated && user ? user.username : t('header.guest')}
         </Typography>
         {isAuthenticated && user?.email && (
           <Typography 
@@ -231,9 +231,9 @@ export default function PrimarySearchAppBar() {
               flex: 1
             }}
           >
-            Company ID: {participantId}
+            {t('header.companyId', { id: participantId })}
           </Typography>
-          <Tooltip title={copied ? "Copied!" : "Copy ID"} arrow>
+          <Tooltip title={copied ? t('actions.copied') : t('header.copyId')} arrow>
             <IconButton
               size="small"
               onClick={handleCopyParticipantId}
@@ -267,7 +267,7 @@ export default function PrimarySearchAppBar() {
         <ListItemIcon>
           <AccountCircle fontSize="small" sx={{ color: 'primary.main' }} />
         </ListItemIcon>
-        <Typography variant="body2">Profile</Typography>
+        <Typography variant="body2">{t('header.profile')}</Typography>
       </MenuItem>
       <MenuItem 
         onClick={handleMenuClose}
@@ -282,7 +282,7 @@ export default function PrimarySearchAppBar() {
         <ListItemIcon>
           <Settings fontSize="small" sx={{ color: 'primary.main' }} />
         </ListItemIcon>
-        <Typography variant="body2">Settings</Typography>
+        <Typography variant="body2">{t('header.settings')}</Typography>
       </MenuItem>
       
       <Divider sx={{ my: 1 }} />
@@ -300,7 +300,7 @@ export default function PrimarySearchAppBar() {
         <ListItemIcon>
           <Logout fontSize="small" sx={{ color: 'error.main' }} />
         </ListItemIcon>
-        <Typography variant="body2" color="error">Logout</Typography>
+        <Typography variant="body2" color="error">{t('header.logout')}</Typography>
       </MenuItem>
     </Menu>
   );
@@ -389,7 +389,7 @@ export default function PrimarySearchAppBar() {
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>{t('header.notifications')}</p>
       </MenuItem>
       <MenuItem>
         <IconButton
@@ -398,7 +398,7 @@ export default function PrimarySearchAppBar() {
         >
           <Policy />
         </IconButton>
-        <p>Policy Config</p>
+        <p>{t('header.policyConfig')}</p>
       </MenuItem>
       <MenuItem onClick={handleLanguageMenuOpen}>
         <IconButton
@@ -416,7 +416,7 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>{t('header.profile')}</p>
       </MenuItem>
     </Menu>
   );
@@ -456,11 +456,11 @@ export default function PrimarySearchAppBar() {
                 letterSpacing: '0.5px'
               }}
             >
-              Industry Core Hub
+              {t('app.name')}
             </Typography>
           </Box>
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
-            <Tooltip title="Notifications are coming soon" arrow>
+            <Tooltip title={t('header.notificationsComingSoon')} arrow>
               <IconButton
                 size="large"
                 aria-label="show 17 new notifications"
@@ -479,7 +479,7 @@ export default function PrimarySearchAppBar() {
                 </Badge>
               </IconButton>
             </Tooltip>
-            <Tooltip title="Policy/Governance Configuration is coming soon" arrow>
+            <Tooltip title={t('header.policyComingSoon')} arrow>
               <IconButton 
                 size="large" 
                 aria-label="configure policies"
@@ -496,7 +496,7 @@ export default function PrimarySearchAppBar() {
                 <Policy/>
               </IconButton>
             </Tooltip>
-            <Tooltip title={`Language: ${getCurrentLanguage().name}`} arrow>
+            <Tooltip title={t('header.language', { language: getCurrentLanguage().name })} arrow>
               <IconButton
                 size="large"
                 aria-label="select language"

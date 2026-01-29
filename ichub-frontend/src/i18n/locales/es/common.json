@@ -74,6 +74,24 @@
   "errors": {
     "defaultTitle": "Ha Ocurrido un Error",
     "possibleCauses": "Posibles causas:",
-    "retry": "Reintentar"
+    "retry": "Reintentar",
+    "notFound": "No hay piezas de catálogo disponibles, por favor verifica la conexión/configuración de ichub-backend."
+  },
+  "header": {
+    "profile": "Perfil",
+    "settings": "Configuración",
+    "logout": "Cerrar sesión",
+    "notifications": "Notificaciones",
+    "policyConfig": "Config. de Políticas",
+    "companyId": "ID de Empresa: {{id}}",
+    "copyId": "Copiar ID",
+    "guest": "Invitado",
+    "language": "Idioma: {{language}}",
+    "notificationsComingSoon": "Las notificaciones estarán disponibles próximamente",
+    "policyComingSoon": "La configuración de Políticas/Gobernanza estará disponible próximamente"
+  },
+  "jsonViewer": {
+    "copyJson": "Copiar JSON",
+    "downloadJson": "Descargar JSON"
   }
 }
