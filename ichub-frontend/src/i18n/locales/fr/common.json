@@ -1,4 +1,7 @@
 {
+  "app": {
+    "name": "Industry Core Hub"
+  },
   "features": {
     "addFeatures": "Ajouter des fonctionnalités"
   },
@@ -42,5 +45,20 @@
   "notifications": {
     "copiedToClipboard": "{{field}} copié dans le presse-papiers !",
     "failedToCopy": "Échec de la copie de {{field}}"
+  },
+  "auth": {
+    "initializingAuth": "Initialisation de l'authentification...",
+    "authFailed": "Échec de l'Authentification",
+    "causes": {
+      "invalidCredentials": "Identifiants invalides ou utilisateur non autorisé",
+      "keycloakNotRunning": "Le service Keycloak n'est pas en cours d'exécution ou est mal configuré",
+      "networkIssues": "Problèmes de connectivité réseau"
+    },
+    "contactAdmin": "Si le problème persiste, veuillez contacter votre administrateur système"
+  },
+  "errors": {
+    "defaultTitle": "Une Erreur s'est Produite",
+    "possibleCauses": "Causes possibles :",
+    "retry": "Réessayer"
   }
 }

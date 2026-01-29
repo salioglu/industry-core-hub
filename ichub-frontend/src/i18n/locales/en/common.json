@@ -42,5 +42,21 @@
   "notifications": {
     "copiedToClipboard": "{{field}} copied to clipboard!",
     "failedToCopy": "Failed to copy {{field}}"
+  },
+  "auth": {
+    "appName": "Industry Core Hub",
+    "initializingAuth": "Initializing authentication...",
+    "authFailed": "Authentication Failed",
+    "causes": {
+      "invalidCredentials": "Invalid credentials or user not authorized",
+      "keycloakNotRunning": "Keycloak service is not running or misconfigured",
+      "networkIssues": "Network connectivity issues"
+    },
+    "contactAdmin": "If the problem persists, please contact your system administrator"
+  },
+  "errors": {
+    "defaultTitle": "An Error Occurred",
+    "possibleCauses": "Possible causes:",
+    "retry": "Retry"
   }
 }
