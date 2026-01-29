@@ -12,6 +12,8 @@
     "edit": "Modifier",
     "create": "Créer",
     "creating": "Création...",
+    "new": "Nouveau",
+    "retrying": "Nouvelle tentative...",
     "search": "Rechercher",
     "filter": "Filtrer",
     "close": "Fermer",
@@ -93,5 +95,29 @@
   "jsonViewer": {
     "copyJson": "Copier JSON",
     "downloadJson": "Télécharger JSON"
+  },
+  "validation": {
+    "required": "{{field}} est requis",
+    "invalidFormat": "Format de {{field}} invalide"
+  },
+  "fields": {
+    "name": "Nom",
+    "bpnl": "BPNL"
+  },
+  "httpErrors": {
+    "badRequest": "Requête invalide. Veuillez vérifier votre saisie.",
+    "unauthorized": "Non autorisé. Veuillez vous reconnecter.",
+    "forbidden": "Accès refusé. Vous n'avez pas la permission d'effectuer cette action.",
+    "notFound": "Service introuvable. Veuillez réessayer plus tard.",
+    "methodNotAllowed": "Opération non autorisée. Veuillez contacter le support.",
+    "conflict": "La ressource existe déjà.",
+    "validationFailed": "Données invalides. Veuillez vérifier votre saisie.",
+    "internalServer": "Erreur interne du serveur. Veuillez réessayer plus tard.",
+    "serviceUnavailable": "Service temporairement indisponible. Veuillez réessayer plus tard.",
+    "serverError": "Erreur serveur ({{status}}). Veuillez réessayer.",
+    "networkError": "Erreur réseau. Veuillez vérifier votre connexion et réessayer.",
+    "timeout": "La requête a expiré. Veuillez réessayer.",
+    "connectionFailed": "Connexion échouée. Veuillez réessayer plus tard.",
+    "genericError": "Une erreur s'est produite. Veuillez réessayer."
   }
 }

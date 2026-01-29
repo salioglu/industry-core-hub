@@ -12,6 +12,8 @@
     "edit": "Edit",
     "create": "Create",
     "creating": "Creating...",
+    "new": "New",
+    "retrying": "Retrying...",
     "search": "Search",
     "filter": "Filter",
     "close": "Close",
@@ -93,5 +95,29 @@
   "jsonViewer": {
     "copyJson": "Copy JSON",
     "downloadJson": "Download JSON"
+  },
+  "validation": {
+    "required": "{{field}} is required",
+    "invalidFormat": "Invalid {{field}} format"
+  },
+  "fields": {
+    "name": "Name",
+    "bpnl": "BPNL"
+  },
+  "httpErrors": {
+    "badRequest": "Invalid request. Please check your input.",
+    "unauthorized": "Unauthorized. Please log in again.",
+    "forbidden": "Access denied. You do not have permission to perform this action.",
+    "notFound": "Service not found. Please try again later.",
+    "methodNotAllowed": "Operation not allowed. Please contact support.",
+    "conflict": "Resource already exists.",
+    "validationFailed": "Invalid data provided. Please check your input.",
+    "internalServer": "Internal server error. Please try again later.",
+    "serviceUnavailable": "Service temporarily unavailable. Please try again later.",
+    "serverError": "Server error ({{status}}). Please try again.",
+    "networkError": "Network error. Please check your connection and try again.",
+    "timeout": "Request timed out. Please try again.",
+    "connectionFailed": "Connection failed. Please try again later.",
+    "genericError": "An error occurred. Please try again."
   }
 }

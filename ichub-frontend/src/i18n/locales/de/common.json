@@ -12,6 +12,8 @@
     "edit": "Bearbeiten",
     "create": "Erstellen",
     "creating": "Erstellen...",
+    "new": "Neu",
+    "retrying": "Erneuter Versuch...",
     "search": "Suchen",
     "filter": "Filtern",
     "close": "Schließen",
@@ -93,5 +95,29 @@
   "jsonViewer": {
     "copyJson": "JSON kopieren",
     "downloadJson": "JSON herunterladen"
+  },
+  "validation": {
+    "required": "{{field}} ist erforderlich",
+    "invalidFormat": "Ungültiges {{field}}-Format"
+  },
+  "fields": {
+    "name": "Name",
+    "bpnl": "BPNL"
+  },
+  "httpErrors": {
+    "badRequest": "Ungültige Anfrage. Bitte überprüfen Sie Ihre Eingabe.",
+    "unauthorized": "Nicht autorisiert. Bitte melden Sie sich erneut an.",
+    "forbidden": "Zugriff verweigert. Sie haben keine Berechtigung für diese Aktion.",
+    "notFound": "Dienst nicht gefunden. Bitte versuchen Sie es später erneut.",
+    "methodNotAllowed": "Operation nicht erlaubt. Bitte kontaktieren Sie den Support.",
+    "conflict": "Ressource existiert bereits.",
+    "validationFailed": "Ungültige Daten. Bitte überprüfen Sie Ihre Eingabe.",
+    "internalServer": "Interner Serverfehler. Bitte versuchen Sie es später erneut.",
+    "serviceUnavailable": "Dienst vorübergehend nicht verfügbar. Bitte versuchen Sie es später erneut.",
+    "serverError": "Serverfehler ({{status}}). Bitte versuchen Sie es erneut.",
+    "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "timeout": "Anfrage abgelaufen. Bitte versuchen Sie es erneut.",
+    "connectionFailed": "Verbindung fehlgeschlagen. Bitte versuchen Sie es später erneut.",
+    "genericError": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
   }
 }

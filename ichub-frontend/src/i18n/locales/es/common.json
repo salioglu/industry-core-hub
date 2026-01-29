@@ -12,6 +12,8 @@
     "edit": "Editar",
     "create": "Crear",
     "creating": "Creando...",
+    "new": "Nuevo",
+    "retrying": "Reintentando...",
     "search": "Buscar",
     "filter": "Filtrar",
     "close": "Cerrar",
@@ -93,5 +95,29 @@
   "jsonViewer": {
     "copyJson": "Copiar JSON",
     "downloadJson": "Descargar JSON"
+  },
+  "validation": {
+    "required": "{{field}} es requerido",
+    "invalidFormat": "Formato de {{field}} inválido"
+  },
+  "fields": {
+    "name": "Nombre",
+    "bpnl": "BPNL"
+  },
+  "httpErrors": {
+    "badRequest": "Solicitud inválida. Por favor verifica tu entrada.",
+    "unauthorized": "No autorizado. Por favor inicia sesión de nuevo.",
+    "forbidden": "Acceso denegado. No tienes permiso para realizar esta acción.",
+    "notFound": "Servicio no encontrado. Por favor intenta más tarde.",
+    "methodNotAllowed": "Operación no permitida. Por favor contacta a soporte.",
+    "conflict": "El recurso ya existe.",
+    "validationFailed": "Datos inválidos. Por favor verifica tu entrada.",
+    "internalServer": "Error interno del servidor. Por favor intenta más tarde.",
+    "serviceUnavailable": "Servicio temporalmente no disponible. Por favor intenta más tarde.",
+    "serverError": "Error del servidor ({{status}}). Por favor intenta de nuevo.",
+    "networkError": "Error de red. Por favor verifica tu conexión e intenta de nuevo.",
+    "timeout": "La solicitud expiró. Por favor intenta de nuevo.",
+    "connectionFailed": "Conexión fallida. Por favor intenta más tarde.",
+    "genericError": "Ocurrió un error. Por favor intenta de nuevo."
   }
 }

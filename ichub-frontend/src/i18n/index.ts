@@ -27,43 +27,51 @@ import { initReactI18next } from 'react-i18next';
 import enCommon from './locales/en/common.json';
 import enKits from './locales/en/kits.json';
 import enCatalogManagement from './locales/en/catalogManagement.json';
+import enPartnerManagement from './locales/en/partnerManagement.json';
 
 // Spanish
 import esCommon from './locales/es/common.json';
 import esKits from './locales/es/kits.json';
 import esCatalogManagement from './locales/es/catalogManagement.json';
+import esPartnerManagement from './locales/es/partnerManagement.json';
 
 // German
 import deCommon from './locales/de/common.json';
 import deKits from './locales/de/kits.json';
 import deCatalogManagement from './locales/de/catalogManagement.json';
+import dePartnerManagement from './locales/de/partnerManagement.json';
 
 // French
 import frCommon from './locales/fr/common.json';
 import frKits from './locales/fr/kits.json';
 import frCatalogManagement from './locales/fr/catalogManagement.json';
+import frPartnerManagement from './locales/fr/partnerManagement.json';
 
 export const defaultNS = 'common';
 export const resources = {
   en: {
     common: enCommon,
     kits: enKits,
-    catalogManagement: enCatalogManagement
+    catalogManagement: enCatalogManagement,
+    partnerManagement: enPartnerManagement
   },
   es: {
     common: esCommon,
     kits: esKits,
-    catalogManagement: esCatalogManagement
+    catalogManagement: esCatalogManagement,
+    partnerManagement: esPartnerManagement
   },
   de: {
     common: deCommon,
     kits: deKits,
-    catalogManagement: deCatalogManagement
+    catalogManagement: deCatalogManagement,
+    partnerManagement: dePartnerManagement
   },
   fr: {
     common: frCommon,
     kits: frKits,
-    catalogManagement: frCatalogManagement
+    catalogManagement: frCatalogManagement,
+    partnerManagement: frPartnerManagement
   }
 } as const;
 
@@ -74,7 +82,7 @@ i18n
     lng: 'en', // Default language
     fallbackLng: 'en',
     defaultNS,
-    ns: ['common', 'kits', 'catalogManagement'],
+    ns: ['common', 'kits', 'catalogManagement', 'partnerManagement'],
     interpolation: {
       escapeValue: false // React already escapes values
     }
