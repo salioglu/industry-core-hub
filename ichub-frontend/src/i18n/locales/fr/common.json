@@ -19,6 +19,7 @@
     "close": "Fermer",
     "confirm": "Confirmer",
     "back": "Retour",
+    "goBack": "Revenir",
     "next": "Suivant",
     "loading": "Chargement...",
     "share": "Partager",
@@ -28,7 +29,8 @@
     "view": "Voir",
     "add": "Ajouter",
     "update": "Mettre à jour",
-    "register": "Enregistrer"
+    "register": "Enregistrer",
+    "download": "Télécharger"
   },
   "pagination": {
     "of": "de",
@@ -38,7 +40,8 @@
     "available": "Disponible",
     "comingSoon": "Bientôt disponible",
     "enabled": "Activé",
-    "disabled": "Désactivé"
+    "disabled": "Désactivé",
+    "ready": "Prêt"
   },
   "table": {
     "noData": "Aucune donnée disponible",
@@ -102,7 +105,8 @@
   },
   "fields": {
     "name": "Nom",
-    "bpnl": "BPNL"
+    "bpnl": "BPNL",
+    "id": "ID:"
   },
   "httpErrors": {
     "badRequest": "Requête invalide. Veuillez vérifier votre saisie.",

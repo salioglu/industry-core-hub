@@ -19,6 +19,7 @@
     "close": "Close",
     "confirm": "Confirm",
     "back": "Back",
+    "goBack": "Go Back",
     "next": "Next",
     "loading": "Loading...",
     "share": "Share",
@@ -28,7 +29,8 @@
     "view": "View",
     "add": "Add",
     "update": "Update",
-    "register": "Register"
+    "register": "Register",
+    "download": "Download"
   },
   "pagination": {
     "of": "of",
@@ -38,7 +40,8 @@
     "available": "Available",
     "comingSoon": "Coming Soon",
     "enabled": "Enabled",
-    "disabled": "Disabled"
+    "disabled": "Disabled",
+    "ready": "Ready"
   },
   "table": {
     "noData": "No data available",
@@ -102,7 +105,8 @@
   },
   "fields": {
     "name": "Name",
-    "bpnl": "BPNL"
+    "bpnl": "BPNL",
+    "id": "ID:"
   },
   "httpErrors": {
     "badRequest": "Invalid request. Please check your input.",

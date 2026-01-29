@@ -28,24 +28,28 @@ import enCommon from './locales/en/common.json';
 import enKits from './locales/en/kits.json';
 import enCatalogManagement from './locales/en/catalogManagement.json';
 import enPartnerManagement from './locales/en/partnerManagement.json';
+import enPassportConsumption from './locales/en/passportConsumption.json';
 
 // Spanish
 import esCommon from './locales/es/common.json';
 import esKits from './locales/es/kits.json';
 import esCatalogManagement from './locales/es/catalogManagement.json';
 import esPartnerManagement from './locales/es/partnerManagement.json';
+import esPassportConsumption from './locales/es/passportConsumption.json';
 
 // German
 import deCommon from './locales/de/common.json';
 import deKits from './locales/de/kits.json';
 import deCatalogManagement from './locales/de/catalogManagement.json';
 import dePartnerManagement from './locales/de/partnerManagement.json';
+import dePassportConsumption from './locales/de/passportConsumption.json';
 
 // French
 import frCommon from './locales/fr/common.json';
 import frKits from './locales/fr/kits.json';
 import frCatalogManagement from './locales/fr/catalogManagement.json';
 import frPartnerManagement from './locales/fr/partnerManagement.json';
+import frPassportConsumption from './locales/fr/passportConsumption.json';
 
 export const defaultNS = 'common';
 export const resources = {
@@ -53,25 +57,29 @@ export const resources = {
     common: enCommon,
     kits: enKits,
     catalogManagement: enCatalogManagement,
-    partnerManagement: enPartnerManagement
+    partnerManagement: enPartnerManagement,
+    passportConsumption: enPassportConsumption
   },
   es: {
     common: esCommon,
     kits: esKits,
     catalogManagement: esCatalogManagement,
-    partnerManagement: esPartnerManagement
+    partnerManagement: esPartnerManagement,
+    passportConsumption: esPassportConsumption
   },
   de: {
     common: deCommon,
     kits: deKits,
     catalogManagement: deCatalogManagement,
-    partnerManagement: dePartnerManagement
+    partnerManagement: dePartnerManagement,
+    passportConsumption: dePassportConsumption
   },
   fr: {
     common: frCommon,
     kits: frKits,
     catalogManagement: frCatalogManagement,
-    partnerManagement: frPartnerManagement
+    partnerManagement: frPartnerManagement,
+    passportConsumption: frPassportConsumption
   }
 } as const;
 
@@ -82,7 +90,7 @@ i18n
     lng: 'en', // Default language
     fallbackLng: 'en',
     defaultNS,
-    ns: ['common', 'kits', 'catalogManagement', 'partnerManagement'],
+    ns: ['common', 'kits', 'catalogManagement', 'partnerManagement', 'passportConsumption'],
     interpolation: {
       escapeValue: false // React already escapes values
     }

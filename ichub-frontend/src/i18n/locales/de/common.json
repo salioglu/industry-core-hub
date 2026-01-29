@@ -19,6 +19,7 @@
     "close": "Schließen",
     "confirm": "Bestätigen",
     "back": "Zurück",
+    "goBack": "Zurück gehen",
     "next": "Weiter",
     "loading": "Laden...",
     "share": "Teilen",
@@ -28,7 +29,8 @@
     "view": "Anzeigen",
     "add": "Hinzufügen",
     "update": "Aktualisieren",
-    "register": "Registrieren"
+    "register": "Registrieren",
+    "download": "Herunterladen"
   },
   "pagination": {
     "of": "von",
@@ -38,7 +40,8 @@
     "available": "Verfügbar",
     "comingSoon": "Demnächst",
     "enabled": "Aktiviert",
-    "disabled": "Deaktiviert"
+    "disabled": "Deaktiviert",
+    "ready": "Bereit"
   },
   "table": {
     "noData": "Keine Daten verfügbar",
@@ -102,7 +105,8 @@
   },
   "fields": {
     "name": "Name",
-    "bpnl": "BPNL"
+    "bpnl": "BPNL",
+    "id": "ID:"
   },
   "httpErrors": {
     "badRequest": "Ungültige Anfrage. Bitte überprüfen Sie Ihre Eingabe.",
