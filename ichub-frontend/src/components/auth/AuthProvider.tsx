@@ -112,4 +112,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
         ]}
         showRefreshButton={true}
         helpText={t('auth.contactAdmin')}
+      />
+    );
+  }
+
+  // Authentication initialized successfully, render the app
+  return <>{children}</>;
+}
+
+export default AuthProvider;
  

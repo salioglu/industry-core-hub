@@ -20,7 +20,6 @@
  * SPDX-License-Identifier: Apache-2.0
 ********************************************************************************/
 
-import React from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import WarningAmberIcon from '@mui/icons-material/WarningAmber';
