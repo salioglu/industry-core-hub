@@ -48,13 +48,28 @@
   },
   "auth": {
     "initializingAuth": "Initializing authentication...",
+    "authenticating": "Authenticating...",
+    "redirectingToLogin": "Redirecting to login...",
     "authFailed": "Authentication Failed",
+    "authError": "Authentication Error",
+    "accessDenied": "Access Denied",
+    "noRequiredRole": "You don't have the required role to access this content.",
+    "noRequiredPermission": "You don't have the required permissions to access this content.",
+    "requiredRoles": "Required roles: {{roles}}",
+    "yourRoles": "Your roles: {{roles}}",
+    "requiredPermissions": "Required permissions: {{permissions}}",
+    "yourPermissions": "Your permissions: {{permissions}}",
     "causes": {
       "invalidCredentials": "Invalid credentials or user not authorized",
       "keycloakNotRunning": "Keycloak service is not running or misconfigured",
-      "networkIssues": "Network connectivity issues"
+      "networkIssues": "Network connectivity issues",
+      "sessionExpired": "Session expired or invalid",
+      "serviceUnavailable": "Authentication service unavailable",
+      "permissionDenied": "Permission denied"
     },
-    "contactAdmin": "If the problem persists, please contact your system administrator"
+    "contactAdmin": "If the problem persists, please contact your system administrator",
+    "contactAdminAccess": "Please contact your administrator if you believe you should have access to this content.",
+    "tryRefresh": "Please try refreshing the page or contact support if the problem persists."
   },
   "errors": {
     "defaultTitle": "An Error Occurred",

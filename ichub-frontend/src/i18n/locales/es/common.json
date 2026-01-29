@@ -48,13 +48,28 @@
   },
   "auth": {
     "initializingAuth": "Inicializando autenticación...",
+    "authenticating": "Autenticando...",
+    "redirectingToLogin": "Redirigiendo al inicio de sesión...",
     "authFailed": "Autenticación Fallida",
+    "authError": "Error de Autenticación",
+    "accessDenied": "Acceso Denegado",
+    "noRequiredRole": "No tienes el rol requerido para acceder a este contenido.",
+    "noRequiredPermission": "No tienes los permisos requeridos para acceder a este contenido.",
+    "requiredRoles": "Roles requeridos: {{roles}}",
+    "yourRoles": "Tus roles: {{roles}}",
+    "requiredPermissions": "Permisos requeridos: {{permissions}}",
+    "yourPermissions": "Tus permisos: {{permissions}}",
     "causes": {
       "invalidCredentials": "Credenciales inválidas o usuario no autorizado",
       "keycloakNotRunning": "El servicio de Keycloak no está funcionando o está mal configurado",
-      "networkIssues": "Problemas de conectividad de red"
+      "networkIssues": "Problemas de conectividad de red",
+      "sessionExpired": "Sesión expirada o inválida",
+      "serviceUnavailable": "Servicio de autenticación no disponible",
+      "permissionDenied": "Permiso denegado"
     },
-    "contactAdmin": "Si el problema persiste, por favor contacte a su administrador del sistema"
+    "contactAdmin": "Si el problema persiste, por favor contacte a su administrador del sistema",
+    "contactAdminAccess": "Por favor contacte a su administrador si cree que debería tener acceso a este contenido.",
+    "tryRefresh": "Por favor intente refrescar la página o contacte a soporte si el problema persiste."
   },
   "errors": {
     "defaultTitle": "Ha Ocurrido un Error",

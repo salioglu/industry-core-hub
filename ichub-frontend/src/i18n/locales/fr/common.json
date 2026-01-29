@@ -48,13 +48,28 @@
   },
   "auth": {
     "initializingAuth": "Initialisation de l'authentification...",
+    "authenticating": "Authentification en cours...",
+    "redirectingToLogin": "Redirection vers la connexion...",
     "authFailed": "Échec de l'Authentification",
+    "authError": "Erreur d'Authentification",
+    "accessDenied": "Accès Refusé",
+    "noRequiredRole": "Vous n'avez pas le rôle requis pour accéder à ce contenu.",
+    "noRequiredPermission": "Vous n'avez pas les permissions requises pour accéder à ce contenu.",
+    "requiredRoles": "Rôles requis : {{roles}}",
+    "yourRoles": "Vos rôles : {{roles}}",
+    "requiredPermissions": "Permissions requises : {{permissions}}",
+    "yourPermissions": "Vos permissions : {{permissions}}",
     "causes": {
       "invalidCredentials": "Identifiants invalides ou utilisateur non autorisé",
       "keycloakNotRunning": "Le service Keycloak n'est pas en cours d'exécution ou est mal configuré",
-      "networkIssues": "Problèmes de connectivité réseau"
+      "networkIssues": "Problèmes de connectivité réseau",
+      "sessionExpired": "Session expirée ou invalide",
+      "serviceUnavailable": "Service d'authentification indisponible",
+      "permissionDenied": "Permission refusée"
     },
-    "contactAdmin": "Si le problème persiste, veuillez contacter votre administrateur système"
+    "contactAdmin": "Si le problème persiste, veuillez contacter votre administrateur système",
+    "contactAdminAccess": "Veuillez contacter votre administrateur si vous pensez devoir avoir accès à ce contenu.",
+    "tryRefresh": "Veuillez essayer de rafraîchir la page ou contacter le support si le problème persiste."
   },
   "errors": {
     "defaultTitle": "Une Erreur s'est Produite",

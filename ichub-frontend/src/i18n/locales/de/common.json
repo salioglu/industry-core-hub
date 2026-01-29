@@ -48,13 +48,28 @@
   },
   "auth": {
     "initializingAuth": "Authentifizierung wird initialisiert...",
+    "authenticating": "Authentifizierung läuft...",
+    "redirectingToLogin": "Weiterleitung zur Anmeldung...",
     "authFailed": "Authentifizierung Fehlgeschlagen",
+    "authError": "Authentifizierungsfehler",
+    "accessDenied": "Zugriff Verweigert",
+    "noRequiredRole": "Sie haben nicht die erforderliche Rolle, um auf diesen Inhalt zuzugreifen.",
+    "noRequiredPermission": "Sie haben nicht die erforderlichen Berechtigungen, um auf diesen Inhalt zuzugreifen.",
+    "requiredRoles": "Erforderliche Rollen: {{roles}}",
+    "yourRoles": "Ihre Rollen: {{roles}}",
+    "requiredPermissions": "Erforderliche Berechtigungen: {{permissions}}",
+    "yourPermissions": "Ihre Berechtigungen: {{permissions}}",
     "causes": {
       "invalidCredentials": "Ungültige Anmeldedaten oder Benutzer nicht autorisiert",
       "keycloakNotRunning": "Keycloak-Dienst läuft nicht oder ist falsch konfiguriert",
-      "networkIssues": "Netzwerkverbindungsprobleme"
+      "networkIssues": "Netzwerkverbindungsprobleme",
+      "sessionExpired": "Sitzung abgelaufen oder ungültig",
+      "serviceUnavailable": "Authentifizierungsdienst nicht verfügbar",
+      "permissionDenied": "Berechtigung verweigert"
     },
-    "contactAdmin": "Wenn das Problem weiterhin besteht, wenden Sie sich bitte an Ihren Systemadministrator"
+    "contactAdmin": "Wenn das Problem weiterhin besteht, wenden Sie sich bitte an Ihren Systemadministrator",
+    "contactAdminAccess": "Bitte wenden Sie sich an Ihren Administrator, wenn Sie glauben, dass Sie Zugriff auf diesen Inhalt haben sollten.",
+    "tryRefresh": "Bitte versuchen Sie die Seite zu aktualisieren oder kontaktieren Sie den Support, wenn das Problem weiterhin besteht."
   },
   "errors": {
     "defaultTitle": "Ein Fehler ist aufgetreten",
