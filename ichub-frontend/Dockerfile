@@ -21,7 +21,7 @@
 #################################################################################
 
 # Stage 1: Build the React app
-FROM node:23-alpine AS builder
+FROM node:lts-alpine3.23 AS builder
 
 # Set working directory first
 WORKDIR /app
@@ -47,7 +47,7 @@ RUN npm run build
 
 
 # Stage 2: Serve the app with Nginx
-FROM nginxinc/nginx-unprivileged:alpine3.21
+FROM nginxinc/nginx-unprivileged:alpine3.22
 
 # Copy custom Nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
