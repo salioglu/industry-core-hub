@@ -106,7 +106,8 @@
   "fields": {
     "name": "Nom",
     "bpnl": "BPNL",
-    "id": "ID:"
+    "id": "ID:",
+    "partner": "Partenaire"
   },
   "httpErrors": {
     "badRequest": "Requête invalide. Veuillez vérifier votre saisie.",

@@ -106,7 +106,8 @@
   "fields": {
     "name": "Nombre",
     "bpnl": "BPNL",
-    "id": "ID:"
+    "id": "ID:",
+    "partner": "Socio"
   },
   "httpErrors": {
     "badRequest": "Solicitud inválida. Por favor verifica tu entrada.",
