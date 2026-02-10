@@ -56,9 +56,17 @@
     "available": "Available",
     "notAvailable": "Not available",
     "comingSoon": "Coming Soon",
+    "beta": "Beta",
     "enabled": "Enabled",
     "disabled": "Disabled",
     "ready": "Ready"
+  },
+  "labels": {
+    "default": "Default",
+    "feature": "Feature",
+    "features": "Features",
+    "created": "Created",
+    "updated": "Updated"
   },
   "results": {
     "noResults": "No results found",

@@ -10,6 +10,18 @@
     "viewFeatures": "Ver Funcionalidades",
     "comingSoon": "Próximamente"
   },
+  "featuresPanel": {
+    "title": "Funcionalidades Disponibles",
+    "footer": "Expande los KITs para habilitar/deshabilitar funcionalidades"
+  },
+  "kitDetail": {
+    "backToKitFeatures": "Volver a Funcionalidades de KIT",
+    "kitNotFound": "KIT no encontrado",
+    "goToDocumentation": "Ir a Documentación del KIT"
+  },
+  "featureCard": {
+    "defaultTooltip": "Las funcionalidades por defecto no se pueden deshabilitar"
+  },
   "items": {
     "industryCore": {
       "name": "Industry Core KIT",

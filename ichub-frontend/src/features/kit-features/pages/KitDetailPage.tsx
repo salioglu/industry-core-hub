@@ -23,6 +23,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   Box,
   Typography,
@@ -40,6 +41,8 @@ import { useFeatures } from '@/contexts/FeatureContext';
 const KitDetailPage: React.FC = () => {
   const { kitId } = useParams<{ kitId: string }>();
   const navigate = useNavigate();
+  const { t } = useTranslation('kits');
+  const { t: tCommon } = useTranslation('common');
   const translatedKits = useTranslatedKits();
   const [kit, setKit] = useState<KitFeature | null>(null);
   const { toggleFeature, featureStates } = useFeatures();
@@ -89,26 +92,26 @@ const KitDetailPage: React.FC = () => {
   const getStatusLabel = (status: string) => {
     switch (status) {
       case 'available':
-        return 'Available';
+        return tCommon('status.available');
       case 'coming-soon':
-        return 'Coming Soon';
+        return tCommon('status.comingSoon');
       case 'beta':
-        return 'Beta';
+        return tCommon('status.beta');
       default:
-        return 'Available';
+        return tCommon('status.available');
     }
   };
 
   if (!kit) {
     return (
       <Box sx={{ p: 4 }}>
-        <Alert severity="error">KIT not found</Alert>
+        <Alert severity="error">{t('kitDetail.kitNotFound')}</Alert>
         <Button
           startIcon={<ArrowBack />}
           onClick={() => navigate('/kit-features')}
           sx={{ mt: 2 }}
         >
-          Back to KIT Features
+          {t('kitDetail.backToKitFeatures')}
         </Button>
       </Box>
     );
@@ -146,7 +149,7 @@ const KitDetailPage: React.FC = () => {
                   }
                 }}
               >
-                Back to KIT Features
+                {t('kitDetail.backToKitFeatures')}
               </Button>
 
               {/* KIT Logo */}
@@ -223,7 +226,7 @@ const KitDetailPage: React.FC = () => {
                 {kit.features.length}
             </Typography>
             <Typography variant="body1" sx={{ color: 'rgba(255, 255, 255, 0.7)', mt: 1 }}>
-                {kit.features.length === 1 ? 'Feature' : 'Features'}
+                {kit.features.length === 1 ? tCommon('labels.feature') : tCommon('labels.features')}
             </Typography>
             </Box>
               {/* Number of Features */}
@@ -282,7 +285,7 @@ const KitDetailPage: React.FC = () => {
                         textAlign: 'center'
                       }}
                     >
-                      Created
+                      {tCommon('labels.created')}
                     </Typography>
                     <Typography 
                       variant="body2" 
@@ -328,7 +331,7 @@ const KitDetailPage: React.FC = () => {
                         textAlign: 'center'
                       }}
                     >
-                      Updated
+                      {tCommon('labels.updated')}
                     </Typography>
                     <Typography 
                       variant="body2" 
@@ -377,7 +380,7 @@ const KitDetailPage: React.FC = () => {
                   }
                 }}
               >
-                Go to KIT Documentation
+                {t('kitDetail.goToDocumentation')}
               </Button>
           </Box>
         </Grid2>

@@ -41,6 +41,7 @@ import {
 } from '@mui/icons-material';
 import { useTranslatedKits } from '@/hooks/useTranslatedKits';
 import { useFeatures } from '@/contexts/FeatureContext';
+import { useTranslation } from 'react-i18next';
 
 interface FeaturesPanelProps {
   isOpen: boolean;
@@ -52,6 +53,8 @@ const FeaturesPanel: React.FC<FeaturesPanelProps> = ({ isOpen, onClose, onFeatur
   const [expandedKits, setExpandedKits] = useState<string[]>([]);
   const { featureStates } = useFeatures();
   const kits = useTranslatedKits();
+  const { t } = useTranslation('kits');
+  const { t: tCommon } = useTranslation('common');
 
   // Filter kits to show only those that have non-default features or are coming-soon
   const availableKits = useMemo(() => 
@@ -129,7 +132,7 @@ const FeaturesPanel: React.FC<FeaturesPanelProps> = ({ isOpen, onClose, onFeatur
             fontSize: '1.1rem'
           }}
         >
-          Available Features
+          {t('featuresPanel.title')}
         </Typography>
         <IconButton
           onClick={onClose}
@@ -196,7 +199,7 @@ const FeaturesPanel: React.FC<FeaturesPanelProps> = ({ isOpen, onClose, onFeatur
                         {kit.name}
                       </Typography>
                       <Chip
-                        label={kit.status === 'available' ? 'Available' : kit.status === 'coming-soon' ? 'Coming Soon' : 'Beta'}
+                        label={kit.status === 'available' ? tCommon('status.available') : kit.status === 'coming-soon' ? tCommon('status.comingSoon') : tCommon('status.beta')}
                         size="small"
                         sx={{
                           height: isComingSoon ? '16px' : '18px',
@@ -295,7 +298,7 @@ const FeaturesPanel: React.FC<FeaturesPanelProps> = ({ isOpen, onClose, onFeatur
                               </Typography>
                               {isDefaultFeature && (
                                 <Chip
-                                  label="Default"
+                                  label={tCommon('labels.default')}
                                   size="small"
                                   sx={{
                                     height: '16px',
@@ -372,7 +375,7 @@ const FeaturesPanel: React.FC<FeaturesPanelProps> = ({ isOpen, onClose, onFeatur
             textAlign: 'center'
           }}
         >
-          Expand KITs to enable/disable features
+          {t('featuresPanel.footer')}
         </Typography>
       </Box>
 

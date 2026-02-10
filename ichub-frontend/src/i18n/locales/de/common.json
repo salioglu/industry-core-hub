@@ -56,9 +56,17 @@
     "available": "Verfügbar",
     "notAvailable": "Nicht verfügbar",
     "comingSoon": "Demnächst",
+    "beta": "Beta",
     "enabled": "Aktiviert",
     "disabled": "Deaktiviert",
     "ready": "Bereit"
+  },
+  "labels": {
+    "default": "Standard",
+    "feature": "Funktion",
+    "features": "Funktionen",
+    "created": "Erstellt",
+    "updated": "Aktualisiert"
   },
   "results": {
     "noResults": "Keine Ergebnisse gefunden",

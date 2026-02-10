@@ -10,6 +10,18 @@
     "viewFeatures": "Voir les fonctionnalités",
     "comingSoon": "Bientôt disponible"
   },
+  "featuresPanel": {
+    "title": "Fonctionnalités Disponibles",
+    "footer": "Développez les KITs pour activer/désactiver les fonctionnalités"
+  },
+  "kitDetail": {
+    "backToKitFeatures": "Retour aux Fonctionnalités KIT",
+    "kitNotFound": "KIT non trouvé",
+    "goToDocumentation": "Aller à la Documentation KIT"
+  },
+  "featureCard": {
+    "defaultTooltip": "Les fonctionnalités par défaut ne peuvent pas être désactivées"
+  },
   "items": {
     "industryCore": {
       "name": "Industry Core KIT",

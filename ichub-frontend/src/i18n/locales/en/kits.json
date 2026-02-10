@@ -10,6 +10,18 @@
     "viewFeatures": "View Features",
     "comingSoon": "Coming Soon"
   },
+  "featuresPanel": {
+    "title": "Available Features",
+    "footer": "Expand KITs to enable/disable features"
+  },
+  "kitDetail": {
+    "backToKitFeatures": "Back to KIT Features",
+    "kitNotFound": "KIT not found",
+    "goToDocumentation": "Go to KIT Documentation"
+  },
+  "featureCard": {
+    "defaultTooltip": "Default features cannot be disabled"
+  },
   "items": {
     "industryCore": {
       "name": "Industry Core KIT",
