@@ -385,7 +385,7 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                 </>
                             ) : twinDetails ? (
                                 <> {twinDetails.globalId && (
-                                        <Tooltip title={t('productDetail.productData.clickToCopyGlobalAssetId')}>
+                                        <Tooltip title={t('common:tooltips.copyGlobalAssetId')}>
                                             <Chip
                                                 icon={<AccountTreeIcon />}
                                                 label={twinDetails.globalId.startsWith('urn:uuid:') ? twinDetails.globalId : `urn:uuid:${twinDetails.globalId}`}
@@ -416,7 +416,7 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                         </Tooltip>
                                     )}
                                     {twinDetails.dtrAasId && (
-                                        <Tooltip title={t('productDetail.productData.clickToCopyAasId')}>
+                                        <Tooltip title={t('common:tooltips.copyAasId')}>
                                             <Chip
                                                 icon={<FingerprintIcon />}
                                                 label={twinDetails.dtrAasId.startsWith('urn:uuid:') ? twinDetails.dtrAasId : `urn:uuid:${twinDetails.dtrAasId}`}
@@ -536,14 +536,14 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                 </Box>
                                 {/* Manufacturer Info Chips */}
                                 <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mt: 2 }}>
-                                    <Tooltip title={t('productDetail.productData.tooltips.clickToCopyManufacturerId')}>
+                                    <Tooltip title={t('common:tooltips.copyManufacturerId')}>
                                         <Chip
                                             icon={<BusinessIcon />}
-                                            label={`${t('productDetail.productData.labels.manufacturerId')}: ${part.manufacturerId}`}
+                                            label={`${t('common:fields.manufacturerId')}: ${part.manufacturerId}`}
                                             variant="outlined"
                                             size="small"
                                             clickable
-                                            onClick={() => handleCopy(part.manufacturerId, t('productDetail.productData.labels.manufacturerId'))}
+                                            onClick={() => handleCopy(part.manufacturerId, t('common:fields.manufacturerId'))}
                                             sx={{
                                                 backgroundColor: 'rgba(255, 255, 255, 0.05)',
                                                 borderColor: 'rgba(255, 255, 255, 0.2)',
@@ -565,14 +565,14 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                             }}
                                         />
                                     </Tooltip>
-                                    <Tooltip title={t('productDetail.productData.tooltips.clickToCopyManufacturerPartId')}>
+                                    <Tooltip title={t('common:tooltips.copyManufacturerPartId')}>
                                         <Chip
                                             icon={<InventoryIcon />}
-                                            label={`${t('productDetail.productData.labels.manufacturerPartId')}: ${part.manufacturerPartId}`}
+                                            label={`${t('common:fields.manufacturerPartId')}: ${part.manufacturerPartId}`}
                                             variant="outlined"
                                             size="small"
                                             clickable
-                                            onClick={() => handleCopy(part.manufacturerPartId, t('productDetail.productData.labels.manufacturerPartId'))}
+                                            onClick={() => handleCopy(part.manufacturerPartId, t('common:fields.manufacturerPartId'))}
                                             sx={{
                                                 backgroundColor: 'rgba(255, 255, 255, 0.05)',
                                                 borderColor: 'rgba(255, 255, 255, 0.2)',

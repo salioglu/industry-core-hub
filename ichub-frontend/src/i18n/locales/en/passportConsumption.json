@@ -36,8 +36,6 @@
     "cameraError": "Failed to access camera. Please grant camera permissions."
   },
   "visualization": {
-    "aasId": "AAS ID:",
-    "globalAssetId": "Global Asset ID:",
     "copiedToClipboard": "{{label}} copied to clipboard",
     "copyFailed": "Failed to copy",
     "noDataAvailable": "No data available for this section",

@@ -6,6 +6,7 @@
     "addFeatures": "Añadir Funcionalidades"
   },
   "actions": {
+    "title": "Acciones",
     "save": "Guardar",
     "cancel": "Cancelar",
     "delete": "Eliminar",
@@ -21,35 +22,83 @@
     "back": "Atrás",
     "goBack": "Volver",
     "next": "Siguiente",
+    "previous": "Anterior",
     "loading": "Cargando...",
     "share": "Compartir",
     "sharing": "Compartiendo...",
     "copy": "Copiar",
     "copied": "¡Copiado!",
+    "copyToClipboard": "Copiar al portapapeles",
     "view": "Ver",
+    "viewDetails": "Ver Detalles",
     "add": "Añadir",
     "update": "Actualizar",
     "register": "Registrar",
-    "download": "Descargar"
+    "download": "Descargar",
+    "downloadJson": "Descargar JSON",
+    "refresh": "Actualizar",
+    "expand": "Expandir",
+    "collapse": "Contraer",
+    "moreOptions": "Más opciones",
+    "displayFilters": "Mostrar Filtros",
+    "hideFilters": "Ocultar Filtros"
   },
   "pagination": {
     "of": "de",
+    "page": "Página",
     "rowsPerPage": "Filas por página"
   },
   "status": {
     "available": "Disponible",
+    "notAvailable": "No disponible",
     "comingSoon": "Próximamente",
     "enabled": "Habilitado",
     "disabled": "Deshabilitado",
     "ready": "Listo"
   },
+  "results": {
+    "noResults": "No se encontraron resultados",
+    "tryDifferentSearch": "Intente ajustar sus criterios de búsqueda"
+  },
   "table": {
     "noData": "No hay datos disponibles",
     "loading": "Cargando datos..."
   },
+  "fields": {
+    "name": "Nombre",
+    "bpnl": "BPNL",
+    "id": "ID:",
+    "partner": "Socio",
+    "description": "Descripción",
+    "identifier": "Identificador",
+    "aasId": "ID de AAS",
+    "globalAssetId": "ID Global del Activo",
+    "idShort": "ID Corto",
+    "assetType": "Tipo de Activo",
+    "assetKind": "Clase de Activo",
+    "manufacturerPartId": "ID de Parte del Fabricante",
+    "customerPartId": "ID de Parte del Cliente",
+    "manufacturerId": "ID del Fabricante",
+    "partInstanceId": "ID de Instancia de Parte",
+    "partId": "ID de Parte",
+    "digitalTwinType": "Tipo de Gemelo Digital",
+    "submodels": "Submodelos",
+    "connectorUrl": "URL del Conector"
+  },
   "notifications": {
     "copiedToClipboard": "{{field}} copiado al portapapeles!",
     "failedToCopy": "Error al copiar {{field}}"
+  },
+  "tooltips": {
+    "copyAasId": "Copiar ID de AAS",
+    "copyShellId": "Copiar ID del Shell",
+    "copyGlobalAssetId": "Copiar ID Global del Activo",
+    "copyIdShort": "Copiar ID Corto",
+    "copyManufacturerId": "Copiar ID del Fabricante",
+    "copyManufacturerPartId": "Copiar ID de Pieza del Fabricante",
+    "copyPartInstanceId": "Copiar ID de Instancia de Pieza",
+    "copyCustomerPartId": "Copiar ID de Pieza del Cliente",
+    "downloadTwinData": "Descargar Datos del Gemelo"
   },
   "auth": {
     "initializingAuth": "Inicializando autenticación...",
@@ -95,19 +144,9 @@
     "notificationsComingSoon": "Las notificaciones estarán disponibles próximamente",
     "policyComingSoon": "La configuración de Políticas/Gobernanza estará disponible próximamente"
   },
-  "jsonViewer": {
-    "copyJson": "Copiar JSON",
-    "downloadJson": "Descargar JSON"
-  },
   "validation": {
     "required": "{{field}} es requerido",
     "invalidFormat": "Formato de {{field}} inválido"
-  },
-  "fields": {
-    "name": "Nombre",
-    "bpnl": "BPNL",
-    "id": "ID:",
-    "partner": "Socio"
   },
   "httpErrors": {
     "badRequest": "Solicitud inválida. Por favor verifica tu entrada.",

@@ -30,6 +30,7 @@ import enCatalogManagement from './locales/en/catalogManagement.json';
 import enPartnerManagement from './locales/en/partnerManagement.json';
 import enPassportConsumption from './locales/en/passportConsumption.json';
 import enPassportProvision from './locales/en/passportProvision.json';
+import enPartDiscovery from './locales/en/partDiscovery.json';
 
 // Spanish
 import esCommon from './locales/es/common.json';
@@ -38,6 +39,7 @@ import esCatalogManagement from './locales/es/catalogManagement.json';
 import esPartnerManagement from './locales/es/partnerManagement.json';
 import esPassportConsumption from './locales/es/passportConsumption.json';
 import esPassportProvision from './locales/es/passportProvision.json';
+import esPartDiscovery from './locales/es/partDiscovery.json';
 
 // German
 import deCommon from './locales/de/common.json';
@@ -46,6 +48,7 @@ import deCatalogManagement from './locales/de/catalogManagement.json';
 import dePartnerManagement from './locales/de/partnerManagement.json';
 import dePassportConsumption from './locales/de/passportConsumption.json';
 import dePassportProvision from './locales/de/passportProvision.json';
+import dePartDiscovery from './locales/de/partDiscovery.json';
 
 // French
 import frCommon from './locales/fr/common.json';
@@ -54,6 +57,7 @@ import frCatalogManagement from './locales/fr/catalogManagement.json';
 import frPartnerManagement from './locales/fr/partnerManagement.json';
 import frPassportConsumption from './locales/fr/passportConsumption.json';
 import frPassportProvision from './locales/fr/passportProvision.json';
+import frPartDiscovery from './locales/fr/partDiscovery.json';
 
 export const defaultNS = 'common';
 export const resources = {
@@ -63,7 +67,8 @@ export const resources = {
     catalogManagement: enCatalogManagement,
     partnerManagement: enPartnerManagement,
     passportConsumption: enPassportConsumption,
-    passportProvision: enPassportProvision
+    passportProvision: enPassportProvision,
+    partDiscovery: enPartDiscovery
   },
   es: {
     common: esCommon,
@@ -71,7 +76,8 @@ export const resources = {
     catalogManagement: esCatalogManagement,
     partnerManagement: esPartnerManagement,
     passportConsumption: esPassportConsumption,
-    passportProvision: esPassportProvision
+    passportProvision: esPassportProvision,
+    partDiscovery: esPartDiscovery
   },
   de: {
     common: deCommon,
@@ -79,7 +85,8 @@ export const resources = {
     catalogManagement: deCatalogManagement,
     partnerManagement: dePartnerManagement,
     passportConsumption: dePassportConsumption,
-    passportProvision: dePassportProvision
+    passportProvision: dePassportProvision,
+    partDiscovery: dePartDiscovery
   },
   fr: {
     common: frCommon,
@@ -87,7 +94,8 @@ export const resources = {
     catalogManagement: frCatalogManagement,
     partnerManagement: frPartnerManagement,
     passportConsumption: frPassportConsumption,
-    passportProvision: frPassportProvision
+    passportProvision: frPassportProvision,
+    partDiscovery: frPartDiscovery
   }
 } as const;
 
@@ -98,7 +106,7 @@ i18n
     lng: 'en', // Default language
     fallbackLng: 'en',
     defaultNS,
-    ns: ['common', 'kits', 'catalogManagement', 'partnerManagement', 'passportConsumption', 'passportProvision'],
+    ns: ['common', 'kits', 'catalogManagement', 'partnerManagement', 'passportConsumption', 'passportProvision', 'partDiscovery'],
     interpolation: {
       escapeValue: false // React already escapes values
     }

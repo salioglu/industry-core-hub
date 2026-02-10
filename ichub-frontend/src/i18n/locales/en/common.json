@@ -6,6 +6,7 @@
     "addFeatures": "Add Features"
   },
   "actions": {
+    "title": "Actions",
     "save": "Save",
     "cancel": "Cancel",
     "delete": "Delete",
@@ -21,35 +22,83 @@
     "back": "Back",
     "goBack": "Go Back",
     "next": "Next",
+    "previous": "Previous",
     "loading": "Loading...",
     "share": "Share",
     "sharing": "Sharing...",
     "copy": "Copy",
     "copied": "Copied!",
+    "copyToClipboard": "Copy to clipboard",
     "view": "View",
+    "viewDetails": "View Details",
     "add": "Add",
     "update": "Update",
     "register": "Register",
-    "download": "Download"
+    "download": "Download",
+    "downloadJson": "Download JSON",
+    "refresh": "Refresh",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "moreOptions": "More options",
+    "displayFilters": "Display Filters",
+    "hideFilters": "Hide Filters"
   },
   "pagination": {
     "of": "of",
+    "page": "Page",
     "rowsPerPage": "Rows per page"
   },
   "status": {
     "available": "Available",
+    "notAvailable": "Not available",
     "comingSoon": "Coming Soon",
     "enabled": "Enabled",
     "disabled": "Disabled",
     "ready": "Ready"
   },
+  "results": {
+    "noResults": "No results found",
+    "tryDifferentSearch": "Try adjusting your search criteria"
+  },
   "table": {
     "noData": "No data available",
     "loading": "Loading data..."
   },
+  "fields": {
+    "name": "Name",
+    "bpnl": "BPNL",
+    "id": "ID:",
+    "partner": "Partner",
+    "description": "Description",
+    "identifier": "Identifier",
+    "aasId": "AAS ID",
+    "globalAssetId": "Global Asset ID",
+    "idShort": "ID Short",
+    "assetType": "Asset Type",
+    "assetKind": "Asset Kind",
+    "manufacturerPartId": "Manufacturer Part ID",
+    "customerPartId": "Customer Part ID",
+    "manufacturerId": "Manufacturer ID",
+    "partInstanceId": "Part Instance ID",
+    "partId": "Part ID",
+    "digitalTwinType": "Digital Twin Type",
+    "submodels": "Submodels",
+    "connectorUrl": "Connector URL"
+  },
   "notifications": {
     "copiedToClipboard": "{{field}} copied to clipboard!",
     "failedToCopy": "Failed to copy {{field}}"
+  },
+  "tooltips": {
+    "copyAasId": "Copy AAS ID",
+    "copyShellId": "Copy Shell ID",
+    "copyGlobalAssetId": "Copy Global Asset ID",
+    "copyIdShort": "Copy ID Short",
+    "copyManufacturerId": "Copy Manufacturer ID",
+    "copyManufacturerPartId": "Copy Manufacturer Part ID",
+    "copyPartInstanceId": "Copy Part Instance ID",
+    "copyCustomerPartId": "Copy Customer Part ID",
+    "downloadTwinData": "Download Twin Data"
   },
   "auth": {
     "initializingAuth": "Initializing authentication...",
@@ -95,19 +144,9 @@
     "notificationsComingSoon": "Notifications are coming soon",
     "policyComingSoon": "Policy/Governance Configuration is coming soon"
   },
-  "jsonViewer": {
-    "copyJson": "Copy JSON",
-    "downloadJson": "Download JSON"
-  },
   "validation": {
     "required": "{{field}} is required",
     "invalidFormat": "Invalid {{field}} format"
-  },
-  "fields": {
-    "name": "Name",
-    "bpnl": "BPNL",
-    "id": "ID:",
-    "partner": "Partner"
   },
   "httpErrors": {
     "badRequest": "Invalid request. Please check your input.",

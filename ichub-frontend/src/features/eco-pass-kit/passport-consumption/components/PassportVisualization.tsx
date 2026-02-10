@@ -269,8 +269,8 @@ export const PassportVisualization: React.FC<PassportVisualizationProps> = ({
             <Box sx={{ display: 'flex', gap: { xs: 0.75, sm: 1 }, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center', mt: 1 }}>
               <Chip
                 icon={<ContentCopy sx={{ fontSize: { xs: '0.7rem', sm: '0.8rem' } }} />}
-                label={`${t('visualization.aasId')} ${(data.metadata as any)?.passportIdentifier || 'N/A'}`}
-                onClick={() => handleCopy((data.metadata as any)?.passportIdentifier || 'N/A', t('visualization.aasId'))}
+                label={`${t('common:fields.aasId')}: ${(data.metadata as any)?.passportIdentifier || 'N/A'}`}
+                onClick={() => handleCopy((data.metadata as any)?.passportIdentifier || 'N/A', t('common:fields.aasId'))}
                 sx={{
                   backgroundColor: 'rgba(74, 144, 226, 0.15)',
                   color: 'rgba(255, 255, 255, 0.8)',
@@ -294,8 +294,8 @@ export const PassportVisualization: React.FC<PassportVisualizationProps> = ({
               />
               <Chip
                 icon={<ContentCopy sx={{ fontSize: { xs: '0.7rem', sm: '0.8rem' } }} />}
-                label={`${t('visualization.globalAssetId')} ${passportId}`}
-                onClick={() => handleCopy(passportId, t('visualization.globalAssetId'))}
+                label={`${t('common:fields.globalAssetId')}: ${passportId}`}
+                onClick={() => handleCopy(passportId, t('common:fields.globalAssetId'))}
                 sx={{
                   backgroundColor: 'rgba(74, 144, 226, 0.15)',
                   color: 'rgba(255, 255, 255, 0.8)',

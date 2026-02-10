@@ -12,10 +12,8 @@
     "registerPart": "Register part",
     "sharePart": "Share part",
     "moreOptions": "More options",
-    "manufacturerPartId": "Manufacturer Part ID",
     "category": "Category",
     "viewButton": "View",
-    "copyAasId": "Copy AAS ID",
     "copied": "Copied!"
   },
   "pagination": {
@@ -150,8 +148,6 @@
   "productDetail": {
     "addSerializedPartDialog": {
       "title": "Add a serialized part",
-      "manufacturerId": "Manufacturer ID",
-      "manufacturerPartId": "Manufacturer Part ID",
       "sharingPartner": "Sharing Partner",
       "selectPartner": "Select Sharing Partner",
       "selectPartnerPlaceholder": "Select a partner to share with",
@@ -173,10 +169,7 @@
       "addFirstInstance": "Start by adding your first instance product to track individual items",
       "columns": {
         "status": "Status",
-        "actions": "Actions",
-        "partInstanceId": "Part Instance ID",
-        "globalAssetId": "Global Asset ID",
-        "aasId": "AAS ID"
+        "actions": "Actions"
       },
       "noGlobalAssetId": "No Global Asset ID",
       "noAasId": "No AAS ID",
@@ -184,11 +177,7 @@
         "registerTwin": "Register Twin",
         "shareTwin": "Share Twin",
         "unshareTwin": "Unshare Twin",
-        "deleteSerializedPart": "Delete Serialized Part",
-        "copyGlobalAssetId": "Copy Global Asset ID",
-        "clickToCopyGlobalAssetId": "Click to copy Global Asset ID",
-        "copyAasId": "Copy AAS ID",
-        "clickToCopyAasId": "Click to copy AAS ID"
+        "deleteSerializedPart": "Delete Serialized Part"
       },
       "messages": {
         "twinRegisteredSuccess": "Twin registered successfully!",
@@ -219,8 +208,6 @@
       "loadingTwinId": "Loading Twin ID...",
       "noTwinIds": "No Twin IDs",
       "twinDataUnavailable": "Twin data unavailable",
-      "clickToCopyGlobalAssetId": "Click to copy Global Asset ID",
-      "clickToCopyAasId": "Click to copy AAS ID",
       "copiedToClipboard": "{{field}} copied to clipboard!",
       "failedToCopy": "Failed to copy {{field}}",
       "partDetails": "Part Details",
@@ -263,13 +250,9 @@
         "submodels": "Submodels"
       },
       "tooltips": {
-        "clickToCopyManufacturerId": "Click to copy Manufacturer ID",
-        "clickToCopyManufacturerPartId": "Click to copy Manufacturer Part ID",
         "clickToCopySiteOfOrigin": "Click to copy Site of Origin"
       },
       "labels": {
-        "manufacturerId": "Manufacturer ID",
-        "manufacturerPartId": "Manufacturer Part ID",
         "siteOfOrigin": "Site of Origin"
       },
       "specifications": {
@@ -317,8 +300,7 @@
       "columns": {
         "companyName": "Company Name",
         "partnerName": "Company Name",
-        "bpnl": "BPNL",
-        "customerPartId": "Customer Part ID"
+        "bpnl": "BPNL"
       }
     },
     "submodelCard": {

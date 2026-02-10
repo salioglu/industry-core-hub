@@ -12,10 +12,8 @@
     "registerPart": "Enregistrer la pièce",
     "sharePart": "Partager la pièce",
     "moreOptions": "Plus d'options",
-    "manufacturerPartId": "ID de Pièce Fabricant",
     "category": "Catégorie",
     "viewButton": "Voir",
-    "copyAasId": "Copier l'ID AAS",
     "copied": "Copié !"
   },
   "pagination": {
@@ -150,8 +148,6 @@
   "productDetail": {
     "addSerializedPart": {
       "title": "Ajouter une Pièce Sérialisée",
-      "manufacturerId": "ID Fabricant",
-      "manufacturerPartId": "ID Pièce Fabricant",
       "sharingPartner": "Partenaire de Partage",
       "selectPartner": "Sélectionner un partenaire",
       "partInstanceId": "ID Instance de Pièce",
@@ -176,10 +172,7 @@
       "addFirstInstance": "Commencez par ajouter votre premier produit d'instance pour suivre les articles individuels",
       "columns": {
         "status": "Statut",
-        "actions": "Actions",
-        "partInstanceId": "ID Instance de Pièce",
-        "globalAssetId": "ID d'Actif Global",
-        "aasId": "ID AAS"
+        "actions": "Actions"
       },
       "noGlobalAssetId": "Pas d'ID d'Actif Global",
       "noAasId": "Pas d'ID AAS",
@@ -187,11 +180,7 @@
         "registerTwin": "Enregistrer le Twin",
         "shareTwin": "Partager le Twin",
         "unshareTwin": "Annuler le partage du Twin",
-        "deleteSerializedPart": "Supprimer la Pièce Sérialisée",
-        "copyGlobalAssetId": "Copier l'ID d'Actif Global",
-        "clickToCopyGlobalAssetId": "Cliquez pour copier l'ID d'Actif Global",
-        "copyAasId": "Copier l'ID AAS",
-        "clickToCopyAasId": "Cliquez pour copier l'ID AAS"
+        "deleteSerializedPart": "Supprimer la Pièce Sérialisée"
       },
       "messages": {
         "twinRegisteredSuccess": "Twin enregistré avec succès !",
@@ -249,8 +238,6 @@
       "loadingTwinId": "Chargement de l'ID du Twin...",
       "noTwinIds": "Pas d'IDs de Twin",
       "twinDataUnavailable": "Données du twin non disponibles",
-      "clickToCopyGlobalAssetId": "Cliquer pour copier l'ID d'actif global",
-      "clickToCopyAasId": "Cliquer pour copier l'ID AAS",
       "copiedToClipboard": "{{field}} copié dans le presse-papiers !",
       "failedToCopy": "Échec de la copie de {{field}}",
       "partDetails": "Détails de la Pièce",
@@ -293,13 +280,9 @@
         "submodels": "Sous-modèles"
       },
       "tooltips": {
-        "clickToCopyManufacturerId": "Cliquer pour copier l'ID du fabricant",
-        "clickToCopyManufacturerPartId": "Cliquer pour copier l'ID de pièce du fabricant",
         "clickToCopySiteOfOrigin": "Cliquer pour copier le site d'origine"
       },
       "labels": {
-        "manufacturerId": "ID du Fabricant",
-        "manufacturerPartId": "ID de Pièce du Fabricant",
         "siteOfOrigin": "Site d'Origine"
       },
       "specifications": {
@@ -350,8 +333,7 @@
         "partnerName": "Nom du Partenaire",
         "companyName": "Nom de l'entreprise",
         "sharedAt": "Partagé le",
-        "status": "Statut",
-        "customerPartId": "ID Pièce Client"
+        "status": "Statut"
       },
       "messages": {
         "noShares": "Aucun partenaire de partage trouvé"

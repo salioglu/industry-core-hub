@@ -230,7 +230,7 @@ export const ProductCard = ({
                       display: 'block'
                     }}
                   >
-                    {t('productCard.manufacturerPartId')}
+                    {t('common:fields.manufacturerPartId')}
                   </Typography>
                   <Tooltip title={item.manufacturerPartId} arrow placement="top">
                     <Typography 
@@ -416,7 +416,7 @@ export const ProductCard = ({
                   color: copySuccess[selectedProductId] ? 'white' : 'black',
                   transition: 'color 0.3s ease'
                 }}>
-                  {copySuccess[selectedProductId] ? t('productCard.copied') : t('productCard.copyAasId')}
+                  {copySuccess[selectedProductId] ? t('productCard.copied') : t('common:tooltips.copyAasId')}
                 </Box>
               </Box>
             )}

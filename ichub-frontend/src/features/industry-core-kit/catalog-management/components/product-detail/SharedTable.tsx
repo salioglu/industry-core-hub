@@ -55,7 +55,7 @@ const SharedTable = ({ sharedParts }: SharedTableProps) => {
             <TableRow>
               <TableCell>{t('productDetail.sharedTable.columns.partnerName')}</TableCell>
               <TableCell>{t('productDetail.sharedTable.columns.bpnl')}</TableCell>
-              <TableCell>{t('productDetail.sharedTable.columns.customerPartId')}</TableCell>
+              <TableCell>{t('common:fields.customerPartId')}</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

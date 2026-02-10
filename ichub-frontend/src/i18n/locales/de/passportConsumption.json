@@ -36,8 +36,7 @@
     "cameraError": "Kamerazugriff fehlgeschlagen. Bitte erteilen Sie Kameraberechtigungen."
   },
   "visualization": {
-    "aasId": "AAS-ID:",
-    "globalAssetId": "Globale Asset-ID:",
+
     "copiedToClipboard": "{{label}} in die Zwischenablage kopiert",
     "copyFailed": "Kopieren fehlgeschlagen",
     "noDataAvailable": "Keine Daten für diesen Bereich verfügbar",

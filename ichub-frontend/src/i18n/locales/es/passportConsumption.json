@@ -36,8 +36,6 @@
     "cameraError": "Error al acceder a la cámara. Por favor, concede permisos de cámara."
   },
   "visualization": {
-    "aasId": "AAS ID:",
-    "globalAssetId": "ID de Activo Global:",
     "copiedToClipboard": "{{label}} copiado al portapapeles",
     "copyFailed": "Error al copiar",
     "noDataAvailable": "No hay datos disponibles para esta sección",

@@ -12,10 +12,8 @@
     "registerPart": "Registrar pieza",
     "sharePart": "Compartir pieza",
     "moreOptions": "Más opciones",
-    "manufacturerPartId": "ID de Pieza del Fabricante",
     "category": "Categoría",
     "viewButton": "Ver",
-    "copyAasId": "Copiar AAS ID",
     "copied": "¡Copiado!"
   },
   "pagination": {
@@ -150,8 +148,6 @@
   "productDetail": {
     "addSerializedPartDialog": {
       "title": "Añadir una pieza serializada",
-      "manufacturerId": "ID de Fabricante",
-      "manufacturerPartId": "ID de Pieza del Fabricante",
       "sharingPartner": "Socio de Compartición",
       "selectPartner": "Seleccionar Socio de Compartición",
       "selectPartnerPlaceholder": "Selecciona un socio para compartir",
@@ -173,10 +169,7 @@
       "addFirstInstance": "Comienza añadiendo tu primer producto de instancia para rastrear elementos individuales",
       "columns": {
         "status": "Estado",
-        "actions": "Acciones",
-        "partInstanceId": "ID de Instancia de Pieza",
-        "globalAssetId": "ID de Activo Global",
-        "aasId": "ID de AAS"
+        "actions": "Acciones"
       },
       "noGlobalAssetId": "Sin ID de Activo Global",
       "noAasId": "Sin ID de AAS",
@@ -184,11 +177,7 @@
         "registerTwin": "Registrar Twin",
         "shareTwin": "Compartir Twin",
         "unshareTwin": "Dejar de compartir Twin",
-        "deleteSerializedPart": "Eliminar Pieza Serializada",
-        "copyGlobalAssetId": "Copiar ID de Activo Global",
-        "clickToCopyGlobalAssetId": "Clic para copiar ID de Activo Global",
-        "copyAasId": "Copiar ID de AAS",
-        "clickToCopyAasId": "Clic para copiar ID de AAS"
+        "deleteSerializedPart": "Eliminar Pieza Serializada"
       },
       "messages": {
         "twinRegisteredSuccess": "¡Twin registrado correctamente!",
@@ -219,8 +208,6 @@
       "loadingTwinId": "Cargando ID de Twin...",
       "noTwinIds": "Sin IDs de Twin",
       "twinDataUnavailable": "Datos de twin no disponibles",
-      "clickToCopyGlobalAssetId": "Clic para copiar ID de Activo Global",
-      "clickToCopyAasId": "Clic para copiar ID de AAS",
       "copiedToClipboard": "¡{{field}} copiado al portapapeles!",
       "failedToCopy": "Error al copiar {{field}}",
       "partDetails": "Detalles de la Pieza",
@@ -263,13 +250,9 @@
         "submodels": "Submodelos"
       },
       "tooltips": {
-        "clickToCopyManufacturerId": "Clic para copiar ID de Fabricante",
-        "clickToCopyManufacturerPartId": "Clic para copiar ID de Pieza del Fabricante",
         "clickToCopySiteOfOrigin": "Clic para copiar Sitio de Origen"
       },
       "labels": {
-        "manufacturerId": "ID de Fabricante",
-        "manufacturerPartId": "ID de Pieza del Fabricante",
         "siteOfOrigin": "Sitio de Origen"
       },
       "specifications": {
@@ -317,8 +300,7 @@
       "columns": {
         "companyName": "Nombre de Empresa",
         "partnerName": "Nombre de Empresa",
-        "bpnl": "BPNL",
-        "customerPartId": "ID de Pieza de Cliente"
+        "bpnl": "BPNL"
       }
     },
     "submodelCard": {

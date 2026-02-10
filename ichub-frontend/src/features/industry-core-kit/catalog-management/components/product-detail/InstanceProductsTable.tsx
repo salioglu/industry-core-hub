@@ -673,7 +673,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
     },
     {
       field: 'partInstanceId',
-      headerName: t('productDetail.instanceProductsTable.columns.partInstanceId'),
+      headerName: t('common:fields.partInstanceId'),
       width: 400,
       headerAlign: 'center',
       renderCell: (params) => (
@@ -690,7 +690,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
     },
     {
       field: 'globalId',
-      headerName: t('productDetail.instanceProductsTable.columns.globalAssetId'),
+      headerName: t('common:fields.globalAssetId'),
       width: 350,
       headerAlign: 'center',
       renderCell: (params) => {
@@ -719,7 +719,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
 
         return (
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, width: '100%' }}>
-            <Tooltip title={t('productDetail.instanceProductsTable.tooltips.clickToCopyGlobalAssetId')} arrow>
+            <Tooltip title={t('common:tooltips.copyGlobalAssetId')} arrow>
               <Typography
                 variant="body2"
                 sx={{ 
@@ -740,7 +740,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
                 {displayValue}
               </Typography>
             </Tooltip>
-            <Tooltip title={t('productDetail.instanceProductsTable.tooltips.copyGlobalAssetId')} arrow>
+            <Tooltip title={t('common:tooltips.copyGlobalAssetId')} arrow>
               <IconButton
                 size="small"
                 onClick={handleCopy}
@@ -763,7 +763,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
     },
     {
       field: 'dtrAasId',
-      headerName: t('productDetail.instanceProductsTable.columns.aasId'),
+      headerName: t('common:fields.aasId'),
       width: 350,
       headerAlign: 'center',
       renderCell: (params) => {
@@ -792,7 +792,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
 
         return (
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, width: '100%' }}>
-            <Tooltip title={t('productDetail.instanceProductsTable.tooltips.clickToCopyAasId')} arrow>
+            <Tooltip title={t('common:tooltips.copyAasId')} arrow>
               <Typography
                 variant="body2"
                 sx={{ 
@@ -813,7 +813,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
                 {displayValue}
               </Typography>
             </Tooltip>
-            <Tooltip title={t('productDetail.instanceProductsTable.tooltips.copyAasId')} arrow>
+            <Tooltip title={t('common:tooltips.copyAasId')} arrow>
               <IconButton
                 size="small"
                 onClick={handleCopy}
@@ -836,7 +836,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
     },
     {
       field: 'customerPartId',
-      headerName: 'Customer Part ID',
+      headerName: t('common:fields.customerPartId'),
       width: 300,
       headerAlign: 'center',
       renderCell: (params) => (
@@ -1313,7 +1313,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
                 display: 'flex',
                 justifyContent: 'space-between'
               }}>
-                <span style={{ fontWeight: 600 }}>{t('productDetail.addSerializedPartDialog.manufacturerId')}:</span>
+                <span style={{ fontWeight: 600 }}>{t('common:fields.manufacturerId')}:</span>
                 <span>{deleteConfirmDialog.row.manufacturerId}</span>
               </Typography>
             </Box>

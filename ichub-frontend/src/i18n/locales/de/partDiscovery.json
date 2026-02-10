@@ -1,0 +1,108 @@
+{
+  "page": {
+    "title": "Teile-Entdeckung",
+    "subtitle": "Erkunden und entdecken Sie digitale Zwillinge im Datenraum"
+  },
+  "searchModes": {
+    "discovery": "Entdeckung",
+    "singleTwin": "Einzelner Zwilling"
+  },
+  "sidebar": {
+    "digitalTwinType": "Digitaler Zwillingstyp",
+    "partTypeCatalog": "Teiletyp (Katalog)",
+    "partInstanceSerialized": "Teileinstanz (Serialisiert)",
+    "resultsPerPage": "Ergebnisse pro Seite",
+    "customLimit": "Benutzerdefiniertes Limit",
+    "customLimitPlaceholder": "Anzahl der Ergebnisse pro Seite eingeben",
+    "validNumberHint": "Geben Sie eine Zahl zwischen 1 und 1000 ein",
+    "validNumberError": "Bitte geben Sie eine gültige Zahl zwischen 1 und 1000 ein",
+    "quickSelect": "Schnellauswahl",
+    "noLimit": "Kein Limit",
+    "custom": "Benutzerdefiniert",
+    "advancedOptions": "Erweiterte Optionen",
+    "customerPartId": "Kunden-Teile-ID (Optional)",
+    "customerPartIdPlaceholder": "Kunden-Teile-ID eingeben",
+    "customerPartIdHelper": "Nach spezifischer Kunden-Teile-Kennung suchen",
+    "manufacturerPartId": "Hersteller-Teile-ID (Optional)",
+    "manufacturerPartIdPlaceholder": "Hersteller-Teile-ID eingeben",
+    "manufacturerPartIdHelper": "Nach spezifischer Hersteller-Teile-Kennung suchen",
+    "globalAssetId": "Globale Asset-ID (Optional)",
+    "globalAssetIdPlaceholder": "Globale Asset-ID eingeben",
+    "globalAssetIdHelper": "Globale Asset-ID des digitalen Zwillings",
+    "partInstanceId": "Teileinstanz-ID (Optional)",
+    "partInstanceIdPlaceholder": "Teileinstanz-Kennung eingeben",
+    "partInstanceIdHelper": "Nach spezifischer Teileinstanz-Kennung suchen"
+  },
+  "search": {
+    "partnerBpnl": "Partner-BPNL",
+    "partnerPlaceholder": "Aus verfügbaren Partnern auswählen oder benutzerdefinierte Geschäftspartnernummer eingeben",
+    "startDiscovery": "Entdeckung starten",
+    "searchTwin": "Zwilling suchen",
+    "aasIdPlaceholder": "Asset-Administration-Shell-ID eingeben"
+  },
+  "loading": {
+    "searchingDataspace": "Durchsuche den Datenraum nach verfügbaren Daten...",
+    "discoveringPartners": "Entdecke Partner-Endpunkte...",
+    "discoveringDtr": "Entdecke Digital-Twin-Registries...",
+    "negotiatingContracts": "Verhandle Verträge mit Datenanbietern...",
+    "connectingDtr": "Verbinde mit Digital-Twin-Registries...",
+    "establishingConnections": "Stelle sichere Verbindungen zu Datenquellen her...",
+    "retrievingTwinInfo": "Rufe Digital-Twin-Informationen ab...",
+    "preparingResults": "Bereite Ergebnisse zur Anzeige vor...",
+    "lookingForRegistries": "Suche nach bekannten Registries im Cache...",
+    "extendedWait": "Es dauert etwas länger als erwartet, wahrscheinlich läuft die Zugriffsverhandlung noch (ca. 10s). Diese Verhandlung wird nur bei der ersten Anfrage durchgeführt.",
+    "errorMessage": "Dies dauert viel länger als erwartet. Möglicherweise liegt ein Fehler im anfänglichen Verbindungs-/Verhandlungsprozess vor. Bitte kontaktieren Sie Ihren Administrator.",
+    "cancelSearch": "Suche abbrechen",
+    "searchComplete": "Suche abgeschlossen!",
+    "searchingDigitalTwins": "Suche digitale Zwillinge",
+    "dataRetrieved": "Daten wurden erfolgreich abgerufen und sind zur Anzeige bereit",
+    "processing": "Verarbeite..."
+  },
+  "catalogParts": {
+    "noPartsAvailable": "Keine Katalogteile verfügbar, bitte überprüfen Sie Ihre ichub-backend Verbindung/Konfiguration."
+  },
+  "serializedParts": {
+    "dtrSource": "DTR-Quelle",
+    "showingParts": "{{count}} serialisierte Teile werden angezeigt",
+    "sortHint": "Klicken Sie auf Spaltenüberschriften zum Sortieren • Verwenden Sie Spaltenfilter zur Suche"
+  },
+  "singleTwin": {
+    "searchTwin": "Zwilling suchen",
+    "invalidDataMissingDescriptor": "Ungültige Digital-Twin-Daten: Shell-Descriptor fehlt",
+    "invalidDataMissingSubmodels": "Ungültige Digital-Twin-Daten: Submodel-Deskriptoren fehlen",
+    "dtrDetails": "DTR-Details",
+    "digitalTwinInfo": "Digital-Twin-Informationen",
+    "assetIdentifiers": "Asset-Kennungen",
+    "identifiers": "Kennungen",
+    "availableSubmodels": "Verfügbare Submodelle",
+    "submodelsAvailable": "{{count}} Submodell(e) verfügbar",
+    "viewAllSubmodels": "Alle Submodelle anzeigen",
+    "viewSubmodel": "Submodell anzeigen",
+    "noSubmodels": "Keine Submodelle verfügbar",
+    "assetId": "Asset-ID",
+    "verifiableCredential": "Verifizierbare Berechtigung",
+    "securityAttributes": "Sicherheitsattribute"
+  },
+  "dtr": {
+    "title": "Digital Twin Registries",
+    "subtitle": "Von {{partner}} entdeckte DTRs",
+    "showDtrs": "DTRs anzeigen",
+    "hideDtrs": "DTRs ausblenden",
+    "dtrLabel": "DTR {{index}}",
+    "shellsFound": "{{count}} Shell gefunden",
+    "shellsFound_plural": "{{count}} Shells gefunden"
+  },
+  "results": {
+    "title": "Entdeckungsergebnisse",
+    "catalogParts": "Katalogteile",
+    "serializedParts": "Serialisierte Teile",
+    "newSearch": "Neue Suche"
+  },
+  "errors": {
+    "enterBpnl": "Bitte geben Sie eine Partner-BPNL ein",
+    "enterAasId": "Bitte geben Sie eine AAS-ID ein",
+    "searchFailed": "Suche fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "connectionError": "Verbindungsfehler. Bitte überprüfen Sie Ihr Netzwerk.",
+    "noPartnersAvailable": "Keine Partner verfügbar. Bitte fügen Sie zuerst Partner hinzu."
+  }
+}

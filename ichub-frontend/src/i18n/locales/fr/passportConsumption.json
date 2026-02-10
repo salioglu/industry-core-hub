@@ -36,8 +36,6 @@
     "cameraError": "Échec de l'accès à la caméra. Veuillez accorder les permissions de caméra."
   },
   "visualization": {
-    "aasId": "ID AAS:",
-    "globalAssetId": "ID d'Actif Global:",
     "copiedToClipboard": "{{label}} copié dans le presse-papiers",
     "copyFailed": "Échec de la copie",
     "noDataAvailable": "Aucune donnée disponible pour cette section",

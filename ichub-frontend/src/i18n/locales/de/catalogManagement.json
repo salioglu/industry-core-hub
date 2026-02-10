@@ -12,10 +12,8 @@
     "registerPart": "Teil registrieren",
     "sharePart": "Teil teilen",
     "moreOptions": "Weitere Optionen",
-    "manufacturerPartId": "Hersteller-Teilenummer",
     "category": "Kategorie",
     "viewButton": "Anzeigen",
-    "copyAasId": "AAS-ID kopieren",
     "copied": "Kopiert!"
   },
   "pagination": {
@@ -150,8 +148,6 @@
   "productDetail": {
     "addSerializedPartDialog": {
       "title": "Serialisiertes Teil hinzufügen",
-      "manufacturerId": "Hersteller-ID",
-      "manufacturerPartId": "Hersteller-Teilenummer",
       "sharingPartner": "Teilungspartner",
       "selectPartner": "Teilungspartner auswählen",
       "selectPartnerPlaceholder": "Partner zum Teilen auswählen",
@@ -173,10 +169,7 @@
       "addFirstInstance": "Beginnen Sie, indem Sie Ihr erstes Instanzprodukt hinzufügen, um einzelne Artikel zu verfolgen",
       "columns": {
         "status": "Status",
-        "actions": "Aktionen",
-        "partInstanceId": "Teil-Instanz-ID",
-        "globalAssetId": "Globale Asset-ID",
-        "aasId": "AAS-ID"
+        "actions": "Aktionen"
       },
       "noGlobalAssetId": "Keine globale Asset-ID",
       "noAasId": "Keine AAS-ID",
@@ -184,11 +177,7 @@
         "registerTwin": "Twin registrieren",
         "shareTwin": "Twin teilen",
         "unshareTwin": "Twin-Freigabe aufheben",
-        "deleteSerializedPart": "Serialisiertes Teil löschen",
-        "copyGlobalAssetId": "Globale Asset-ID kopieren",
-        "clickToCopyGlobalAssetId": "Klicken um globale Asset-ID zu kopieren",
-        "copyAasId": "AAS-ID kopieren",
-        "clickToCopyAasId": "Klicken um AAS-ID zu kopieren"
+        "deleteSerializedPart": "Serialisiertes Teil löschen"
       },
       "messages": {
         "twinRegisteredSuccess": "Twin erfolgreich registriert!",
@@ -219,8 +208,6 @@
       "loadingTwinId": "Twin-ID wird geladen...",
       "noTwinIds": "Keine Twin-IDs",
       "twinDataUnavailable": "Twin-Daten nicht verfügbar",
-      "clickToCopyGlobalAssetId": "Klicken um globale Asset-ID zu kopieren",
-      "clickToCopyAasId": "Klicken um AAS-ID zu kopieren",
       "copiedToClipboard": "{{field}} in Zwischenablage kopiert!",
       "failedToCopy": "Kopieren von {{field}} fehlgeschlagen",
       "partDetails": "Teil-Details",
@@ -263,13 +250,9 @@
         "submodels": "Submodelle"
       },
       "tooltips": {
-        "clickToCopyManufacturerId": "Klicken um Hersteller-ID zu kopieren",
-        "clickToCopyManufacturerPartId": "Klicken um Hersteller-Teilenummer zu kopieren",
         "clickToCopySiteOfOrigin": "Klicken um Produktionsstandort zu kopieren"
       },
       "labels": {
-        "manufacturerId": "Hersteller-ID",
-        "manufacturerPartId": "Hersteller-Teilenummer",
         "siteOfOrigin": "Produktionsstandort"
       },
       "specifications": {
@@ -317,8 +300,7 @@
       "columns": {
         "companyName": "Firmenname",
         "partnerName": "Firmenname",
-        "bpnl": "BPNL",
-        "customerPartId": "Kunden-Teil-ID"
+        "bpnl": "BPNL"
       }
     },
     "submodelCard": {

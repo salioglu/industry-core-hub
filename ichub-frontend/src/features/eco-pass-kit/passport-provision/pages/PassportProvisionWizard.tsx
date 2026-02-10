@@ -705,7 +705,7 @@ const PassportProvisionWizard: React.FC = () => {
                             {option.name}
                           </Typography>
                           <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.6)' }}>
-                            {t('wizard.step2.manufacturerPartId')}: {option.manufacturerPartId} • {t('wizard.step2.partInstanceId')}: {option.partInstanceId}
+                            {t('common:fields.manufacturerPartId')}: {option.manufacturerPartId} • {t('common:fields.partInstanceId')}: {option.partInstanceId}
                           </Typography>
                           {option.van && (
                             <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.5)', display: 'block' }}>
@@ -730,12 +730,12 @@ const PassportProvisionWizard: React.FC = () => {
                           sx={darkCardStyles.chip.active}
                         />
                         <Chip
-                          label={`${t('wizard.step2.manufacturerPartId')}: ${selectedPart.manufacturerPartId}`}
+                          label={`${t('common:fields.manufacturerPartId')}: ${selectedPart.manufacturerPartId}`}
                           size="small"
                           sx={darkCardStyles.chip.default}
                         />
                         <Chip
-                          label={`${t('wizard.step2.partInstanceId')}: ${selectedPart.partInstanceId}`}
+                          label={`${t('common:fields.partInstanceId')}: ${selectedPart.partInstanceId}`}
                           size="small"
                           sx={darkCardStyles.chip.default}
                         />
@@ -748,14 +748,14 @@ const PassportProvisionWizard: React.FC = () => {
                         )}
                         {(selectedPart as any)?.globalId && (
                           <Chip
-                            label={`${t('wizard.step2.globalAssetId')}: ${(selectedPart as any).globalId}`}
+                            label={`${t('common:fields.globalAssetId')}: ${(selectedPart as any).globalId}`}
                             size="small"
                             sx={darkCardStyles.chip.active}
                           />
                         )}
                         {(selectedPart as any)?.dtrAasId && (
                           <Chip
-                            label={`${t('wizard.step2.aasId')}: ${(selectedPart as any).dtrAasId}`}
+                            label={`${t('common:fields.aasId')}: ${(selectedPart as any).dtrAasId}`}
                             size="small"
                             sx={darkCardStyles.chip.active}
                           />
@@ -1111,7 +1111,7 @@ const PassportProvisionWizard: React.FC = () => {
                           sx={darkCardStyles.chip.active}
                         />
                         <Chip
-                          label={`${t('wizard.step2.partId')}: ${selectedPart.manufacturerPartId}`}
+                          label={`${t('common:fields.partId')}: ${selectedPart.manufacturerPartId}`}
                           size="small"
                           sx={darkCardStyles.chip.default}
                         />
@@ -1155,26 +1155,26 @@ const PassportProvisionWizard: React.FC = () => {
                     )}
                     {(selectedPart as any)?.globalId ? (
                       <Chip
-                        label={`${t('wizard.step2.globalAssetId')}: ${(selectedPart as any).globalId}`}
+                        label={`${t('common:fields.globalAssetId')}: ${(selectedPart as any).globalId}`}
                         size="small"
                         sx={darkCardStyles.chip.active}
                       />
                     ) : (
                       <Chip
-                        label={`${t('wizard.step2.globalAssetId')}: ${t('wizard.step4.notAvailable')}`}
+                        label={`${t('common:fields.globalAssetId')}: ${t('wizard.step4.notAvailable')}`}
                         size="small"
                         sx={darkCardStyles.chip.draft}
                       />
                     )}
                     {(selectedPart as any)?.dtrAasId ? (
                       <Chip
-                        label={`${t('wizard.step2.aasId')}: ${(selectedPart as any).dtrAasId}`}
+                        label={`${t('common:fields.aasId')}: ${(selectedPart as any).dtrAasId}`}
                         size="small"
                         sx={darkCardStyles.chip.active}
                       />
                     ) : (
                       <Chip
-                        label={`${t('wizard.step2.aasId')}: ${t('wizard.step4.notAvailable')}`}
+                        label={`${t('common:fields.aasId')}: ${t('wizard.step4.notAvailable')}`}
                         size="small"
                         sx={darkCardStyles.chip.draft}
                       />

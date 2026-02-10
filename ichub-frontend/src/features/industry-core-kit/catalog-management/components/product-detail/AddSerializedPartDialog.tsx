@@ -194,7 +194,7 @@ const AddSerializedPartDialog = ({ open, onClose, partData }: ProductDetailDialo
                             mb: 1
                         }}>
                             <Chip
-                                label={`${t('productDetail.addSerializedPartDialog.manufacturerId')}: ${formData.manufacturerId}`}
+                                label={`${t('common:fields.manufacturerId')}: ${formData.manufacturerId}`}
                                 variant="filled"
                                 color="secondary"
                                 size="medium"
@@ -214,7 +214,7 @@ const AddSerializedPartDialog = ({ open, onClose, partData }: ProductDetailDialo
                                 }}
                             />
                             <Chip
-                                label={`${t('productDetail.addSerializedPartDialog.manufacturerPartId')}: ${formData.manufacturerPartId}`}
+                                label={`${t('common:fields.manufacturerPartId')}: ${formData.manufacturerPartId}`}
                                 variant="filled"
                                 color="secondary" 
                                 size="medium"

@@ -1,0 +1,108 @@
+{
+  "page": {
+    "title": "Descubrimiento de Partes",
+    "subtitle": "Explora y descubre gemelos digitales en el espacio de datos"
+  },
+  "searchModes": {
+    "discovery": "Descubrimiento",
+    "singleTwin": "Gemelo Individual"
+  },
+  "sidebar": {
+    "digitalTwinType": "Tipo de Gemelo Digital",
+    "partTypeCatalog": "Tipo de Parte (Catálogo)",
+    "partInstanceSerialized": "Instancia de Parte (Serializada)",
+    "resultsPerPage": "Resultados por Página",
+    "customLimit": "Límite Personalizado",
+    "customLimitPlaceholder": "Ingrese el número de resultados por página",
+    "validNumberHint": "Ingrese un número entre 1 y 1000",
+    "validNumberError": "Por favor ingrese un número válido entre 1 y 1000",
+    "quickSelect": "Selección rápida",
+    "noLimit": "Sin Límite",
+    "custom": "Personalizado",
+    "advancedOptions": "Opciones Avanzadas",
+    "customerPartId": "ID de Parte del Cliente (Opcional)",
+    "customerPartIdPlaceholder": "Ingrese el ID de Parte del Cliente",
+    "customerPartIdHelper": "Buscar por identificador específico de Parte del Cliente",
+    "manufacturerPartId": "ID de Parte del Fabricante (Opcional)",
+    "manufacturerPartIdPlaceholder": "Ingrese el ID de Parte del Fabricante",
+    "manufacturerPartIdHelper": "Buscar por identificador específico de Parte del Fabricante",
+    "globalAssetId": "ID Global del Activo (Opcional)",
+    "globalAssetIdPlaceholder": "Ingrese el ID Global del Activo",
+    "globalAssetIdHelper": "ID Global del Activo del Gemelo Digital",
+    "partInstanceId": "ID de Instancia de Parte (Opcional)",
+    "partInstanceIdPlaceholder": "Ingrese el identificador de Instancia de Parte",
+    "partInstanceIdHelper": "Buscar por identificador específico de Instancia de Parte"
+  },
+  "search": {
+    "partnerBpnl": "BPNL del Socio",
+    "partnerPlaceholder": "Seleccione de los socios disponibles o ingrese un Número de Socio Comercial de Entidad Legal personalizado",
+    "startDiscovery": "Iniciar Descubrimiento",
+    "searchTwin": "Buscar Gemelo",
+    "aasIdPlaceholder": "Ingrese el ID del Shell de Administración de Activos"
+  },
+  "loading": {
+    "searchingDataspace": "Buscando en el espacio de datos para datos disponibles...",
+    "discoveringPartners": "Descubriendo endpoints de socios...",
+    "discoveringDtr": "Descubriendo Registros de Gemelos Digitales...",
+    "negotiatingContracts": "Negociando contratos con proveedores de datos...",
+    "connectingDtr": "Conectando a registros de gemelos digitales...",
+    "establishingConnections": "Estableciendo conexiones seguras a fuentes de datos...",
+    "retrievingTwinInfo": "Recuperando información de gemelos digitales...",
+    "preparingResults": "Preparando resultados para mostrar...",
+    "lookingForRegistries": "Buscando registros conocidos en caché...",
+    "extendedWait": "Está tardando un poco más de lo esperado, probablemente la negociación de acceso aún está en curso (aprox. 10s). Esta negociación solo se realiza en la primera solicitud.",
+    "errorMessage": "Esto está tardando mucho más de lo esperado. Puede haber un error en el proceso de conexión/negociación inicial. Por favor contacte a su administrador.",
+    "cancelSearch": "Cancelar búsqueda",
+    "searchComplete": "¡Búsqueda Completada!",
+    "searchingDigitalTwins": "Buscando Gemelos Digitales",
+    "dataRetrieved": "Los datos se han recuperado exitosamente y están listos para mostrar",
+    "processing": "Procesando..."
+  },
+  "catalogParts": {
+    "noPartsAvailable": "No hay partes de catálogo disponibles, por favor verifique la conexión/configuración de su ichub-backend."
+  },
+  "serializedParts": {
+    "dtrSource": "Fuente DTR",
+    "showingParts": "Mostrando {{count}} partes serializadas",
+    "sortHint": "Haga clic en los encabezados de columna para ordenar • Use los filtros de columna para buscar"
+  },
+  "singleTwin": {
+    "searchTwin": "Buscar Gemelo",
+    "invalidDataMissingDescriptor": "Datos de gemelo digital inválidos: Falta el descriptor del shell",
+    "invalidDataMissingSubmodels": "Datos de gemelo digital inválidos: Faltan los descriptores de submodelos",
+    "dtrDetails": "Detalles DTR",
+    "digitalTwinInfo": "Información del Gemelo Digital",
+    "assetIdentifiers": "Identificadores de Activo",
+    "identifiers": "Identificadores",
+    "availableSubmodels": "Submodelos Disponibles",
+    "submodelsAvailable": "{{count}} submodelo(s) disponible(s)",
+    "viewAllSubmodels": "Ver Todos los Submodelos",
+    "viewSubmodel": "Ver Submodelo",
+    "noSubmodels": "No hay submodelos disponibles",
+    "assetId": "ID del Activo",
+    "verifiableCredential": "Credencial Verificable",
+    "securityAttributes": "Atributos de Seguridad"
+  },
+  "dtr": {
+    "title": "Registros de Gemelos Digitales",
+    "subtitle": "DTRs descubiertos de {{partner}}",
+    "showDtrs": "Mostrar DTRs",
+    "hideDtrs": "Ocultar DTRs",
+    "dtrLabel": "DTR {{index}}",
+    "shellsFound": "{{count}} shell encontrado",
+    "shellsFound_plural": "{{count}} shells encontrados"
+  },
+  "results": {
+    "title": "Resultados del Descubrimiento",
+    "catalogParts": "Partes de Catálogo",
+    "serializedParts": "Partes Serializadas",
+    "newSearch": "Nueva Búsqueda"
+  },
+  "errors": {
+    "enterBpnl": "Por favor ingrese un BPNL de socio",
+    "enterAasId": "Por favor ingrese un ID de AAS",
+    "searchFailed": "La búsqueda falló. Por favor intente de nuevo.",
+    "connectionError": "Error de conexión. Por favor verifique su red.",
+    "noPartnersAvailable": "No hay socios disponibles. Por favor agregue socios primero."
+  }
+}
