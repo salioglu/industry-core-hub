@@ -76,10 +76,17 @@ const getStatusStyle = (status: StatusVariants): ChipStyle => {
 export const SerializedPartStatusChip: React.FC<SerializedPartStatusChipProps> = ({ status }) => {
   const theme = useTheme();
   const { t } = useTranslation('catalogManagement');
+  const { t: tCommon } = useTranslation('common');
   const style = getStatusStyle(status);
 
   const getTranslatedStatus = (status: StatusVariants): string => {
     const statusKey = status.toLowerCase();
+    // Try common first for generic statuses (registered, available, created, unknown)
+    // Then fall back to catalogManagement for context-specific ones (draft, shared, pending)
+    const commonStatus = tCommon(`status.${statusKey}`, { defaultValue: '' });
+    if (commonStatus) {
+      return commonStatus;
+    }
     return t(`status.${statusKey}`);
   };
 

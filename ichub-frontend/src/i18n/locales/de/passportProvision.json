@@ -39,7 +39,6 @@
     "discoveryId": "Discovery-ID",
     "type": "Typ",
     "expires": "Läuft ab",
-    "created": "Erstellt",
     "cardView": "Kartenansicht",
     "tableView": "Tabellenansicht"
   },
@@ -47,7 +46,6 @@
     "registerPassport": "Pass registrieren",
     "sharePassport": "Pass teilen",
     "unsharePassport": "Teilen aufheben",
-    "moreOptions": "Weitere Optionen",
     "processing": "Verarbeitung...",
     "copyDiscoveryId": "Discovery-ID kopieren",
     "exportPdf": "PDF exportieren",
@@ -57,7 +55,6 @@
   },
   "status": {
     "draft": "Entwurf",
-    "registered": "Registriert",
     "shared": "Geteilt",
     "pending": "Ausstehend"
   },
@@ -92,7 +89,6 @@
       "selectedPart": "Ausgewähltes Teil",
       "checkingRegistration": "Registrierungsstatus wird überprüft...",
       "registrationStatus": "Registrierungsstatus",
-      "registered": "Registriert",
       "notRegistered": "Nicht registriert",
       "alreadyHasDpp": "Hat bereits DPP",
       "noDppAssigned": "Kein DPP zugewiesen",
@@ -161,7 +157,6 @@
       "creatingDpp": "Digitaler Produktpass wird erstellt...",
       "pleaseWait": "Bitte warten Sie, während wir Ihren DPP registrieren",
       "successMessage": "Ihr Digitaler Produktpass wurde erfolgreich veröffentlicht!",
-      "submodelId": "Submodell-ID",
       "currentStatus": "Aktueller Status",
       "sharePrompt": "Jetzt können Sie ihn mit Ihrem Partner teilen!",
       "errorOccurred": "Beim Veröffentlichen des DPP ist ein Fehler aufgetreten"

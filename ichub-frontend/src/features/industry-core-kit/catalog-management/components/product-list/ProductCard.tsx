@@ -73,6 +73,7 @@ export const ProductCard = ({
   isLoading,
 }: CardDecisionProps) => {
   const { t } = useTranslation('catalogManagement');
+  const { t: tCommon } = useTranslation('common');
 
   const handleDecision = (
     e: React.SyntheticEvent,
@@ -190,7 +191,7 @@ export const ProductCard = ({
                         </IconButton>
                       </Tooltip>
                     )}
-                  <Tooltip title={t('productCard.moreOptions')} arrow>
+                  <Tooltip title={tCommon('actions.moreOptions')} arrow>
                     <IconButton
                       onClick={(e) => {
                         e.stopPropagation();
@@ -277,7 +278,7 @@ export const ProductCard = ({
                       position: 'relative'
                     }}
                   >
-                    <Tooltip title={`${t('productCard.category')}: ${item.category}`} arrow placement="top">
+                    <Tooltip title={`${tCommon('fields.category')}: ${item.category}`} arrow placement="top">
                       <Typography
                         sx={{
                           fontSize: '0.65rem',
@@ -308,7 +309,7 @@ export const ProductCard = ({
                   </Box>
                 )}
                 <Button variant="contained" size="small" endIcon={<Launch />}>
-                  {t('productCard.viewButton')}
+                  {tCommon('actions.view')}
                 </Button>
               </Box>
             </Box>
@@ -416,7 +417,7 @@ export const ProductCard = ({
                   color: copySuccess[selectedProductId] ? 'white' : 'black',
                   transition: 'color 0.3s ease'
                 }}>
-                  {copySuccess[selectedProductId] ? t('productCard.copied') : t('common:tooltips.copyAasId')}
+                  {copySuccess[selectedProductId] ? tCommon('actions.copied') : tCommon('tooltips.copyAasId')}
                 </Box>
               </Box>
             )}

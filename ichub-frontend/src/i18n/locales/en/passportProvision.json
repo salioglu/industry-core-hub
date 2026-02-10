@@ -39,7 +39,6 @@
     "discoveryId": "Discovery ID",
     "type": "Type",
     "expires": "Expires",
-    "created": "Created",
     "cardView": "Card View",
     "tableView": "Table View"
   },
@@ -47,7 +46,6 @@
     "registerPassport": "Register passport",
     "sharePassport": "Share passport",
     "unsharePassport": "Unshare passport",
-    "moreOptions": "More options",
     "processing": "Processing...",
     "copyDiscoveryId": "Copy Discovery ID",
     "exportPdf": "Export PDF",
@@ -57,7 +55,6 @@
   },
   "status": {
     "draft": "Draft",
-    "registered": "Registered",
     "shared": "Shared",
     "pending": "Pending"
   },
@@ -92,7 +89,6 @@
       "selectedPart": "Selected Part",
       "checkingRegistration": "Checking registration status...",
       "registrationStatus": "Registration Status",
-      "registered": "Registered",
       "notRegistered": "Not Registered",
       "alreadyHasDpp": "Already has DPP",
       "noDppAssigned": "No DPP assigned",
@@ -161,7 +157,6 @@
       "creatingDpp": "Creating Digital Product Passport...",
       "pleaseWait": "Please wait while we register your DPP",
       "successMessage": "Your Digital Product Passport has been successfully published!",
-      "submodelId": "Submodel ID",
       "currentStatus": "Current Status",
       "sharePrompt": "Now you can share it with your partner!",
       "errorOccurred": "An error occurred while publishing the DPP"

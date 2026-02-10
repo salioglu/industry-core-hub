@@ -39,7 +39,6 @@
     "discoveryId": "ID de Descubrimiento",
     "type": "Tipo",
     "expires": "Expira",
-    "created": "Creado",
     "cardView": "Vista de Tarjetas",
     "tableView": "Vista de Tabla"
   },
@@ -47,7 +46,6 @@
     "registerPassport": "Registrar pasaporte",
     "sharePassport": "Compartir pasaporte",
     "unsharePassport": "Dejar de compartir pasaporte",
-    "moreOptions": "Más opciones",
     "processing": "Procesando...",
     "copyDiscoveryId": "Copiar ID de Descubrimiento",
     "exportPdf": "Exportar PDF",
@@ -57,7 +55,6 @@
   },
   "status": {
     "draft": "Borrador",
-    "registered": "Registrado",
     "shared": "Compartido",
     "pending": "Pendiente"
   },
@@ -92,7 +89,6 @@
       "selectedPart": "Pieza Seleccionada",
       "checkingRegistration": "Verificando estado de registro...",
       "registrationStatus": "Estado de Registro",
-      "registered": "Registrado",
       "notRegistered": "No Registrado",
       "alreadyHasDpp": "Ya tiene DPP",
       "noDppAssigned": "Sin DPP asignado",
@@ -161,7 +157,6 @@
       "creatingDpp": "Creando Pasaporte Digital de Producto...",
       "pleaseWait": "Por favor espera mientras registramos tu DPP",
       "successMessage": "¡Tu Pasaporte Digital de Producto ha sido publicado exitosamente!",
-      "submodelId": "ID del Submodelo",
       "currentStatus": "Estado Actual",
       "sharePrompt": "¡Ahora puedes compartirlo con tu socio!",
       "errorOccurred": "Ocurrió un error al publicar el DPP"

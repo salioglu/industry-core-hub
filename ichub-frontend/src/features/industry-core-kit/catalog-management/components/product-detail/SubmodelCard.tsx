@@ -63,6 +63,7 @@ const SubmodelCard: React.FC<SubmodelCardProps> = ({
     onViewDetails
 }) => {
     const { t } = useTranslation('catalogManagement');
+    const { t: tCommon } = useTranslation('common');
 
     const formatSemanticId = (semanticId: string): string => {
         if (semanticId.length > 40) {
@@ -198,7 +199,7 @@ const SubmodelCard: React.FC<SubmodelCardProps> = ({
                                 fontSize: '10px'
                             }}
                         >
-                            {t('productDetail.submodelCard.submodelId')}
+                            {tCommon('fields.submodelId')}
                         </Typography>
                         <Tooltip title={aspect.submodelId} placement="top">
                             <Typography 
@@ -238,7 +239,7 @@ const SubmodelCard: React.FC<SubmodelCardProps> = ({
                         borderRadius: 1
                     }}
                 >
-                    {t('productDetail.submodelCard.viewDetails')}
+                    {tCommon('actions.viewDetails')}
                 </Button>
             </CardActions>
         </Card>

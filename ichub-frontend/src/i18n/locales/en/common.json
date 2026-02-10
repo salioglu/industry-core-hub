@@ -40,6 +40,7 @@
     "expand": "Expand",
     "collapse": "Collapse",
     "moreOptions": "More options",
+    "more": "More",
     "displayFilters": "Display Filters",
     "hideFilters": "Hide Filters",
     "createAndSave": "Create & Save",
@@ -59,7 +60,10 @@
     "beta": "Beta",
     "enabled": "Enabled",
     "disabled": "Disabled",
-    "ready": "Ready"
+    "ready": "Ready",
+    "registered": "Registered",
+    "created": "Created",
+    "unknown": "Unknown"
   },
   "labels": {
     "default": "Default",
@@ -100,7 +104,9 @@
     "status": "Status",
     "category": "Category",
     "van": "VAN",
-    "businessPartner": "Business Partner"
+    "businessPartner": "Business Partner",
+    "submodelId": "Submodel ID",
+    "width": "Width"
   },
   "notifications": {
     "copiedToClipboard": "{{field}} copied to clipboard!",

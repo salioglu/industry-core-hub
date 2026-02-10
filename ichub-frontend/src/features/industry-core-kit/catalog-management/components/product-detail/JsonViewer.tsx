@@ -48,6 +48,7 @@ export const JsonViewer: React.FC<JsonViewerProps> = ({
 }) => {
     const [copySuccess, setCopySuccess] = useState(false);
     const { t } = useTranslation('catalogManagement');
+    const { t: tCommon } = useTranslation('common');
 
     const handleCopyJson = () => {
         navigator.clipboard.writeText(JSON.stringify(data, null, 4)).then(() => {
@@ -212,7 +213,7 @@ export const JsonViewer: React.FC<JsonViewerProps> = ({
                     {filename}
                 </Typography>
                 <Box sx={{ ml: 'auto' }}>
-                    <Tooltip title={copySuccess ? t('productDetail.jsonViewer.copied') : t('productDetail.jsonViewer.copyJson')}>
+                    <Tooltip title={copySuccess ? tCommon('actions.copied') : t('productDetail.jsonViewer.copyJson')}>
                         <IconButton
                             size="small"
                             onClick={handleCopyJson}

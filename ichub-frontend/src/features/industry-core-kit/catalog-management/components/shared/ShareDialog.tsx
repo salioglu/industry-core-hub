@@ -39,6 +39,7 @@ import { useEscapeDialog } from '@/hooks/useEscapeKey';
 
 const ShareDialog = ({ open, onClose, partData }: ProductDetailDialogProps) => {
   const { t } = useTranslation('catalogManagement');
+  const { t: tCommon } = useTranslation('common');
   const title = partData?.name ?? t('shareDialog.partNameFallback');
   const navigate = useNavigate();
 
@@ -411,7 +412,7 @@ const ShareDialog = ({ open, onClose, partData }: ProductDetailDialogProps) => {
             fontWeight: 500
           }}
         >
-          {t('shareDialog.close')}
+          {tCommon('actions.close')}
         </Button>
         {partnersList.length === 0 ? (
           <Button 
@@ -444,7 +445,7 @@ const ShareDialog = ({ open, onClose, partData }: ProductDetailDialogProps) => {
               boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
             }}
           >
-            {isLoading ? t('shareDialog.sharing') : t('shareDialog.share')}
+            {isLoading ? tCommon('actions.sharing') : tCommon('actions.share')}
           </Button>
         )}
       </DialogActions>

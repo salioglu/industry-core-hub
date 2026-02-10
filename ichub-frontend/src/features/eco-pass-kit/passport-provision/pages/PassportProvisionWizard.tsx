@@ -1538,7 +1538,7 @@ const PassportProvisionWizard: React.FC = () => {
               {publishingResult.submodelId && (
                 <Box sx={{ mt: 2 }}>
                   <Typography sx={{ color: 'rgba(255,255,255,0.6)', mb: 1, fontSize: '0.875rem' }}>
-                    {t('wizard.publishing.submodelId')}:
+                    {t('common:fields.submodelId')}:
                   </Typography>
                   <Box sx={{ 
                     bgcolor: 'rgba(139, 92, 246, 0.1)',
@@ -1562,7 +1562,7 @@ const PassportProvisionWizard: React.FC = () => {
                     {t('wizard.publishing.currentStatus')}:
                   </Typography>
                   <Chip
-                    label={t('wizard.step2.registered')}
+                    label={t('common:status.registered')}
                     size="small"
                     sx={{
                       bgcolor: 'rgba(16, 185, 129, 0.1)',

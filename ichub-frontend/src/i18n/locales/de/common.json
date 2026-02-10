@@ -40,6 +40,7 @@
     "expand": "Erweitern",
     "collapse": "Zuklappen",
     "moreOptions": "Weitere Optionen",
+    "more": "Mehr",
     "displayFilters": "Filter anzeigen",
     "hideFilters": "Filter ausblenden",
     "createAndSave": "Erstellen & Speichern",
@@ -59,7 +60,10 @@
     "beta": "Beta",
     "enabled": "Aktiviert",
     "disabled": "Deaktiviert",
-    "ready": "Bereit"
+    "ready": "Bereit",
+    "registered": "Registriert",
+    "created": "Erstellt",
+    "unknown": "Unbekannt"
   },
   "labels": {
     "default": "Standard",
@@ -100,7 +104,9 @@
     "status": "Status",
     "category": "Kategorie",
     "van": "VAN",
-    "businessPartner": "Geschäftspartner"
+    "businessPartner": "Geschäftspartner",
+    "submodelId": "Submodell-ID",
+    "width": "Breite"
   },
   "notifications": {
     "copiedToClipboard": "{{field}} in die Zwischenablage kopiert!",

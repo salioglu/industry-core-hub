@@ -795,7 +795,7 @@ const PassportProvisionList: React.FC = () => {
                         </IconButton>
                       </Tooltip>
                     )}
-                    <Tooltip title={t('actions.moreOptions')} arrow>
+                    <Tooltip title={t('common:actions.moreOptions')} arrow>
                       <IconButton
                         onClick={(e) => {
                           e.stopPropagation();
@@ -1347,7 +1347,7 @@ const PassportProvisionList: React.FC = () => {
                         </IconButton>
                       </Tooltip>
                     )}
-                    <Tooltip title={t('actions.moreOptions')} arrow>
+                    <Tooltip title={t('common:actions.moreOptions')} arrow>
                       <IconButton
                         size="small"
                         onClick={(e) => {
@@ -1778,7 +1778,7 @@ const PassportProvisionList: React.FC = () => {
                               mb: 0.3,
                             }}
                           >
-                            {t('list.created')}
+                            {t('labels.created', { ns: 'common' })}
                           </Typography>
                           <Typography 
                             sx={{ 
@@ -1826,7 +1826,7 @@ const PassportProvisionList: React.FC = () => {
                           </IconButton>
                         </Tooltip>
                       )}
-                      <Tooltip title={t('actions.moreOptions')} arrow>
+                      <Tooltip title={t('common:actions.moreOptions')} arrow>
                         <IconButton
                           size="small"
                           onClick={(e) => {

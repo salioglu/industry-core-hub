@@ -7,8 +7,7 @@
     "featureToggled": "{{featureName}} in {{kitName}} wurde {{status}}"
   },
   "kitCard": {
-    "viewFeatures": "Funktionen anzeigen",
-    "comingSoon": "Demnächst"
+    "viewFeatures": "Funktionen anzeigen"
   },
   "featuresPanel": {
     "title": "Verfügbare Funktionen",

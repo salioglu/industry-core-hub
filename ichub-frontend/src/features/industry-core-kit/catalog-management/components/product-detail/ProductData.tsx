@@ -62,6 +62,7 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
     const [isUpdatingParent, setIsUpdatingParent] = useState(false);
     const [copySnackbar, setCopySnackbar] = useState<{ open: boolean; message: string; severity: 'success' | 'error' }>({ open: false, message: '', severity: 'success' });
     const { t } = useTranslation('catalogManagement');
+    const { t: tCommon } = useTranslation('common');
     
     // Submodel viewer dialog state
     const [submodelViewerOpen, setSubmodelViewerOpen] = useState(false);
@@ -160,10 +161,10 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
     const handleCopy = async (text: string, fieldName: string) => {
         try {
             await navigator.clipboard.writeText(text);
-            setCopySnackbar({ open: true, message: t('productDetail.productData.copiedToClipboard', { field: fieldName }), severity: 'success' });
+            setCopySnackbar({ open: true, message: tCommon('notifications.copiedToClipboard', { field: fieldName }), severity: 'success' });
         } catch (error) {
             console.error('Failed to copy:', error);
-            setCopySnackbar({ open: true, message: t('productDetail.productData.failedToCopy', { field: fieldName }), severity: 'error' });
+            setCopySnackbar({ open: true, message: tCommon('notifications.failedToCopy', { field: fieldName }), severity: 'error' });
         }
     };
 
@@ -657,7 +658,7 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
                                     <DescriptionIcon sx={{ color: 'primary.main' }} />
                                     <Typography variant="label3" sx={{ color: 'text.primary' }}>
-                                        {t('productDetail.productData.partInfo.description')}
+                                        {tCommon('fields.description')}
                                     </Typography>
                                 </Box>
                                 <Typography variant="body3" sx={{ 
@@ -709,11 +710,11 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                                 letterSpacing: '0.08em',
                                                 mb: 1
                                             }}>
-                                                {t('productDetail.productData.twinTimestamps.created')}
+                                                {tCommon('labels.created')}
                                             </Typography>
                                             <Typography variant="body2" sx={{ color: 'text.primary' }}>
                                                 {isLoadingTwin 
-                                                    ? t('productDetail.productData.twinTimestamps.loading')
+                                                    ? tCommon('actions.loading')
                                                     : twinDetails?.createdDate 
                                                         ? formatDate(twinDetails.createdDate)
                                                         : t('productDetail.productData.twinTimestamps.notYetCreated')
@@ -746,11 +747,11 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                                 letterSpacing: '0.08em',
                                                 mb: 1
                                             }}>
-                                                {t('productDetail.productData.twinTimestamps.updated')}
+                                                {tCommon('labels.updated')}
                                             </Typography>
                                             <Typography variant="body2" sx={{ color: 'text.primary' }}>
                                                 {isLoadingTwin 
-                                                    ? t('productDetail.productData.twinTimestamps.loading')
+                                                    ? tCommon('actions.loading')
                                                     : twinDetails?.modifiedDate 
                                                         ? formatDate(twinDetails.modifiedDate)
                                                         : t('productDetail.productData.twinTimestamps.notYetCreated')
@@ -921,7 +922,7 @@ const ProductData = ({ part, sharedParts, twinDetails: propTwinDetails, onPartUp
                                                     display: 'block',
                                                     mb: 0.5
                                                 }}>
-                                                    {t('productDetail.productData.moreInformation.width')}
+                                                    {tCommon('fields.width')}
                                                 </Typography>
                                                 <Typography variant="body2" sx={{ color: 'text.primary' }}>
                                                     {part.width?.value || '-'} {part.width?.unit || ''}

@@ -133,6 +133,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
     const [viewMode, setViewMode] = useState<'structured' | 'json'>('structured');
     const [copiedItems, setCopiedItems] = useState<Set<string>>(new Set());
     const { t } = useTranslation('catalogManagement');
+    const { t: tCommon } = useTranslation('common');
 
     const handleCopyValue = async (value: string) => {
         try {
@@ -325,7 +326,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                         </Typography>
                         
                         <Box sx={{ display: 'grid', gap: 2, gridTemplateColumns: 'auto 1fr' }}>
-                            <Typography variant="body2" color="text.secondary">{t('productDetail.darkSubmodelViewer.submodelId')}:</Typography>
+                            <Typography variant="body2" color="text.secondary">{tCommon('fields.submodelId')}:</Typography>
                             <Typography variant="body2" fontFamily="monospace">{submodel.id}</Typography>
                             
                             <Typography variant="body2" color="text.secondary">{t('productDetail.darkSubmodelViewer.semanticId')}:</Typography>
@@ -422,7 +423,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
 
                 <DialogActions sx={{ p: 3, borderTop: 1, borderColor: 'divider' }}>
                     <Button onClick={onClose} variant="outlined">
-                        {t('productDetail.darkSubmodelViewer.close')}
+                        {tCommon('actions.close')}
                     </Button>
                     <Button 
                         onClick={loadSubmodelContent} 
@@ -443,7 +444,7 @@ const DarkSubmodelViewer: React.FC<DarkSubmodelViewerProps> = ({
                             fontWeight: 500,
                         }}
                     >
-                        {isLoading ? t('productDetail.darkSubmodelViewer.loading') : t('productDetail.darkSubmodelViewer.refresh')}
+                        {isLoading ? tCommon('actions.loading') : tCommon('actions.refresh')}
                     </Button>
                 </DialogActions>
             </Dialog>

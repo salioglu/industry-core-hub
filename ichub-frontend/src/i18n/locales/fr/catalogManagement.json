@@ -4,21 +4,9 @@
     "createButton": "Créer une Pièce de Catalogue"
   },
   "productCard": {
-    "share": "Partager",
-    "more": "Plus",
-    "register": "Enregistrer Twin",
-    "viewDetails": "Voir les Détails",
-    "noPartsAvailable": "Aucune pièce de catalogue disponible, veuillez vérifier la connexion/configuration de ichub-backend",
-    "registerPart": "Enregistrer la pièce",
-    "sharePart": "Partager la pièce",
-    "moreOptions": "Plus d'options",
-    "category": "Catégorie",
-    "viewButton": "Voir",
-    "copied": "Copié !"
-  },
-  "pagination": {
-    "of": "de",
-    "rowsPerPage": "Lignes par page"
+    "noPartsAvailable": "Aucune pièce de catalogue disponible, veuillez vérifier la connexion/configuration du ichub-backend",
+    "registerPart": "Enregistrer pièce",
+    "sharePart": "Partager pièce"
   },
   "messages": {
     "registerSuccess": "Twin de pièce enregistré avec succès !",
@@ -28,10 +16,6 @@
   },
   "createDialog": {
     "title": "Créer une Nouvelle Pièce de Catalogue",
-    "save": "Enregistrer",
-    "cancel": "Annuler",
-    "create": "Créer",
-    "creating": "Création...",
     "successMessage": "Pièce de catalogue créée avec succès.",
     "errorMessage": "Échec de la création de la pièce de catalogue.",
     "materialSharesError": "Les parts de matériaux doivent totaliser exactement 100% (actuellement {{total}}%). Veuillez ajuster les pourcentages avant de créer.",
@@ -130,17 +114,13 @@
     "addCustomPartId": "Ajouter un ID de pièce client personnalisé",
     "customerPartIdLabel": "ID de Pièce Client",
     "customerPartIdPlaceholder": "Entrez votre identifiant de pièce personnalisé",
-    "close": "Fermer",
     "addPartner": "Ajouter un Partenaire",
-    "share": "Partager",
-    "sharing": "Partage en cours...",
     "shareSuccess": "Pièce partagée avec succès avec {{bpnl}}",
     "shareError": "Échec du partage de la pièce.",
     "validationError": "Échec de la validation.",
     "partDataNotAvailable": "Les données de la pièce ne sont pas disponibles."
   },
   "status": {
-    "registered": "Enregistré",
     "shared": "Partagé",
     "draft": "Brouillon",
     "pending": "En attente"
@@ -226,15 +206,10 @@
       "loadingTwinId": "Chargement de l'ID du Twin...",
       "noTwinIds": "Pas d'IDs de Twin",
       "twinDataUnavailable": "Données du twin non disponibles",
-      "copiedToClipboard": "{{field}} copié dans le presse-papiers !",
-      "failedToCopy": "Échec de la copie de {{field}}",
       "partDetails": "Détails de la Pièce",
       "invalidDate": "Date invalide",
       "twinTimestamps": {
         "title": "Horodatages du Twin",
-        "created": "Créé",
-        "updated": "Mis à jour",
-        "loading": "Chargement...",
         "notYetCreated": "Pas encore créé"
       },
       "sharing": {
@@ -247,17 +222,13 @@
         "materials": "Matériaux :",
         "noMaterials": "Aucune donnée de matériau disponible",
         "dimensions": "Dimensions :",
-        "width": "Largeur",
         "height": "Hauteur",
         "length": "Longueur",
         "weight": "Poids"
       },
       "partInfo": {
-        "description": "Description",
         "noDescription": "Aucune description disponible",
-        "category": "Catégorie",
         "uncategorized": "Non catégorisé",
-        "bpns": "BPNS",
         "noBpns": "Aucun BPNS disponible"
       },
       "sections": {
@@ -275,13 +246,11 @@
       },
       "specifications": {
         "manufacturerId": "ID du Fabricant",
-        "manufacturerPartId": "ID de Pièce du Fabricant",
         "createdAt": "Créé le",
         "updatedAt": "Mis à jour le",
         "notAvailable": "Non disponible"
       },
       "dimensions": {
-        "width": "Largeur",
         "height": "Hauteur", 
         "length": "Longueur",
         "weight": "Poids",
@@ -332,10 +301,8 @@
       "semanticId": "ID Sémantique",
       "idShort": "ID Court",
       "namespace": "Espace de noms",
-      "submodelId": "ID Sous-modèle",
       "viewJson": "Voir JSON",
       "copyJson": "Copier JSON",
-      "viewDetails": "Voir Détails",
       "noSubmodels": "Aucun sous-modèle disponible"
     },
     "submodelsGrid": {
@@ -349,8 +316,7 @@
     },
     "jsonViewer": {
       "title": "Visionneuse JSON",
-      "copyJson": "Copier JSON",
-      "copied": "Copié !"
+      "copyJson": "Copier JSON"
     },
     "shareDropdown": {
       "share": "PARTAGER",
@@ -378,14 +344,10 @@
     },
     "darkSubmodelViewer": {
       "title": "Visionneuse de Sous-modèle",
-      "submodelId": "ID de Sous-modèle",
       "semanticId": "ID Sémantique",
       "jsonData": "Données JSON",
       "structured": "Structuré",
       "json": "JSON",
-      "close": "Fermer",
-      "refresh": "Actualiser",
-      "loading": "Chargement...",
       "failedToLoad": "Échec du chargement du contenu du sous-modèle",
       "noDataAvailable": "Aucune donnée de sous-modèle disponible ou les données n'ont pas pu être récupérées.",
       "unknownDataType": "Type de données inconnu"
@@ -395,16 +357,9 @@
       "newSubmodel": "Nouveau Sous-modèle",
       "noSubmodelsAvailable": "Aucun Sous-modèle Disponible",
       "noSubmodelsDescription": "Ce jumeau numérique n'a aucun aspect de sous-modèle disponible.",
-      "submodelId": "ID de Sous-modèle",
       "registrationInfo": "Info d'Enregistrement",
       "noRegistration": "Pas d'Enregistrement",
-      "viewSubmodel": "Voir le Sous-modèle",
-      "status": {
-        "created": "Créé",
-        "available": "Disponible",
-        "registered": "Enregistré",
-        "unknown": "Inconnu"
-      }
+      "viewSubmodel": "Voir le Sous-modèle"
     }
   }
 }

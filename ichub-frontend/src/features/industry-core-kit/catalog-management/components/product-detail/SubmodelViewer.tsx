@@ -66,6 +66,7 @@ interface SubmodelViewerProps {
 const SubmodelViewer: React.FC<SubmodelViewerProps> = ({ twinDetails, onViewFullDetails, onCreateSubmodel }) => {
     const [currentStartIndex, setCurrentStartIndex] = useState(0);
     const { t } = useTranslation('catalogManagement');
+    const { t: tCommon } = useTranslation('common');
     const submodelsPerPage = 3;
     const submodelEntries = Object.entries(twinDetails.aspects || {});
     const totalSubmodels = submodelEntries.length;
@@ -86,13 +87,13 @@ const SubmodelViewer: React.FC<SubmodelViewerProps> = ({ twinDetails, onViewFull
     const getStatusLabel = (status: number): { label: string; color: string } => {
         switch (status) {
             case 1:
-                return { label: t('productDetail.submodelViewer.status.created'), color: '#2196f3' }; // Blue
+                return { label: tCommon('status.created'), color: '#2196f3' }; // Blue
             case 2:
-                return { label: t('productDetail.submodelViewer.status.available'), color: '#ff9800' }; // Orange
+                return { label: tCommon('status.available'), color: '#ff9800' }; // Orange
             case 3:
-                return { label: t('productDetail.submodelViewer.status.registered'), color: '#4caf50' }; // Green
+                return { label: tCommon('status.registered'), color: '#4caf50' }; // Green
             default:
-                return { label: t('productDetail.submodelViewer.status.unknown'), color: '#757575' }; // Gray
+                return { label: tCommon('status.unknown'), color: '#757575' }; // Gray
         }
     };
 
@@ -322,7 +323,7 @@ const SubmodelViewer: React.FC<SubmodelViewerProps> = ({ twinDetails, onViewFull
                                             letterSpacing: '0.08em',
                                             fontSize: '10px'
                                         }}>
-                                            {t('productDetail.submodelViewer.submodelId')}
+                                            {tCommon('fields.submodelId')}
                                         </Typography>
                                         <Tooltip title={aspect.submodelId} placement="top">
                                             <Typography variant="body2" sx={{ 

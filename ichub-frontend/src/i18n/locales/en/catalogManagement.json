@@ -4,21 +4,9 @@
     "createButton": "Create Catalog Part"
   },
   "productCard": {
-    "share": "Share",
-    "more": "More",
-    "register": "Register Twin",
-    "viewDetails": "View Details",
     "noPartsAvailable": "No catalog parts available, please check your ichub-backend connection/configuration",
     "registerPart": "Register part",
-    "sharePart": "Share part",
-    "moreOptions": "More options",
-    "category": "Category",
-    "viewButton": "View",
-    "copied": "Copied!"
-  },
-  "pagination": {
-    "of": "of",
-    "rowsPerPage": "Rows per page"
+    "sharePart": "Share part"
   },
   "messages": {
     "registerSuccess": "Part twin registered successfully!",
@@ -28,10 +16,6 @@
   },
   "createDialog": {
     "title": "Create New Catalog Part",
-    "save": "Save",
-    "cancel": "Cancel",
-    "create": "Create",
-    "creating": "Creating...",
     "successMessage": "Catalog part created successfully.",
     "errorMessage": "Failed to create catalog part.",
     "materialSharesError": "Material shares must total exactly 100% (currently {{total}}%). Please adjust the percentages before creating.",
@@ -130,17 +114,13 @@
     "addCustomPartId": "Add custom customer part Id",
     "customerPartIdLabel": "Customer Part Id",
     "customerPartIdPlaceholder": "Enter your custom part identifier",
-    "close": "Close",
     "addPartner": "Add a Partner",
-    "share": "Share",
-    "sharing": "Sharing...",
     "shareSuccess": "Part shared successfully with {{bpnl}}",
     "shareError": "Failed to share part.",
     "validationError": "Validation failed.",
     "partDataNotAvailable": "Part data is not available."
   },
   "status": {
-    "registered": "Registered",
     "shared": "Shared",
     "draft": "Draft",
     "pending": "Pending"
@@ -200,15 +180,10 @@
       "loadingTwinId": "Loading Twin ID...",
       "noTwinIds": "No Twin IDs",
       "twinDataUnavailable": "Twin data unavailable",
-      "copiedToClipboard": "{{field}} copied to clipboard!",
-      "failedToCopy": "Failed to copy {{field}}",
       "partDetails": "Part Details",
       "invalidDate": "Invalid date",
       "twinTimestamps": {
         "title": "Twin Timestamps",
-        "created": "Created",
-        "updated": "Updated",
-        "loading": "Loading...",
         "notYetCreated": "Not yet created"
       },
       "sharing": {
@@ -221,17 +196,13 @@
         "materials": "Materials:",
         "noMaterials": "No materials data available",
         "dimensions": "Dimensions:",
-        "width": "Width",
         "height": "Height",
         "length": "Length",
         "weight": "Weight"
       },
       "partInfo": {
-        "description": "Description",
         "noDescription": "No description available",
-        "category": "Category",
         "uncategorized": "Uncategorized",
-        "bpns": "BPNS",
         "noBpns": "No BPNS available"
       },
       "sections": {
@@ -249,13 +220,11 @@
       },
       "specifications": {
         "manufacturerId": "Manufacturer ID",
-        "manufacturerPartId": "Manufacturer Part ID",
         "createdAt": "Created At",
         "updatedAt": "Updated At",
         "notAvailable": "Not available"
       },
       "dimensions": {
-        "width": "Width",
         "height": "Height", 
         "length": "Length",
         "weight": "Weight",
@@ -297,9 +266,7 @@
     },
     "submodelCard": {
       "version": "v{{version}}",
-      "namespace": "Namespace",
-      "submodelId": "Submodel ID",
-      "viewDetails": "View Details"
+      "namespace": "Namespace"
     },
     "submodelsGrid": {
       "title": "Digital Twin Submodels",
@@ -312,8 +279,7 @@
     },
     "jsonViewer": {
       "title": "JSON Viewer",
-      "copyJson": "Copy JSON",
-      "copied": "Copied!"
+      "copyJson": "Copy JSON"
     },
     "shareDropdown": {
       "share": "SHARE",
@@ -341,14 +307,10 @@
     },
     "darkSubmodelViewer": {
       "title": "Submodel Viewer",
-      "submodelId": "Submodel ID",
       "semanticId": "Semantic ID",
       "jsonData": "JSON Data",
       "structured": "Structured",
       "json": "JSON",
-      "close": "Close",
-      "refresh": "Refresh",
-      "loading": "Loading...",
       "failedToLoad": "Failed to load submodel content",
       "noDataAvailable": "No submodel data available or data could not be retrieved.",
       "unknownDataType": "Unknown data type"
@@ -358,16 +320,9 @@
       "newSubmodel": "New Submodel",
       "noSubmodelsAvailable": "No Submodels Available",
       "noSubmodelsDescription": "This digital twin doesn't have any submodel aspects available.",
-      "submodelId": "Submodel ID",
       "registrationInfo": "Registration Info",
       "noRegistration": "No Registration",
-      "viewSubmodel": "View Submodel",
-      "status": {
-        "created": "Created",
-        "available": "Available",
-        "registered": "Registered",
-        "unknown": "Unknown"
-      }
+      "viewSubmodel": "View Submodel"
     }
   }
 }

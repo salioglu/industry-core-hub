@@ -88,6 +88,7 @@ interface ProductListDialogProps {
 
 const CreateProductListDialog = ({ open, onClose, onSave }: ProductListDialogProps) => {
   const { t } = useTranslation('catalogManagement');
+  const { t: tCommon } = useTranslation('common');
   const manufacturerId = getParticipantId();
   const lengthUnits = Object.values(LengthUnit);
   const weightUnits = Object.values(WeightUnit);
@@ -1044,7 +1045,7 @@ const CreateProductListDialog = ({ open, onClose, onSave }: ProductListDialogPro
             fontWeight: 500
           }}
         >
-          {t('createDialog.cancel')}
+          {tCommon('actions.cancel')}
         </Button>
         <Button 
           onClick={handleSave}
@@ -1060,7 +1061,7 @@ const CreateProductListDialog = ({ open, onClose, onSave }: ProductListDialogPro
             boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
           }}
         >
-          {isLoading ? t('createDialog.creating') : t('createDialog.create')}
+          {isLoading ? tCommon('actions.creating') : tCommon('actions.create')}
         </Button>
       </DialogActions>
     </Dialog>

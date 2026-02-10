@@ -7,8 +7,7 @@
     "featureToggled": "{{featureName}} in {{kitName}} has been {{status}}"
   },
   "kitCard": {
-    "viewFeatures": "View Features",
-    "comingSoon": "Coming Soon"
+    "viewFeatures": "View Features"
   },
   "featuresPanel": {
     "title": "Available Features",

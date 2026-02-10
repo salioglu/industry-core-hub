@@ -4,21 +4,9 @@
     "createButton": "Crear Pieza de Catálogo"
   },
   "productCard": {
-    "share": "Compartir",
-    "more": "Más",
-    "register": "Registrar Twin",
-    "viewDetails": "Ver Detalles",
     "noPartsAvailable": "No hay piezas de catálogo disponibles, revisa la conexión/configuración del ichub-backend",
     "registerPart": "Registrar pieza",
-    "sharePart": "Compartir pieza",
-    "moreOptions": "Más opciones",
-    "category": "Categoría",
-    "viewButton": "Ver",
-    "copied": "¡Copiado!"
-  },
-  "pagination": {
-    "of": "de",
-    "rowsPerPage": "Filas por página"
+    "sharePart": "Compartir pieza"
   },
   "messages": {
     "registerSuccess": "¡Twin de pieza registrado correctamente!",
@@ -28,10 +16,6 @@
   },
   "createDialog": {
     "title": "Crear Nueva Pieza de Catálogo",
-    "save": "Guardar",
-    "cancel": "Cancelar",
-    "create": "Crear",
-    "creating": "Creando...",
     "successMessage": "Pieza de catálogo creada correctamente.",
     "errorMessage": "Error al crear la pieza de catálogo.",
     "materialSharesError": "Los porcentajes de materiales deben sumar exactamente 100% (actualmente {{total}}%). Por favor ajusta los porcentajes antes de crear.",
@@ -130,17 +114,13 @@
     "addCustomPartId": "Añadir ID de pieza de cliente personalizado",
     "customerPartIdLabel": "ID de Pieza de Cliente",
     "customerPartIdPlaceholder": "Introduce tu identificador de pieza personalizado",
-    "close": "Cerrar",
     "addPartner": "Añadir un Socio",
-    "share": "Compartir",
-    "sharing": "Compartiendo...",
     "shareSuccess": "Pieza compartida correctamente con {{bpnl}}",
     "shareError": "Error al compartir la pieza.",
     "validationError": "Error de validación.",
     "partDataNotAvailable": "Los datos de la pieza no están disponibles."
   },
   "status": {
-    "registered": "Registrado",
     "shared": "Compartido",
     "draft": "Borrador",
     "pending": "Pendiente"
@@ -200,15 +180,10 @@
       "loadingTwinId": "Cargando ID de Twin...",
       "noTwinIds": "Sin IDs de Twin",
       "twinDataUnavailable": "Datos de twin no disponibles",
-      "copiedToClipboard": "¡{{field}} copiado al portapapeles!",
-      "failedToCopy": "Error al copiar {{field}}",
       "partDetails": "Detalles de la Pieza",
       "invalidDate": "Fecha inválida",
       "twinTimestamps": {
         "title": "Marcas de Tiempo del Twin",
-        "created": "Creado",
-        "updated": "Actualizado",
-        "loading": "Cargando...",
         "notYetCreated": "Aún no creado"
       },
       "sharing": {
@@ -221,17 +196,13 @@
         "materials": "Materiales:",
         "noMaterials": "No hay datos de materiales disponibles",
         "dimensions": "Dimensiones:",
-        "width": "Ancho",
         "height": "Alto",
         "length": "Largo",
         "weight": "Peso"
       },
       "partInfo": {
-        "description": "Descripción",
         "noDescription": "Sin descripción disponible",
-        "category": "Categoría",
         "uncategorized": "Sin categorizar",
-        "bpns": "BPNS",
         "noBpns": "Sin BPNS disponible"
       },
       "sections": {
@@ -249,13 +220,11 @@
       },
       "specifications": {
         "manufacturerId": "ID de Fabricante",
-        "manufacturerPartId": "ID de Pieza del Fabricante",
         "createdAt": "Creado En",
         "updatedAt": "Actualizado En",
         "notAvailable": "No disponible"
       },
       "dimensions": {
-        "width": "Ancho",
         "height": "Alto", 
         "length": "Largo",
         "weight": "Peso",
@@ -297,9 +266,7 @@
     },
     "submodelCard": {
       "version": "v{{version}}",
-      "namespace": "Espacio de nombres",
-      "submodelId": "ID de Submodelo",
-      "viewDetails": "Ver Detalles"
+      "namespace": "Espacio de nombres"
     },
     "submodelsGrid": {
       "title": "Submodelos del Gemelo Digital",
@@ -312,8 +279,7 @@
     },
     "jsonViewer": {
       "title": "Visor JSON",
-      "copyJson": "Copiar JSON",
-      "copied": "¡Copiado!"
+      "copyJson": "Copiar JSON"
     },
     "shareDropdown": {
       "share": "COMPARTIR",
@@ -341,14 +307,10 @@
     },
     "darkSubmodelViewer": {
       "title": "Visor de Submodelo",
-      "submodelId": "ID de Submodelo",
       "semanticId": "ID Semántico",
       "jsonData": "Datos JSON",
       "structured": "Estructurado",
       "json": "JSON",
-      "close": "Cerrar",
-      "refresh": "Actualizar",
-      "loading": "Cargando...",
       "failedToLoad": "Error al cargar contenido del submodelo",
       "noDataAvailable": "No hay datos de submodelo disponibles o no se pudieron recuperar.",
       "unknownDataType": "Tipo de datos desconocido"
@@ -358,16 +320,9 @@
       "newSubmodel": "Nuevo Submodelo",
       "noSubmodelsAvailable": "Sin Submodelos Disponibles",
       "noSubmodelsDescription": "Este gemelo digital no tiene aspectos de submodelo disponibles.",
-      "submodelId": "ID de Submodelo",
       "registrationInfo": "Info de Registro",
       "noRegistration": "Sin Registro",
-      "viewSubmodel": "Ver Submodelo",
-      "status": {
-        "created": "Creado",
-        "available": "Disponible",
-        "registered": "Registrado",
-        "unknown": "Desconocido"
-      }
+      "viewSubmodel": "Ver Submodelo"
     }
   }
 }

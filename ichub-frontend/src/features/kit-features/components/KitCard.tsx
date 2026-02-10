@@ -44,6 +44,7 @@ interface KitCardProps {
 
 const KitCard: React.FC<KitCardProps> = ({ kit, isCenter = false }) => {
   const { t } = useTranslation('kits');
+  const { t: tCommon } = useTranslation('common');
   const navigate = useNavigate();
 
   const handleViewFeatures = () => {
@@ -217,7 +218,7 @@ const KitCard: React.FC<KitCardProps> = ({ kit, isCenter = false }) => {
                 }
               }}
             >
-              {t('kitCard.comingSoon')} (0)
+              {tCommon('status.comingSoon')} (0)
             </Button>
           </Box>
         )}

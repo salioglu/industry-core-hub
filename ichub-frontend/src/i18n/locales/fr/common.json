@@ -40,6 +40,7 @@
     "expand": "Développer",
     "collapse": "Réduire",
     "moreOptions": "Plus d'options",
+    "more": "Plus",
     "displayFilters": "Afficher les Filtres",
     "hideFilters": "Masquer les Filtres",
     "createAndSave": "Créer et Enregistrer",
@@ -59,7 +60,10 @@
     "beta": "Bêta",
     "enabled": "Activé",
     "disabled": "Désactivé",
-    "ready": "Prêt"
+    "ready": "Prêt",
+    "registered": "Enregistré",
+    "created": "Créé",
+    "unknown": "Inconnu"
   },
   "labels": {
     "default": "Par défaut",
@@ -100,7 +104,9 @@
     "status": "Statut",
     "category": "Catégorie",
     "van": "VAN",
-    "businessPartner": "Partenaire Commercial"
+    "businessPartner": "Partenaire Commercial",
+    "submodelId": "ID Sous-modèle",
+    "width": "Largeur"
   },
   "notifications": {
     "copiedToClipboard": "{{field}} copié dans le presse-papiers !",

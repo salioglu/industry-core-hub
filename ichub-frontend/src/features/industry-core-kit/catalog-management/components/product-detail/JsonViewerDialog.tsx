@@ -79,7 +79,7 @@ const JsonViewerDialog = ({ open, onClose, partData }: ProductDetailDialogProps)
             <DialogContent dividers>
                 <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word', background: '#f4f4f4', padding: '0 10px 5px 10px', borderRadius: '5px', textAlign: 'right' }}>
                     <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', marginBottom: '4px' }}>
-                        <span className='mr-3'>{copied ? t('productDetail.jsonViewer.copied') : ''}</span>
+                        <span className='mr-3'>{copied ? tCommon('actions.copied') : ''}</span>
                         <Button variant="text" onClick={handleCopy} size='small' className='copy-button'>
                             <ContentCopyIcon />
                         </Button>
