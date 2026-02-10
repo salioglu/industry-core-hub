@@ -493,7 +493,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
 
         if (row.twinStatus === StatusVariants.draft) {
           actions.push(
-            <Tooltip title={t('productDetail.instanceProductsTable.tooltips.registerTwin')} key="register" arrow>
+            <Tooltip title={t('common:tooltips.registerTwin')} key="register" arrow>
               <IconButton
                 size="small"
                 onClick={() => handleCreateTwin(row)}
@@ -530,7 +530,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
 
         if (row.twinStatus === StatusVariants.registered) {
           actions.push(
-            <Tooltip title={t('productDetail.instanceProductsTable.tooltips.shareTwin')} key="share" arrow>
+            <Tooltip title={t('common:tooltips.shareTwin')} key="share" arrow>
               <IconButton
                 size="small"
                 onClick={() => handleShareTwin(row)}
@@ -598,7 +598,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
 
         if (row.twinStatus === StatusVariants.shared) {
           actions.push(
-            <Tooltip title={t('productDetail.instanceProductsTable.tooltips.unshareTwin')} key="unshare" arrow>
+            <Tooltip title={t('common:tooltips.unshareTwin')} key="unshare" arrow>
               <IconButton
                 size="small"
                 onClick={() => handleUnshareTwin(row)}
@@ -705,7 +705,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
                 fontStyle: 'italic'
               }}
             >
-              {t('productDetail.instanceProductsTable.noGlobalAssetId')}
+              {t('common:tooltips.noGlobalAssetId')}
             </Typography>
           );
         }
@@ -778,7 +778,7 @@ export default function InstanceProductsTable({ part, onAddClick }: Readonly<Ins
                 fontStyle: 'italic'
               }}
             >
-              {t('productDetail.instanceProductsTable.noAasId')}
+              {t('common:tooltips.noAasId')}
             </Typography>
           );
         }

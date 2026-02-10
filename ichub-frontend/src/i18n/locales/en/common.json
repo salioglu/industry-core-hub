@@ -41,7 +41,11 @@
     "collapse": "Collapse",
     "moreOptions": "More options",
     "displayFilters": "Display Filters",
-    "hideFilters": "Hide Filters"
+    "hideFilters": "Hide Filters",
+    "createAndSave": "Create & Save",
+    "deleting": "Deleting...",
+    "refreshing": "Refreshing...",
+    "retry": "Retry"
   },
   "pagination": {
     "of": "of",
@@ -67,6 +71,7 @@
   "fields": {
     "name": "Name",
     "bpnl": "BPNL",
+    "bpns": "BPNS",
     "id": "ID:",
     "partner": "Partner",
     "description": "Description",
@@ -83,7 +88,11 @@
     "partId": "Part ID",
     "digitalTwinType": "Digital Twin Type",
     "submodels": "Submodels",
-    "connectorUrl": "Connector URL"
+    "connectorUrl": "Connector URL",
+    "status": "Status",
+    "category": "Category",
+    "van": "VAN",
+    "businessPartner": "Business Partner"
   },
   "notifications": {
     "copiedToClipboard": "{{field}} copied to clipboard!",
@@ -98,7 +107,13 @@
     "copyManufacturerPartId": "Copy Manufacturer Part ID",
     "copyPartInstanceId": "Copy Part Instance ID",
     "copyCustomerPartId": "Copy Customer Part ID",
-    "downloadTwinData": "Download Twin Data"
+    "downloadTwinData": "Download Twin Data",
+    "registerTwin": "Register Twin",
+    "shareTwin": "Share Twin",
+    "unshareTwin": "Unshare Twin",
+    "deletePart": "Delete Part",
+    "noGlobalAssetId": "No Global Asset ID",
+    "noAasId": "No AAS ID"
   },
   "auth": {
     "initializingAuth": "Initializing authentication...",

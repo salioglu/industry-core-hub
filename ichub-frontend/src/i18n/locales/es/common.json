@@ -41,7 +41,11 @@
     "collapse": "Contraer",
     "moreOptions": "Más opciones",
     "displayFilters": "Mostrar Filtros",
-    "hideFilters": "Ocultar Filtros"
+    "hideFilters": "Ocultar Filtros",
+    "createAndSave": "Crear y Guardar",
+    "deleting": "Eliminando...",
+    "refreshing": "Actualizando...",
+    "retry": "Reintentar"
   },
   "pagination": {
     "of": "de",
@@ -67,6 +71,7 @@
   "fields": {
     "name": "Nombre",
     "bpnl": "BPNL",
+    "bpns": "BPNS",
     "id": "ID:",
     "partner": "Socio",
     "description": "Descripción",
@@ -83,7 +88,11 @@
     "partId": "ID de Parte",
     "digitalTwinType": "Tipo de Gemelo Digital",
     "submodels": "Submodelos",
-    "connectorUrl": "URL del Conector"
+    "connectorUrl": "URL del Conector",
+    "status": "Estado",
+    "category": "Categoría",
+    "van": "VAN",
+    "businessPartner": "Socio Comercial"
   },
   "notifications": {
     "copiedToClipboard": "{{field}} copiado al portapapeles!",
@@ -98,7 +107,13 @@
     "copyManufacturerPartId": "Copiar ID de Pieza del Fabricante",
     "copyPartInstanceId": "Copiar ID de Instancia de Pieza",
     "copyCustomerPartId": "Copiar ID de Pieza del Cliente",
-    "downloadTwinData": "Descargar Datos del Gemelo"
+    "downloadTwinData": "Descargar Datos del Gemelo",
+    "registerTwin": "Registrar Gemelo",
+    "shareTwin": "Compartir Gemelo",
+    "unshareTwin": "Dejar de Compartir Gemelo",
+    "deletePart": "Eliminar Pieza",
+    "noGlobalAssetId": "Sin ID de Activo Global",
+    "noAasId": "Sin ID de AAS"
   },
   "auth": {
     "initializingAuth": "Inicializando autenticación...",

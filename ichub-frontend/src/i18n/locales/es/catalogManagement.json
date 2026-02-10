@@ -151,12 +151,9 @@
       "sharingPartner": "Socio de Compartición",
       "selectPartner": "Seleccionar Socio de Compartición",
       "selectPartnerPlaceholder": "Selecciona un socio para compartir",
-      "partInstanceId": "ID de Instancia de Pieza",
       "optionalFields": "Campos Opcionales",
       "includeVan": "Incluir campo VAN",
-      "van": "VAN",
       "includeCustomerPartId": "Incluir campo ID de Pieza de Cliente",
-      "customerPartId": "ID de Pieza de Cliente",
       "successMessage": "Pieza serializada creada correctamente",
       "errorMessage": "Error al crear pieza serializada: {{error}}"
     },
@@ -171,12 +168,7 @@
         "status": "Estado",
         "actions": "Acciones"
       },
-      "noGlobalAssetId": "Sin ID de Activo Global",
-      "noAasId": "Sin ID de AAS",
       "tooltips": {
-        "registerTwin": "Registrar Twin",
-        "shareTwin": "Compartir Twin",
-        "unshareTwin": "Dejar de compartir Twin",
         "deleteSerializedPart": "Eliminar Pieza Serializada"
       },
       "messages": {

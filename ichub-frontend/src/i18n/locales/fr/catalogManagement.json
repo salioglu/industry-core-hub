@@ -150,15 +150,12 @@
       "title": "Ajouter une Pièce Sérialisée",
       "sharingPartner": "Partenaire de Partage",
       "selectPartner": "Sélectionner un partenaire",
-      "partInstanceId": "ID Instance de Pièce",
       "partInstanceIdPlaceholder": "Entrez l'ID d'instance de pièce",
       "partInstanceIdRequired": "L'ID d'instance de pièce est requis",
       "optionalFields": "Champs Optionnels",
       "includeVan": "Inclure VAN",
-      "van": "VAN",
       "vanPlaceholder": "Entrez le VAN",
       "includeCustomerPartId": "Inclure l'ID Pièce Client",
-      "customerPartId": "ID Pièce Client",
       "customerPartIdPlaceholder": "Entrez l'ID pièce client",
       "successMessage": "Pièce sérialisée ajoutée avec succès",
       "errorMessage": "Échec de l'ajout de la pièce sérialisée"
@@ -174,12 +171,7 @@
         "status": "Statut",
         "actions": "Actions"
       },
-      "noGlobalAssetId": "Pas d'ID d'Actif Global",
-      "noAasId": "Pas d'ID AAS",
       "tooltips": {
-        "registerTwin": "Enregistrer le Twin",
-        "shareTwin": "Partager le Twin",
-        "unshareTwin": "Annuler le partage du Twin",
         "deleteSerializedPart": "Supprimer la Pièce Sérialisée"
       },
       "messages": {
@@ -207,11 +199,7 @@
       "title": "Instances de Pièces",
       "addButton": "Ajouter une Pièce Sérialisée",
       "columns": {
-        "partInstanceId": "ID Instance de Pièce",
-        "van": "VAN",
-        "customerPartId": "ID Pièce Client",
-        "status": "Statut",
-        "actions": "Actions"
+        "partInstanceId": "ID Instance de Pièce"
       },
       "tooltips": {
         "share": "Partager cette pièce",

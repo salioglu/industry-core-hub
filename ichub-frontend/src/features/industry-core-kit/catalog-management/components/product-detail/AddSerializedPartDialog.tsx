@@ -263,7 +263,7 @@ const AddSerializedPartDialog = ({ open, onClose, partData }: ProductDetailDialo
 
                     <Grid item xs={12}>
                         <TextField
-                            label={t('productDetail.addSerializedPartDialog.partInstanceId')}
+                            label={tCommon('fields.partInstanceId')}
                             value={formData.partInstanceId}
                             onChange={(e) => setFormData({ ...formData, partInstanceId: e.target.value })}
                             fullWidth
@@ -298,7 +298,7 @@ const AddSerializedPartDialog = ({ open, onClose, partData }: ProductDetailDialo
                             
                             {showVanField && (
                                 <TextField
-                                    label={t('productDetail.addSerializedPartDialog.van')}
+                                    label={tCommon('fields.van')}
                                     value={formData.van}
                                     onChange={(e) => setFormData({ ...formData, van: e.target.value })}
                                     fullWidth
@@ -322,7 +322,7 @@ const AddSerializedPartDialog = ({ open, onClose, partData }: ProductDetailDialo
                             
                             {showCustomerPartIdField && (
                                 <TextField
-                                    label={t('productDetail.addSerializedPartDialog.customerPartId')}
+                                    label={tCommon('fields.customerPartId')}
                                     value={formData.customerPartId}
                                     onChange={(e) => setFormData({ ...formData, customerPartId: e.target.value })}
                                     fullWidth

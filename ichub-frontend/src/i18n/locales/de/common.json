@@ -41,7 +41,11 @@
     "collapse": "Zuklappen",
     "moreOptions": "Weitere Optionen",
     "displayFilters": "Filter anzeigen",
-    "hideFilters": "Filter ausblenden"
+    "hideFilters": "Filter ausblenden",
+    "createAndSave": "Erstellen & Speichern",
+    "deleting": "Löschen...",
+    "refreshing": "Aktualisieren...",
+    "retry": "Wiederholen"
   },
   "pagination": {
     "of": "von",
@@ -67,6 +71,7 @@
   "fields": {
     "name": "Name",
     "bpnl": "BPNL",
+    "bpns": "BPNS",
     "id": "ID:",
     "partner": "Partner",
     "description": "Beschreibung",
@@ -79,9 +84,15 @@
     "manufacturerPartId": "Hersteller-Teile-ID",
     "customerPartId": "Kunden-Teile-ID",
     "manufacturerId": "Hersteller-ID",
-    "partInstanceId": "Teileinstanz-ID",    "partId": "Teil-ID",    "digitalTwinType": "Digitaler Zwillingstyp",
+    "partInstanceId": "Teileinstanz-ID",
+    "partId": "Teil-ID",
+    "digitalTwinType": "Digitaler Zwillingstyp",
     "submodels": "Submodelle",
-    "connectorUrl": "Connector-URL"
+    "connectorUrl": "Connector-URL",
+    "status": "Status",
+    "category": "Kategorie",
+    "van": "VAN",
+    "businessPartner": "Geschäftspartner"
   },
   "notifications": {
     "copiedToClipboard": "{{field}} in die Zwischenablage kopiert!",
@@ -96,7 +107,13 @@
     "copyManufacturerPartId": "Hersteller-Teile-ID kopieren",
     "copyPartInstanceId": "Teileinstanz-ID kopieren",
     "copyCustomerPartId": "Kunden-Teile-ID kopieren",
-    "downloadTwinData": "Zwillingsdaten herunterladen"
+    "downloadTwinData": "Zwillingsdaten herunterladen",
+    "registerTwin": "Zwilling registrieren",
+    "shareTwin": "Zwilling teilen",
+    "unshareTwin": "Zwilling nicht mehr teilen",
+    "deletePart": "Teil löschen",
+    "noGlobalAssetId": "Keine Global Asset ID",
+    "noAasId": "Keine AAS ID"
   },
   "auth": {
     "initializingAuth": "Authentifizierung wird initialisiert...",

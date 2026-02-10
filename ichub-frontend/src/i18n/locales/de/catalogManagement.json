@@ -151,12 +151,9 @@
       "sharingPartner": "Teilungspartner",
       "selectPartner": "Teilungspartner auswählen",
       "selectPartnerPlaceholder": "Partner zum Teilen auswählen",
-      "partInstanceId": "Teil-Instanz-ID",
       "optionalFields": "Optionale Felder",
       "includeVan": "VAN-Feld einbeziehen",
-      "van": "VAN",
       "includeCustomerPartId": "Kunden-Teil-ID-Feld einbeziehen",
-      "customerPartId": "Kunden-Teil-ID",
       "successMessage": "Serialisiertes Teil erfolgreich erstellt",
       "errorMessage": "Fehler beim Erstellen des serialisierten Teils: {{error}}"
     },
@@ -171,12 +168,7 @@
         "status": "Status",
         "actions": "Aktionen"
       },
-      "noGlobalAssetId": "Keine globale Asset-ID",
-      "noAasId": "Keine AAS-ID",
       "tooltips": {
-        "registerTwin": "Twin registrieren",
-        "shareTwin": "Twin teilen",
-        "unshareTwin": "Twin-Freigabe aufheben",
         "deleteSerializedPart": "Serialisiertes Teil löschen"
       },
       "messages": {

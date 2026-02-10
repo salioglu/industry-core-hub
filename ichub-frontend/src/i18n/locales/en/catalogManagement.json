@@ -151,12 +151,9 @@
       "sharingPartner": "Sharing Partner",
       "selectPartner": "Select Sharing Partner",
       "selectPartnerPlaceholder": "Select a partner to share with",
-      "partInstanceId": "Part Instance ID",
       "optionalFields": "Optional Fields",
       "includeVan": "Include VAN field",
-      "van": "VAN",
       "includeCustomerPartId": "Include Customer Part ID field",
-      "customerPartId": "Customer Part ID",
       "successMessage": "Serialized part created successfully",
       "errorMessage": "Failed to create serialized part: {{error}}"
     },
@@ -171,12 +168,7 @@
         "status": "Status",
         "actions": "Actions"
       },
-      "noGlobalAssetId": "No Global Asset ID",
-      "noAasId": "No AAS ID",
       "tooltips": {
-        "registerTwin": "Register Twin",
-        "shareTwin": "Share Twin",
-        "unshareTwin": "Unshare Twin",
         "deleteSerializedPart": "Delete Serialized Part"
       },
       "messages": {

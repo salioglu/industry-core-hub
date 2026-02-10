@@ -31,6 +31,7 @@ import enPartnerManagement from './locales/en/partnerManagement.json';
 import enPassportConsumption from './locales/en/passportConsumption.json';
 import enPassportProvision from './locales/en/passportProvision.json';
 import enPartDiscovery from './locales/en/partDiscovery.json';
+import enSerializedParts from './locales/en/serializedParts.json';
 
 // Spanish
 import esCommon from './locales/es/common.json';
@@ -40,6 +41,7 @@ import esPartnerManagement from './locales/es/partnerManagement.json';
 import esPassportConsumption from './locales/es/passportConsumption.json';
 import esPassportProvision from './locales/es/passportProvision.json';
 import esPartDiscovery from './locales/es/partDiscovery.json';
+import esSerializedParts from './locales/es/serializedParts.json';
 
 // German
 import deCommon from './locales/de/common.json';
@@ -49,6 +51,7 @@ import dePartnerManagement from './locales/de/partnerManagement.json';
 import dePassportConsumption from './locales/de/passportConsumption.json';
 import dePassportProvision from './locales/de/passportProvision.json';
 import dePartDiscovery from './locales/de/partDiscovery.json';
+import deSerializedParts from './locales/de/serializedParts.json';
 
 // French
 import frCommon from './locales/fr/common.json';
@@ -58,6 +61,7 @@ import frPartnerManagement from './locales/fr/partnerManagement.json';
 import frPassportConsumption from './locales/fr/passportConsumption.json';
 import frPassportProvision from './locales/fr/passportProvision.json';
 import frPartDiscovery from './locales/fr/partDiscovery.json';
+import frSerializedParts from './locales/fr/serializedParts.json';
 
 export const defaultNS = 'common';
 export const resources = {
@@ -68,7 +72,8 @@ export const resources = {
     partnerManagement: enPartnerManagement,
     passportConsumption: enPassportConsumption,
     passportProvision: enPassportProvision,
-    partDiscovery: enPartDiscovery
+    partDiscovery: enPartDiscovery,
+    serializedParts: enSerializedParts
   },
   es: {
     common: esCommon,
@@ -77,7 +82,8 @@ export const resources = {
     partnerManagement: esPartnerManagement,
     passportConsumption: esPassportConsumption,
     passportProvision: esPassportProvision,
-    partDiscovery: esPartDiscovery
+    partDiscovery: esPartDiscovery,
+    serializedParts: esSerializedParts
   },
   de: {
     common: deCommon,
@@ -86,7 +92,8 @@ export const resources = {
     partnerManagement: dePartnerManagement,
     passportConsumption: dePassportConsumption,
     passportProvision: dePassportProvision,
-    partDiscovery: dePartDiscovery
+    partDiscovery: dePartDiscovery,
+    serializedParts: deSerializedParts
   },
   fr: {
     common: frCommon,
@@ -95,7 +102,8 @@ export const resources = {
     partnerManagement: frPartnerManagement,
     passportConsumption: frPassportConsumption,
     passportProvision: frPassportProvision,
-    partDiscovery: frPartDiscovery
+    partDiscovery: frPartDiscovery,
+    serializedParts: frSerializedParts
   }
 } as const;
 
