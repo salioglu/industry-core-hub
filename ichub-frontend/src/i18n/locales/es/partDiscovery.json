@@ -1,11 +1,16 @@
 {
   "page": {
     "title": "Descubrimiento de Partes",
-    "subtitle": "Explora y descubre gemelos digitales en el espacio de datos"
+    "subtitle": "Explora y descubre gemelos digitales en el espacio de datos",
+    "dataspaceDiscovery": "Descubrimiento del Dataspace",
+    "dataspaceDiscoverySubtitle": "Descubre y explora partes de gemelos digitales en una red Tractus-X",
+    "singleDigitalTwin": "Gemelo Digital Individual",
+    "singleDigitalTwinSubtitle": "Busca un gemelo digital específico proporcionando su ID de Asset Administration Shell (AAS)"
   },
   "searchModes": {
     "discovery": "Descubrimiento",
-    "singleTwin": "Gemelo Individual"
+    "singleTwin": "Gemelo Individual",
+    "discoveryMode": "Modo Descubrimiento"
   },
   "sidebar": {
     "digitalTwinType": "Tipo de Gemelo Digital",
@@ -38,7 +43,13 @@
     "partnerPlaceholder": "Seleccione de los socios disponibles o ingrese un Número de Socio Comercial de Entidad Legal personalizado",
     "startDiscovery": "Iniciar Descubrimiento",
     "searchTwin": "Buscar Gemelo",
-    "aasIdPlaceholder": "Ingrese el ID del Shell de Administración de Activos"
+    "aasIdPlaceholder": "Ingrese el ID del Shell de Administración de Activos",
+    "aasIdLabel": "ID del Asset Administration Shell *",
+    "aasIdPlaceholderFull": "Ingrese el ID de AAS (ej., urn:uuid:35bb3960-70f8-4ff4-bd9f-0670f3beb39d)",
+    "aasIdRequired": "El ID de AAS es requerido",
+    "aasIdHelperText": "Ingrese el identificador único para el Asset Administration Shell",
+    "searching": "Buscando...",
+    "searchDigitalTwin": "Buscar Gemelo Digital"
   },
   "loading": {
     "searchingDataspace": "Buscando en el espacio de datos para datos disponibles...",
@@ -59,12 +70,14 @@
     "processing": "Procesando..."
   },
   "catalogParts": {
-    "noPartsAvailable": "No hay partes de catálogo disponibles, por favor verifique la conexión/configuración de su ichub-backend."
+    "noPartsAvailable": "No hay partes de catálogo disponibles, por favor verifique la conexión/configuración de su ichub-backend.",
+    "noCatalogPartsFound": "No se encontraron partes de catálogo"
   },
   "serializedParts": {
     "dtrSource": "Fuente DTR",
     "showingParts": "Mostrando {{count}} partes serializadas",
-    "sortHint": "Haga clic en los encabezados de columna para ordenar • Use los filtros de columna para buscar"
+    "sortHint": "Haga clic en los encabezados de columna para ordenar • Use los filtros de columna para buscar",
+    "noSerializedPartsFound": "No se encontraron partes serializadas"
   },
   "singleTwin": {
     "searchTwin": "Buscar Gemelo",
@@ -90,19 +103,43 @@
     "hideDtrs": "Ocultar DTRs",
     "dtrLabel": "DTR {{index}}",
     "shellsFound": "{{count}} shell encontrado",
-    "shellsFound_plural": "{{count}} shells encontrados"
+    "shellsFoundPlural": "{{count}} shells encontrados",
+    "connectorUrl": "URL del Conector:",
+    "assetIdLabel": "ID del Activo:",
+    "shellsFoundLabel": "Shells Encontrados",
+    "carousel": {
+      "pageOf": "{{current}} de {{total}} • {{count}} en total"
+    }
   },
   "results": {
     "title": "Resultados del Descubrimiento",
     "catalogParts": "Partes de Catálogo",
     "serializedParts": "Partes Serializadas",
-    "newSearch": "Nueva Búsqueda"
+    "newSearch": "Nueva Búsqueda",
+    "backToResults": "Volver a Resultados",
+    "activeFilters": "Filtros Activos:",
+    "page": "Página {{current}}",
+    "pageOf": "de {{total}}"
   },
   "errors": {
     "enterBpnl": "Por favor ingrese un BPNL de socio",
     "enterAasId": "Por favor ingrese un ID de AAS",
     "searchFailed": "La búsqueda falló. Por favor intente de nuevo.",
     "connectionError": "Error de conexión. Por favor verifique su red.",
-    "noPartnersAvailable": "No hay socios disponibles. Por favor agregue socios primero."
+    "noPartnersAvailable": "No hay socios disponibles. Por favor agregue socios primero.",
+    "failedToLoadPartners": "Error al cargar socios. El backend puede no estar disponible.",
+    "customLimitRequired": "Por favor ingrese un límite personalizado o seleccione una opción predefinida",
+    "customLimitRange": "El límite personalizado debe ser un número entre 1 y 1000",
+    "noDtrsFound": "No se encontraron Registros de Gemelos Digitales para el socio \"{{bpnl}}\". Por favor verifique que el BPNL sea correcto y si el socio tiene un Conector (con un DTR alcanzable) conectado en el mismo espacio de datos que usted.",
+    "noDigitalTwinsFound": "No se encontraron gemelos digitales para los criterios especificados. Por favor intente con diferentes parámetros de búsqueda.",
+    "dtrIssuesDetected": "Problemas de DTR detectados: {{errors}}",
+    "directNavigationNotSupported": "La navegación directa a la página {{page}} no está soportada. Por favor use la navegación anterior/siguiente.",
+    "noMorePages": "No hay más páginas disponibles en esa dirección.",
+    "errorLoadingPage": "Error al cargar la página. Por favor intente de nuevo.",
+    "errorSearchingParts": "Error al buscar partes. Por favor intente de nuevo.",
+    "singleTwinSearchFailed": "La búsqueda del gemelo individual falló: {{message}}",
+    "failedToDiscoverTwin": "Error al descubrir el gemelo digital",
+    "paginationFailed": "La paginación falló: {{message}}",
+    "unableToLoadPartners": "No se pudo cargar la lista de socios desde el backend. Aún puede ingresar un BPNL personalizado manualmente."
   }
 }

@@ -1,11 +1,16 @@
 {
   "page": {
     "title": "Parts Discovery",
-    "subtitle": "Explore and discover digital twins across the dataspace"
+    "subtitle": "Explore and discover digital twins across the dataspace",
+    "dataspaceDiscovery": "Dataspace Discovery",
+    "dataspaceDiscoverySubtitle": "Discover and explore digital twin parts in a Tractus-X network",
+    "singleDigitalTwin": "Single Digital Twin",
+    "singleDigitalTwinSubtitle": "Search for a specific digital twin by providing its Asset Administration Shell (AAS) ID"
   },
   "searchModes": {
     "discovery": "Discovery",
-    "singleTwin": "Single Twin"
+    "singleTwin": "Single Twin",
+    "discoveryMode": "Discovery Mode"
   },
   "sidebar": {
     "digitalTwinType": "Digital Twin Type",
@@ -38,7 +43,13 @@
     "partnerPlaceholder": "Select from available partners or enter a custom Business Partner Number Legal Entity",
     "startDiscovery": "Start Discovery",
     "searchTwin": "Search Twin",
-    "aasIdPlaceholder": "Enter Asset Administration Shell ID"
+    "aasIdPlaceholder": "Enter Asset Administration Shell ID",
+    "aasIdLabel": "Asset Administration Shell ID *",
+    "aasIdPlaceholderFull": "Enter AAS ID (e.g., urn:uuid:35bb3960-70f8-4ff4-bd9f-0670f3beb39d)",
+    "aasIdRequired": "AAS ID is required",
+    "aasIdHelperText": "Enter the unique identifier for the Asset Administration Shell",
+    "searching": "Searching...",
+    "searchDigitalTwin": "Search Digital Twin"
   },
   "loading": {
     "searchingDataspace": "Searching through the dataspace for available data...",
@@ -59,12 +70,14 @@
     "processing": "Processing..."
   },
   "catalogParts": {
-    "noPartsAvailable": "No catalog parts available, please check your ichub-backend connection/configuration."
+    "noPartsAvailable": "No catalog parts available, please check your ichub-backend connection/configuration.",
+    "noCatalogPartsFound": "No catalog parts found"
   },
   "serializedParts": {
     "dtrSource": "DTR Source",
     "showingParts": "Showing {{count}} serialized parts",
-    "sortHint": "Click on column headers to sort • Use column filters for search"
+    "sortHint": "Click on column headers to sort • Use column filters for search",
+    "noSerializedPartsFound": "No serialized parts found"
   },
   "singleTwin": {
     "searchTwin": "Search Twin",
@@ -90,19 +103,43 @@
     "hideDtrs": "Hide DTRs",
     "dtrLabel": "DTR {{index}}",
     "shellsFound": "{{count}} shell found",
-    "shellsFound_plural": "{{count}} shells found"
+    "shellsFoundPlural": "{{count}} shells found",
+    "connectorUrl": "Connector URL:",
+    "assetIdLabel": "Asset ID:",
+    "shellsFoundLabel": "Shells Found",
+    "carousel": {
+      "pageOf": "{{current}} of {{total}} • {{count}} total"
+    }
   },
   "results": {
     "title": "Discovery Results",
     "catalogParts": "Catalog Parts",
     "serializedParts": "Serialized Parts",
-    "newSearch": "New Search"
+    "newSearch": "New Search",
+    "backToResults": "Back to Results",
+    "activeFilters": "Active Filters:",
+    "page": "Page {{current}}",
+    "pageOf": "of {{total}}"
   },
   "errors": {
     "enterBpnl": "Please enter a partner BPNL",
     "enterAasId": "Please enter an AAS ID",
     "searchFailed": "Search failed. Please try again.",
     "connectionError": "Connection error. Please check your network.",
-    "noPartnersAvailable": "No partners available. Please add partners first."
+    "noPartnersAvailable": "No partners available. Please add partners first.",
+    "failedToLoadPartners": "Failed to load partners. Backend may be unavailable.",
+    "customLimitRequired": "Please enter a custom limit or select a predefined option",
+    "customLimitRange": "Custom limit must be a number between 1 and 1000",
+    "noDtrsFound": "No Digital Twin Registries found for partner \"{{bpnl}}\". Please verify the BPNL is correct and if the partner has a Connector (with a reachable DTR) connected in the same dataspace as you.",
+    "noDigitalTwinsFound": "No digital twins found for the specified criteria. Please try different search parameters.",
+    "dtrIssuesDetected": "DTR issues detected: {{errors}}",
+    "directNavigationNotSupported": "Direct navigation to page {{page}} is not supported. Please use next/previous navigation.",
+    "noMorePages": "No more pages available in that direction.",
+    "errorLoadingPage": "Error loading page. Please try again.",
+    "errorSearchingParts": "Error searching for parts. Please try again.",
+    "singleTwinSearchFailed": "Single twin search failed: {{message}}",
+    "failedToDiscoverTwin": "Failed to discover digital twin",
+    "paginationFailed": "Pagination failed: {{message}}",
+    "unableToLoadPartners": "Unable to load partner list from backend. You can still enter a custom BPNL manually."
   }
 }
