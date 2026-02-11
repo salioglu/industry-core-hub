@@ -183,7 +183,7 @@ export default function PrimarySearchAppBar() {
             color: 'text.primary'
           }}
         >
-          Mathias Brunkow Moser
+          {isAuthenticated && user ? user.firstName + ' ' + user.lastName : t('header.guest')}
         </Typography>
         <Typography 
           variant="body2" 
