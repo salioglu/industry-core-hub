@@ -22,6 +22,7 @@
 
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 // English
 import enCommon from './locales/en/common.json';
@@ -107,16 +108,31 @@ export const resources = {
   }
 } as const;
 
+/** 
+ * Supported language codes for the application.
+ * Used by the language detector to validate detected languages.
+ */
+const supportedLanguages = ['en', 'es', 'de', 'fr'];
+
 i18n
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // Default language
     fallbackLng: 'en',
+    supportedLngs: supportedLanguages,
     defaultNS,
     ns: ['common', 'kits', 'catalogManagement', 'partnerManagement', 'passportConsumption', 'passportProvision', 'partDiscovery'],
     interpolation: {
       escapeValue: false // React already escapes values
+    },
+    detection: {
+      // Order of detection methods: localStorage first, then browser language
+      order: ['localStorage', 'navigator', 'htmlTag'],
+      // Key used to store language preference in localStorage
+      lookupLocalStorage: 'ichub-language',
+      // Cache the detected language in localStorage
+      caches: ['localStorage']
     }
   });
 
