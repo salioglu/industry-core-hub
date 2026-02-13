@@ -31,18 +31,8 @@ on:
 
 jobs:
 
-  test-prepare:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Cache ContainerD Image Layers
-        uses: actions/cache@v4
-        with:
-          path: /var/lib/containerd/io.containerd.snapshotter.v1.overlayfs
-          key: ${{ runner.os }}-io.containerd.snapshotter.v1.overlayfs
-
   ichub-deployment:
     runs-on: ubuntu-latest
-    needs: test-prepare
     strategy:
       fail-fast: false
       # this will verify that the official distribution of the Tractus-X Industry Core Helm chart runs on the last 3 Kubernetes versions
@@ -77,11 +67,15 @@ jobs:
         run: |
           docker build -t kind-registry:5000/ichub-backend:test ./ichub-backend
           kind load docker-image kind-registry:5000/ichub-backend:test --name ichub-test-cluster
+        env:
+          KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER: overlayfs
 
       - name: Build and load frontend image
         run: |
           docker build -t kind-registry:5000/ichub-frontend:test ./ichub-frontend
           kind load docker-image kind-registry:5000/ichub-frontend:test --name ichub-test-cluster
+        env:
+          KIND_EXPERIMENTAL_CONTAINERD_SNAPSHOTTER: overlayfs
 
       - name: Wait for cluster to be ready
         run: |
