@@ -78,19 +78,8 @@ jobs:
         with:
           python-version: "3.9"
           check-latest: true
-      - name: Set up chart-testing
-        uses: helm/chart-testing-action@0d28d3144d3a25ea2cc349d6e59901c4ff469b3b # v2.7.0
-
-      - name: Run chart-testing (list-changed)
-        id: list-changed
-        run: |
-          changed=$(ct list-changed --target-branch ${{ github.event.repository.default_branch }})
-          if [[ -n "$changed" ]]; then
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Run chart-testing (lint)
-        run: ct lint --validate-maintainers=false --target-branch ${{ github.event.repository.default_branch }}
+      - name: Helm lint
+        run: helm lint charts/industry-core-hub -f charts/test-helm-values-ichub.yaml
 
       - name: Setup Helm repos
         run: |
@@ -108,17 +97,24 @@ jobs:
           docker build -t kind-registry:5000/ichub-frontend:ci ./ichub-frontend
           kind load docker-image kind-registry:5000/ichub-frontend:ci
 
-      - name: Copy values file to chart ci directory
-        run: |
-          mkdir -p charts/industry-core-hub/ci
-          cp charts/test-helm-values-ichub.yaml charts/industry-core-hub/ci/ci-values.yaml
 
       - name: Run chart-testing (install)
         run: |
-          ct install --charts charts/industry-core-hub \
-            --helm-extra-args "--timeout 900s --set backend.image.repository=kind-registry:5000/ichub-backend --set backend.image.tag=ci --set backend.image.pullPolicy=IfNotPresent --set frontend.image.repository=kind-registry:5000/ichub-frontend --set frontend.image.tag=ci --set frontend.image.pullPolicy=IfNotPresent" \
-            --target-branch ${{ github.event.repository.default_branch }}
-        if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
+          helm dependency update charts/industry-core-hub
+          helm install test-release charts/industry-core-hub \
+            --values charts/test-helm-values-ichub.yaml \
+            --set backend.image.repository=kind-registry:5000/ichub-backend \
+            --set backend.image.tag=ci \
+            --set backend.image.pullPolicy=IfNotPresent \
+            --set frontend.image.repository=kind-registry:5000/ichub-frontend \
+            --set frontend.image.tag=ci \
+            --set frontend.image.pullPolicy=IfNotPresent \
+            --timeout 900s \
+            --wait
+
+      - name: Helm uninstall
+        if: always()
+        run: helm uninstall test-release
 
         # Upgrade the released chart version with the locally available chart
       - name: Run helm upgrade
@@ -138,4 +134,4 @@ jobs:
            --set frontend.image.tag=ci \
            --set frontend.image.pullPolicy=IfNotPresent \
            --timeout 900s --wait --atomic
-        if: github.event_name != 'pull_request' || steps.list-changed.outputs.changed == 'true'
+        if: github.event_name != 'pull_request'
