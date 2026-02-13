@@ -73,19 +73,15 @@ jobs:
           wait: 300s
           registry: true
       
-      - name: Build and push backend image
-        uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56 # v5.1.0
-        with:
-          context: ./ichub-backend
-          push: true
-          tags: kind-registry:5000/ichub-backend:test
+      - name: Build and load backend image
+        run: |
+          docker build -t kind-registry:5000/ichub-backend:test ./ichub-backend
+          kind load docker-image kind-registry:5000/ichub-backend:test --name ichub-test-cluster
 
-      - name: Build and push frontend image  
-        uses: docker/build-push-action@4a13e500e55cf31b7a5d59a38ab2040ab0f42f56 # v5.1.0
-        with:
-          context: ./ichub-frontend
-          push: true
-          tags: kind-registry:5000/ichub-frontend:test
+      - name: Build and load frontend image
+        run: |
+          docker build -t kind-registry:5000/ichub-frontend:test ./ichub-frontend
+          kind load docker-image kind-registry:5000/ichub-frontend:test --name ichub-test-cluster
 
       - name: Wait for cluster to be ready
         run: |
