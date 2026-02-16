@@ -23,7 +23,7 @@
 
 import os
 from pathlib import Path
-from typing import Dict, Any, Callable
+from typing import Dict, Any
 from uuid import UUID
 from hashlib import sha256
 from enum import Enum
