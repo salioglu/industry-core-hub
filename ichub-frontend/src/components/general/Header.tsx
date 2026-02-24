@@ -146,159 +146,63 @@ export default function PrimarySearchAppBar() {
     <Menu
       anchorEl={anchorEl}
       id={menuId}
+      className="header-menu user-menu"
       open={isMenuOpen}
       onClose={handleMenuClose}
-      PaperProps={{
-        elevation: 8,
-        sx: {
-          overflow: 'visible',
-          filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.15))',
-          mt: 1.5,
-          minWidth: 280,
-          borderRadius: 2,
-          '&:before': {
-            content: '""',
-            display: 'block',
-            position: 'absolute',
-            top: 0,
-            right: 14,
-            width: 10,
-            height: 10,
-            bgcolor: 'background.paper',
-            transform: 'translateY(-50%) rotate(45deg)',
-            zIndex: 0,
-          },
-        },
-      }}
       transformOrigin={{ horizontal: 'right', vertical: 'top' }}
       anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
     >
       {/* User Info Section */}
-      <Box sx={{ px: 2, py: 2, background: 'linear-gradient(135deg, rgba(66, 165, 245, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%)' }}>
-        <Typography 
-          variant="subtitle1" 
-          sx={{ 
-            fontWeight: 600,
-            mb: 0.5,
-            color: 'text.primary'
-          }}
-        >
+      <Box className="user-info-section">
+        <Typography variant="subtitle1" className="user-name" color="text.primary">
           {isAuthenticated && user ? user.firstName + ' ' + user.lastName : t('header.guest')}
         </Typography>
-        <Typography 
-          variant="body2" 
-          sx={{ 
-            color: 'text.secondary',
-            mb: 0.5,
-            fontSize: '0.875rem'
-          }}
-        >
+        <Typography variant="body2" className="user-username" color="text.secondary">
           {isAuthenticated && user ? user.username : t('header.guest')}
         </Typography>
         {isAuthenticated && user?.email && (
-          <Typography 
-            variant="caption" 
-            sx={{ 
-              color: 'text.secondary',
-              display: 'block',
-              mb: 1
-            }}
-          >
+          <Typography variant="caption" className="user-email" color="text.secondary">
             {user.email}
           </Typography>
         )}
-        <Box 
-          sx={{ 
-            mt: 1,
-            px: 1.5,
-            py: 0.75,
-            backgroundColor: 'rgba(25, 118, 210, 0.08)',
-            borderRadius: 1,
-            border: '1px solid rgba(25, 118, 210, 0.2)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: 1
-          }}
-        >
-          <Typography 
-            variant="caption" 
-            sx={{ 
-              color: 'primary.main',
-              fontWeight: 600,
-              fontSize: '0.75rem',
-              letterSpacing: '0.3px',
-              flex: 1
-            }}
-          >
+        <Box className="company-id-box">
+          <Typography variant="caption" className="company-id-text" color="primary">
             {t('header.companyId', { id: participantId })}
           </Typography>
           <Tooltip title={copied ? t('actions.copied') : t('header.copyId')} arrow>
             <IconButton
               size="small"
+              className="copy-button"
               onClick={handleCopyParticipantId}
-              sx={{
-                padding: '4px',
-                color: 'primary.main',
-                '&:hover': {
-                  backgroundColor: 'rgba(25, 118, 210, 0.15)'
-                }
-              }}
+              color="primary"
             >
-              <ContentCopy sx={{ fontSize: '0.875rem' }} />
+              <ContentCopy />
             </IconButton>
           </Tooltip>
         </Box>
       </Box>
       
-      <Divider sx={{ my: 1 }} />
+      <Divider />
 
       {/* Menu Options */}
-      <MenuItem 
-        onClick={handleMenuClose}
-        sx={{
-          py: 1.25,
-          px: 2,
-          '&:hover': {
-            backgroundColor: 'rgba(66, 165, 245, 0.08)'
-          }
-        }}
-      >
+      <MenuItem onClick={handleMenuClose} className="menu-item">
         <ListItemIcon>
-          <AccountCircle fontSize="small" sx={{ color: 'primary.main' }} />
+          <AccountCircle fontSize="small" color="primary" />
         </ListItemIcon>
         <Typography variant="body2">{t('header.profile')}</Typography>
       </MenuItem>
-      <MenuItem 
-        onClick={handleMenuClose}
-        sx={{
-          py: 1.25,
-          px: 2,
-          '&:hover': {
-            backgroundColor: 'rgba(66, 165, 245, 0.08)'
-          }
-        }}
-      >
+      <MenuItem onClick={handleMenuClose} className="menu-item">
         <ListItemIcon>
-          <Settings fontSize="small" sx={{ color: 'primary.main' }} />
+          <Settings fontSize="small" color="primary" />
         </ListItemIcon>
         <Typography variant="body2">{t('header.settings')}</Typography>
       </MenuItem>
       
-      <Divider sx={{ my: 1 }} />
+      <Divider />
       
-      <MenuItem 
-        onClick={handleLogout}
-        sx={{
-          py: 1.25,
-          px: 2,
-          '&:hover': {
-            backgroundColor: 'rgba(211, 47, 47, 0.08)'
-          }
-        }}
-      >
+      <MenuItem onClick={handleLogout} className="menu-item menu-item--logout">
         <ListItemIcon>
-          <Logout fontSize="small" sx={{ color: 'error.main' }} />
+          <Logout fontSize="small" color="error" />
         </ListItemIcon>
         <Typography variant="body2" color="error">{t('header.logout')}</Typography>
       </MenuItem>
@@ -310,30 +214,9 @@ export default function PrimarySearchAppBar() {
     <Menu
       anchorEl={languageAnchorEl}
       id={languageMenuId}
+      className="header-menu language-menu"
       open={isLanguageMenuOpen}
       onClose={handleLanguageMenuClose}
-      PaperProps={{
-        elevation: 8,
-        sx: {
-          overflow: 'visible',
-          filter: 'drop-shadow(0px 4px 20px rgba(0,0,0,0.15))',
-          mt: 1.5,
-          minWidth: 160,
-          borderRadius: 2,
-          '&:before': {
-            content: '""',
-            display: 'block',
-            position: 'absolute',
-            top: 0,
-            right: 14,
-            width: 10,
-            height: 10,
-            bgcolor: 'background.paper',
-            transform: 'translateY(-50%) rotate(45deg)',
-            zIndex: 0,
-          },
-        },
-      }}
       transformOrigin={{ horizontal: 'right', vertical: 'top' }}
       anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
     >
@@ -342,31 +225,12 @@ export default function PrimarySearchAppBar() {
           key={lang.code}
           onClick={() => handleLanguageChange(lang.code)}
           selected={i18n.language === lang.code}
-          sx={{
-            py: 1.25,
-            px: 2,
-            '&:hover': {
-              backgroundColor: 'rgba(66, 165, 245, 0.08)'
-            },
-            '&.Mui-selected': {
-              backgroundColor: 'rgba(25, 118, 210, 0.12)',
-              '&:hover': {
-                backgroundColor: 'rgba(25, 118, 210, 0.18)'
-              }
-            }
-          }}
+          className="language-item"
         >
-          <Box 
-            component="img"
+          <img
             src={`/flags/${lang.code}.png`}
             alt={lang.name}
-            sx={{ 
-              mr: 1.5, 
-              width: 24,
-              height: 18,
-              borderRadius: '2px',
-              boxShadow: '0 1px 2px rgba(0,0,0,0.2)'
-            }}
+            className="flag-icon"
           />
           <Typography variant="body2">{lang.name}</Typography>
         </MenuItem>
@@ -383,6 +247,7 @@ export default function PrimarySearchAppBar() {
         horizontal: 'right',
       }}
       id={mobileMenuId}
+      className="mobile-menu"
       keepMounted
       transformOrigin={{
         vertical: 'top',
@@ -391,48 +256,35 @@ export default function PrimarySearchAppBar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-        >
+      <MenuItem className="mobile-menu-item">
+        <IconButton size="large" aria-label="show 17 new notifications">
           <Badge badgeContent={17} color="error">
             <NotificationsIcon />
           </Badge>
         </IconButton>
         <p>{t('header.notifications')}</p>
       </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="configure policies"
-        >
+      <MenuItem className="mobile-menu-item">
+        <IconButton size="large" aria-label="configure policies">
           <Policy />
         </IconButton>
         <p>{t('header.policyConfig')}</p>
       </MenuItem>
-      <MenuItem onClick={handleLanguageMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="select language"
-        >
+      <MenuItem onClick={handleLanguageMenuOpen} className="mobile-menu-item">
+        <IconButton size="large" aria-label="select language">
           <LanguageIcon />
         </IconButton>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Box 
-            component="img"
+        <Box className="language-display">
+          <img
             src={`/flags/${getCurrentLanguage().code}.png`}
             alt={getCurrentLanguage().name}
-            sx={{ width: 24, height: 18, borderRadius: '2px' }}
+            className="flag-icon"
           />
           {getCurrentLanguage().name}
         </Box>
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-        >
+      <MenuItem onClick={handleProfileMenuOpen} className="mobile-menu-item">
+        <IconButton size="large" aria-label="account of current user">
           <AccountCircle />
         </IconButton>
         <p>{t('header.profile')}</p>
@@ -441,57 +293,38 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box className="header-wrapper">
       <AppBar position="static" className={`ichub-header ${scrolled ? "scrolled" : ""}`}>
         <Toolbar>
-          <Box sx={{ display: { xs: 'flex', md: 'none' }, alignItems: 'center', justifyContent: 'flex-start' }}>
-            <a href="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <Box className="logo-container logo-container--mobile">
+            <a href="/">
               <img
                 src="/241117_Tractus_X_Logo_Only_RGB.png"
                 alt="Eclipse Tractus-X logo"
-                className='small-logo'
-                style={{ display: 'block' }}
+                className="small-logo"
               />
             </a>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center', justifyContent: 'flex-start' }}>
-            <a href="/" style={{ display: 'flex', alignItems: 'center' }}>
+          <Box className="logo-container logo-container--desktop">
+            <a href="/">
               <img
                 src="/241117_Tractus_X_Logo_RGB_Light_Version.png"
                 alt="Eclipse Tractus-X logo"
-                className='main-logo'
-                style={{ display: 'block' }}
+                className="main-logo"
               />
             </a>
           </Box>
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
-            <Typography 
-              variant="h1" 
-              sx={{ 
-                fontSize: { xs: '1.6rem', md: '2rem' },
-                fontWeight: '700',
-                color: 'white',
-                textShadow: '0 2px 4px rgba(0,0,0,0.3)',
-                letterSpacing: '0.5px'
-              }}
-            >
+          <Box className="header-title-container">
+            <Typography variant="h1" className="header-title">
               {t('app.name')}
             </Typography>
           </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2, alignItems: 'center' }}>
+          <Box className="header-actions header-actions--desktop">
             <Tooltip title={t('header.notificationsComingSoon')} arrow>
               <IconButton
                 size="large"
+                className="header-icon-button"
                 aria-label="show 17 new notifications"
-                sx={{
-                  color: 'white',
-                  '&:hover': {
-                    backgroundColor: 'rgba(25, 118, 210, 0.2)',
-                    transform: 'translateY(-1px)',
-                    boxShadow: '0 4px 12px rgba(25, 118, 210, 0.3)'
-                  },
-                  transition: 'all 0.2s ease-in-out'
-                }}
               >
                 <Badge badgeContent={17} color="error">
                   <NotificationsIcon />
@@ -500,17 +333,9 @@ export default function PrimarySearchAppBar() {
             </Tooltip>
             <Tooltip title={t('header.policyComingSoon')} arrow>
               <IconButton 
-                size="large" 
+                size="large"
+                className="header-icon-button"
                 aria-label="configure policies"
-                sx={{
-                  color: 'white',
-                  '&:hover': {
-                    backgroundColor: 'rgba(25, 118, 210, 0.2)',
-                    transform: 'translateY(-1px)',
-                    boxShadow: '0 4px 12px rgba(25, 118, 210, 0.3)'
-                  },
-                  transition: 'all 0.2s ease-in-out'
-                }}
               >
                 <Policy/>
               </IconButton>
@@ -518,19 +343,11 @@ export default function PrimarySearchAppBar() {
             <Tooltip title={t('header.language', { language: getCurrentLanguage().name })} arrow>
               <IconButton
                 size="large"
+                className="header-icon-button"
                 aria-label="select language"
                 aria-controls={languageMenuId}
                 aria-haspopup="true"
                 onClick={handleLanguageMenuOpen}
-                sx={{
-                  color: 'white',
-                  '&:hover': {
-                    backgroundColor: 'rgba(25, 118, 210, 0.2)',
-                    transform: 'translateY(-1px)',
-                    boxShadow: '0 4px 12px rgba(25, 118, 210, 0.3)'
-                  },
-                  transition: 'all 0.2s ease-in-out'
-                }}
               >
                 <LanguageIcon />
               </IconButton>
@@ -542,12 +359,12 @@ export default function PrimarySearchAppBar() {
               aria-controls={menuId}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              className='user-button'
+              className="user-button"
             >
               <AccountCircle />
             </IconButton>
           </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+          <Box className="header-actions header-actions--mobile">
             <IconButton
               size="large"
               aria-label="show more"
