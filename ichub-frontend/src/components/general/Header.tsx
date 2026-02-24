@@ -41,10 +41,10 @@ import { getParticipantId } from '../../services/EnvironmentService';
 import useAuth from '../../hooks/useAuth';
 
 const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-  { code: 'fr', name: 'Français', flag: '🇫🇷' }
+  { code: 'en', name: 'English' },
+  { code: 'es', name: 'Español' },
+  { code: 'de', name: 'Deutsch' },
+  { code: 'fr', name: 'Français' }
 ];
 
 export default function PrimarySearchAppBar() {
@@ -356,7 +356,18 @@ export default function PrimarySearchAppBar() {
             }
           }}
         >
-          <Typography variant="body2" sx={{ mr: 1.5 }}>{lang.flag}</Typography>
+          <Box 
+            component="img"
+            src={`/flags/${lang.code}.png`}
+            alt={lang.name}
+            sx={{ 
+              mr: 1.5, 
+              width: 24,
+              height: 18,
+              borderRadius: '2px',
+              boxShadow: '0 1px 2px rgba(0,0,0,0.2)'
+            }}
+          />
           <Typography variant="body2">{lang.name}</Typography>
         </MenuItem>
       ))}
@@ -407,7 +418,15 @@ export default function PrimarySearchAppBar() {
         >
           <LanguageIcon />
         </IconButton>
-        <p>{getCurrentLanguage().flag} {getCurrentLanguage().name}</p>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Box 
+            component="img"
+            src={`/flags/${getCurrentLanguage().code}.png`}
+            alt={getCurrentLanguage().name}
+            sx={{ width: 24, height: 18, borderRadius: '2px' }}
+          />
+          {getCurrentLanguage().name}
+        </Box>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
