@@ -120,11 +120,6 @@
     "validationError": "Échec de la validation.",
     "partDataNotAvailable": "Les données de la pièce ne sont pas disponibles."
   },
-  "status": {
-    "shared": "Partagé",
-    "draft": "Brouillon",
-    "pending": "En attente"
-  },
   "productDetail": {
     "addSerializedPart": {
       "title": "Ajouter une Pièce Sérialisée",

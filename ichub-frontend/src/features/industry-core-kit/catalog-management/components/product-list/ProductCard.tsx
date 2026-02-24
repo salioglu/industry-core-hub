@@ -160,7 +160,7 @@ export const ProductCard = ({
               onClick={() => { onClick(productId); }}
             >
               <Box className="custom-card-header" sx={{ alignItems: 'center', display: 'flex', gap: 1 }}>
-                <CardChip status={item.status} statusText={item.status ? t(`status.${item.status.toLowerCase()}`) : ''} />
+                <CardChip status={item.status} statusText={item.status ? tCommon(`status.${item.status.toLowerCase()}`) : ''} />
                 <Box className="custom-card-header-buttons">                  
                     {/* Register and Share icon buttons in header */}
                     {(item.status === StatusVariants.draft || item.status === StatusVariants.pending) && (

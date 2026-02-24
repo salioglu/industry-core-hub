@@ -63,7 +63,10 @@
     "ready": "Listo",
     "registered": "Registrado",
     "created": "Creado",
-    "unknown": "Desconocido"
+    "unknown": "Desconocido",
+    "draft": "Borrador",
+    "pending": "Pendiente",
+    "shared": "Compartido"
   },
   "labels": {
     "default": "Por defecto",

@@ -63,7 +63,10 @@
     "ready": "Prêt",
     "registered": "Enregistré",
     "created": "Créé",
-    "unknown": "Inconnu"
+    "unknown": "Inconnu",
+    "draft": "Brouillon",
+    "pending": "En attente",
+    "shared": "Partagé"
   },
   "labels": {
     "default": "Par défaut",

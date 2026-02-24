@@ -63,7 +63,10 @@
     "ready": "Ready",
     "registered": "Registered",
     "created": "Created",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "draft": "Draft",
+    "pending": "Pending",
+    "shared": "Shared"
   },
   "labels": {
     "default": "Default",

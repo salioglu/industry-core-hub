@@ -120,11 +120,6 @@
     "validationError": "Validierung fehlgeschlagen.",
     "partDataNotAvailable": "Teil-Daten sind nicht verfügbar."
   },
-  "status": {
-    "shared": "Geteilt",
-    "draft": "Entwurf",
-    "pending": "Ausstehend"
-  },
   "productDetail": {
     "addSerializedPartDialog": {
       "title": "Serialisiertes Teil hinzufügen",

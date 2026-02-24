@@ -63,7 +63,10 @@
     "ready": "Bereit",
     "registered": "Registriert",
     "created": "Erstellt",
-    "unknown": "Unbekannt"
+    "unknown": "Unbekannt",
+    "draft": "Entwurf",
+    "pending": "Ausstehend",
+    "shared": "Geteilt"
   },
   "labels": {
     "default": "Standard",

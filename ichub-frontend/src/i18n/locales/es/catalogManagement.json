@@ -120,11 +120,6 @@
     "validationError": "Error de validación.",
     "partDataNotAvailable": "Los datos de la pieza no están disponibles."
   },
-  "status": {
-    "shared": "Compartido",
-    "draft": "Borrador",
-    "pending": "Pendiente"
-  },
   "productDetail": {
     "addSerializedPartDialog": {
       "title": "Añadir una pieza serializada",

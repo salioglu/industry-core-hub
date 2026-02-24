@@ -120,11 +120,6 @@
     "validationError": "Validation failed.",
     "partDataNotAvailable": "Part data is not available."
   },
-  "status": {
-    "shared": "Shared",
-    "draft": "Draft",
-    "pending": "Pending"
-  },
   "productDetail": {
     "addSerializedPartDialog": {
       "title": "Add a serialized part",
