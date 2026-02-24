@@ -58,6 +58,7 @@ import { useEscapeNavigation } from '@/hooks/useEscapeKey';
 
 const ProductsDetails = () => {
   const { t } = useTranslation('catalogManagement');
+  const { t: tCommon } = useTranslation('common');
   const navigate = useNavigate();
 
   const { manufacturerId, manufacturerPartId } = useParams<{
@@ -279,7 +280,7 @@ const ProductsDetails = () => {
     
     return <CardChip 
       status={statusVariant} 
-      statusText={t(`status.${statusVariant.toLowerCase()}`)} 
+      statusText={tCommon(`status.${statusVariant.toLowerCase()}`)} 
       className={(statusVariant === StatusVariants.shared) || (statusVariant === StatusVariants.pending) ? 'black-status-chip' : undefined}
     />;
   };
