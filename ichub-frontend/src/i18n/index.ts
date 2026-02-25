@@ -84,6 +84,16 @@ import jaPassportProvision from './locales/ja/passportProvision.json';
 import jaPartDiscovery from './locales/ja/partDiscovery.json';
 import jaSerializedParts from './locales/ja/serializedParts.json';
 
+// Portuguese
+import ptCommon from './locales/pt/common.json';
+import ptKits from './locales/pt/kits.json';
+import ptCatalogManagement from './locales/pt/catalogManagement.json';
+import ptPartnerManagement from './locales/pt/partnerManagement.json';
+import ptPassportConsumption from './locales/pt/passportConsumption.json';
+import ptPassportProvision from './locales/pt/passportProvision.json';
+import ptPartDiscovery from './locales/pt/partDiscovery.json';
+import ptSerializedParts from './locales/pt/serializedParts.json';
+
 export const defaultNS = 'common';
 export const resources = {
   en: {
@@ -145,6 +155,16 @@ export const resources = {
     passportProvision: jaPassportProvision,
     partDiscovery: jaPartDiscovery,
     serializedParts: jaSerializedParts
+  },
+  pt: {
+    common: ptCommon,
+    kits: ptKits,
+    catalogManagement: ptCatalogManagement,
+    partnerManagement: ptPartnerManagement,
+    passportConsumption: ptPassportConsumption,
+    passportProvision: ptPassportProvision,
+    partDiscovery: ptPartDiscovery,
+    serializedParts: ptSerializedParts
   }
 } as const;
 
@@ -152,7 +172,7 @@ export const resources = {
  * Supported language codes for the application.
  * Used by the language detector to validate detected languages.
  */
-const supportedLanguages = ['en', 'es', 'de', 'fr', 'zh', 'ja'];
+const supportedLanguages = ['en', 'es', 'de', 'fr', 'zh', 'ja', 'pt'];
 
 i18n
   .use(LanguageDetector)
