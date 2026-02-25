@@ -45,7 +45,8 @@ const languages = [
   { code: 'es', name: 'Español' },
   { code: 'de', name: 'Deutsch' },
   { code: 'fr', name: 'Français' },
-  { code: 'zh', name: '中文' }
+  { code: 'zh', name: '中文' },
+  { code: 'ja', name: '日本語' }
 ];
 
 export default function PrimarySearchAppBar() {
