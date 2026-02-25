@@ -64,6 +64,16 @@ import frPassportProvision from './locales/fr/passportProvision.json';
 import frPartDiscovery from './locales/fr/partDiscovery.json';
 import frSerializedParts from './locales/fr/serializedParts.json';
 
+// Chinese (Simplified)
+import zhCommon from './locales/zh/common.json';
+import zhKits from './locales/zh/kits.json';
+import zhCatalogManagement from './locales/zh/catalogManagement.json';
+import zhPartnerManagement from './locales/zh/partnerManagement.json';
+import zhPassportConsumption from './locales/zh/passportConsumption.json';
+import zhPassportProvision from './locales/zh/passportProvision.json';
+import zhPartDiscovery from './locales/zh/partDiscovery.json';
+import zhSerializedParts from './locales/zh/serializedParts.json';
+
 export const defaultNS = 'common';
 export const resources = {
   en: {
@@ -105,6 +115,16 @@ export const resources = {
     passportProvision: frPassportProvision,
     partDiscovery: frPartDiscovery,
     serializedParts: frSerializedParts
+  },
+  zh: {
+    common: zhCommon,
+    kits: zhKits,
+    catalogManagement: zhCatalogManagement,
+    partnerManagement: zhPartnerManagement,
+    passportConsumption: zhPassportConsumption,
+    passportProvision: zhPassportProvision,
+    partDiscovery: zhPartDiscovery,
+    serializedParts: zhSerializedParts
   }
 } as const;
 
@@ -112,7 +132,7 @@ export const resources = {
  * Supported language codes for the application.
  * Used by the language detector to validate detected languages.
  */
-const supportedLanguages = ['en', 'es', 'de', 'fr'];
+const supportedLanguages = ['en', 'es', 'de', 'fr', 'zh'];
 
 i18n
   .use(LanguageDetector)
