@@ -2,7 +2,8 @@
 # Eclipse Tractus-X - Industry Core Hub Backend
 #
 # Copyright (c) 2026 Capgemini Deutschland GmbH
-# Copyright (c) 2026 Contributors to the Eclipse Foundation
+# Copyright (c) 2026 LKS Next
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -25,6 +26,7 @@ from fastapi import APIRouter, Depends
 from controllers.fastapi.routers.authentication.auth_api import get_authentication_dependency
 from managers.config.config_manager import ConfigManager
 from .ecopass_kit import ecopass_kit
+from .ccm_kit import ccm_kit
 from .pcf_kit import pcf_kit
 
 router = APIRouter(
@@ -34,6 +36,11 @@ router = APIRouter(
 )
 
 router.include_router(ecopass_kit.router)
+
+_ccm_provider_config = ConfigManager.get_config("provider.ccm", {})
+if _ccm_provider_config.get("enabled", True):
+    router.include_router(ccm_kit.router)
+
 router.include_router(pcf_kit.router)
 
 if ConfigManager.get_config("addons.mcp_addon.enabled", True):

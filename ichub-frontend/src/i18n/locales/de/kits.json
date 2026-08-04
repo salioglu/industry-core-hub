@@ -105,6 +105,24 @@
         "mcpTools": {
           "name": "MCP-Tools",
           "description": "KI-gestützte Tools zum Erkunden digitaler Zwillinge, Entdecken von Partnern und Konsumieren von Dataspace-Daten über das Model Context Protocol."
+          }
+        }
+     }, 
+    "ccm": {
+      "name": "CCM KIT",
+      "description": "Compliance-Zertifikate über EDC und Benachrichtigungen mit Datenspeicherpartnern verwalten, teilen und abrufen.",
+      "features": {
+        "certificateManagement": {
+          "name": "Zertifikatsverwaltung",
+          "description": "Eigene Compliance-Zertifikate hochladen, verwalten und pflegen."
+        },
+        "provisionManagement": {
+          "name": "CCM Bereitstellungsverwaltung",
+          "description": "Eingehende Zertifikatsanfragen bearbeiten und Zertifikate an Verbraucher bereitstellen (AVAILABLE / PUSH)."
+        },
+        "consumption": {
+          "name": "CCM Bezug",
+          "description": "Compliance-Zertifikate von Partnern anfragen, verfolgen, herunterladen und prüfen."
         }
       }
     }

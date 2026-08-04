@@ -279,6 +279,17 @@ if ConfigManager.get_config("addons.mcp_addon.enabled", True):
                 )
 
 
+metrics_enabled = ConfigManager.get_config("metrics.enabled", False)
+if metrics_enabled:
+    from prometheus_fastapi_instrumentator import Instrumentator
+
+    metrics_endpoint = ConfigManager.get_config("metrics.endpoint", "/metrics")
+    Instrumentator().instrument(app).expose(
+        app,
+        endpoint=metrics_endpoint,
+        include_in_schema=False,
+    )
+
 def custom_openapi():
     """
     Add custom tag grouping so add-ons appear nested under the Add-Ons section.
