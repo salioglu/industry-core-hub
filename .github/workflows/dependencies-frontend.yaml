@@ -91,18 +91,15 @@ jobs:
             git push
           fi
 
-      - name: Check if dependencies are up to date (PR check)
+      - name: Commit updated DEPENDENCIES_ICHUB-FRONTEND to PR branch
         if: github.event_name == 'pull_request'
         run: |
-          if ! git diff --exit-code DEPENDENCIES_ICHUB-FRONTEND; then
-            git diff DEPENDENCIES_ICHUB-FRONTEND > /tmp/DEPENDENCIES_ICHUB-FRONTEND.diff
-            echo "DEPENDENCIES_ICHUB-FRONTEND is out of date. The diff has been uploaded as a workflow artifact."
-            exit 1
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add DEPENDENCIES_ICHUB-FRONTEND
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(deps): update DEPENDENCIES_ICHUB-FRONTEND [skip ci]"
+            git push origin HEAD:${{ github.head_ref }}
           fi
-
-      - name: Upload DEPENDENCIES diff artifact
-        if: github.event_name == 'pull_request' && failure()
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
-        with:
-          name: dependencies-frontend-diff
-          path: /tmp/DEPENDENCIES_ICHUB-FRONTEND.diff
