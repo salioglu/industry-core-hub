@@ -95,6 +95,14 @@ jobs:
         if: github.event_name == 'pull_request'
         run: |
           if ! git diff --exit-code DEPENDENCIES_ICHUB-FRONTEND; then
-            echo "DEPENDENCIES_ICHUB-FRONTEND is out of date. Please run the dependencies workflow on main or update it manually."
+            git diff DEPENDENCIES_ICHUB-FRONTEND > /tmp/DEPENDENCIES_ICHUB-FRONTEND.diff
+            echo "DEPENDENCIES_ICHUB-FRONTEND is out of date. The diff has been uploaded as a workflow artifact."
             exit 1
           fi
+
+      - name: Upload DEPENDENCIES diff artifact
+        if: github.event_name == 'pull_request' && failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dependencies-frontend-diff
+          path: /tmp/DEPENDENCIES_ICHUB-FRONTEND.diff
