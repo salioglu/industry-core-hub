@@ -124,7 +124,17 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore(deps): update DEPENDENCIES_ICHUB-BACKEND [skip ci]"
-            git push --force-with-lease origin HEAD:${{ github.head_ref }}
+            for attempt in 1 2 3; do
+              if git push origin HEAD:${{ github.head_ref }}; then
+                break
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Failed to push updated dependency file after 3 attempts."
+                exit 1
+              fi
+              git fetch origin "${{ github.head_ref }}"
+              git rebase "origin/${{ github.head_ref }}"
+            done
           fi
 
       - name: Check for restricted dependencies
@@ -134,4 +144,3 @@ jobs:
             echo "The following dependencies are restricted: $restricted"
             exit 1
           fi
-
