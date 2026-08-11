@@ -46,6 +46,8 @@ on:
 jobs:
   check-dependencies-backend:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
 
