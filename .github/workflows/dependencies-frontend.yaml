@@ -46,6 +46,8 @@ on:
 jobs:
   check-dependencies:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Set up JDK 17
