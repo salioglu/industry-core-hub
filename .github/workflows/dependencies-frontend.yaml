@@ -66,19 +66,13 @@ jobs:
           curl -L --output ./dash.jar 'https://repo.eclipse.org/service/rest/v1/search/assets/download?repository=dash-maven2-releases&maven.groupId=org.eclipse.dash&maven.artifactId=org.eclipse.dash.licenses&maven.baseVersion=1.1.0&maven.extension=jar'
 
           DASH_ARGS="ichub-frontend/package-lock.json -project automotive.tractusx -summary DEPENDENCIES_ICHUB-FRONTEND"
-          if [[ "${{ inputs.use_ip_check }}" == "true" && -n "$ECLIPSE_DASH_TOKEN" ]]; then
+          if [[ -n "$ECLIPSE_DASH_TOKEN" ]]; then
             DASH_ARGS="$DASH_ARGS -token $ECLIPSE_DASH_TOKEN"
+          elif [[ "${{ inputs.use_ip_check }}" == "true" ]]; then
+            echo "IP check requested via workflow_dispatch but ECLIPSE_DASH_TOKEN is not set"
           fi
 
           java -jar ./dash.jar $DASH_ARGS || true
-
-      - name: Check for restricted dependencies
-        run: |
-          restricted=$(grep ' restricted,' DEPENDENCIES_ICHUB-FRONTEND || true)
-          if [[ -n "$restricted" ]]; then
-            echo "The following dependencies are restricted: $restricted"
-            exit 1
-          fi
 
       - name: Commit updated DEPENDENCIES_ICHUB-FRONTEND
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -104,4 +98,12 @@ jobs:
           else
             git commit -m "chore(deps): update DEPENDENCIES_ICHUB-FRONTEND [skip ci]"
             git push origin HEAD:${{ github.head_ref }}
+          fi
+
+      - name: Check for restricted dependencies
+        run: |
+          restricted=$(grep ' restricted,' DEPENDENCIES_ICHUB-FRONTEND || true)
+          if [[ -n "$restricted" ]]; then
+            echo "The following dependencies are restricted: $restricted"
+            exit 1
           fi
