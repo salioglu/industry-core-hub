@@ -33,6 +33,15 @@ on:
       - DEPENDENCIES_ICHUB-FRONTEND
       - .github/workflows/dependencies-frontend.yaml
   workflow_dispatch:
+    inputs:
+      use_ip_check:
+        description: 'Submit IP check requests to Eclipse DASH (requires ECLIPSE_DASH_TOKEN secret)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 jobs:
   check-dependencies:
@@ -49,10 +58,17 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
 
       - name: Generate Dependencies file
+        env:
+          ECLIPSE_DASH_TOKEN: ${{ secrets.ECLIPSE_DASH_TOKEN }}
         run: |
           curl -L --output ./dash.jar 'https://repo.eclipse.org/service/rest/v1/search/assets/download?repository=dash-maven2-releases&maven.groupId=org.eclipse.dash&maven.artifactId=org.eclipse.dash.licenses&maven.baseVersion=1.1.0&maven.extension=jar'
 
-          java -jar ./dash.jar ichub-frontend/package-lock.json -project automotive.tractusx -summary DEPENDENCIES_ICHUB-FRONTEND || true
+          DASH_ARGS="ichub-frontend/package-lock.json -project automotive.tractusx -summary DEPENDENCIES_ICHUB-FRONTEND"
+          if [[ "${{ inputs.use_ip_check }}" == "true" && -n "$ECLIPSE_DASH_TOKEN" ]]; then
+            DASH_ARGS="$DASH_ARGS -token $ECLIPSE_DASH_TOKEN"
+          fi
+
+          java -jar ./dash.jar $DASH_ARGS || true
 
       - name: Check for restricted dependencies
         run: |

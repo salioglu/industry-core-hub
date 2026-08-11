@@ -33,6 +33,15 @@ on:
       - DEPENDENCIES_ICHUB-BACKEND
       - .github/workflows/dependencies-backend.yml
   workflow_dispatch:
+    inputs:
+      use_ip_check:
+        description: 'Submit IP check requests to Eclipse DASH (requires ECLIPSE_DASH_TOKEN secret)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 jobs:
   check-dependencies-backend:
@@ -76,10 +85,17 @@ jobs:
           pip list --format=freeze | awk -F'==' '{print "pypi/pypi/-/" $1 "/" $2}' | awk '!seen[$0]++' > ichub-backend/PACKAGE
 
       - name: Generate Dependencies file
+        env:
+          ECLIPSE_DASH_TOKEN: ${{ secrets.ECLIPSE_DASH_TOKEN }}
         run: |
           curl -L --output ./org.eclipse.dash.licenses.jar 'https://repo.eclipse.org/service/rest/v1/search/assets/download?repository=dash-maven2-releases&maven.groupId=org.eclipse.dash&maven.artifactId=org.eclipse.dash.licenses&maven.baseVersion=1.1.0&maven.extension=jar'
 
-          java -jar ./org.eclipse.dash.licenses.jar ichub-backend/PACKAGE -project automotive.tractusx -summary DEPENDENCIES_ICHUB-BACKEND || true
+          DASH_ARGS="ichub-backend/PACKAGE -project automotive.tractusx -summary DEPENDENCIES_ICHUB-BACKEND"
+          if [[ "${{ inputs.use_ip_check }}" == "true" && -n "$ECLIPSE_DASH_TOKEN" ]]; then
+            DASH_ARGS="$DASH_ARGS -token $ECLIPSE_DASH_TOKEN"
+          fi
+
+          java -jar ./org.eclipse.dash.licenses.jar $DASH_ARGS || true
 
       - name: Check for restricted dependencies
         run: |
